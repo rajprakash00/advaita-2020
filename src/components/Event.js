@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 import tech from "../img/TechT.png"
 import art from "../img/ArtT.png"
 import food from "../img/FoodT.png"
@@ -10,6 +11,7 @@ export default class Event extends Component {
         return (
             <div className="main_ev">
                 <h1>EVENTS</h1>
+		 <Link style={{color:"red"}} to="/">Home</Link>
                <div className="diamond">
                 
                 <img className="upper_img"  src={tech} height="350" width="350"/>  

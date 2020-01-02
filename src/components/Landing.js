@@ -17,6 +17,7 @@ export default class Landing extends Component {
             <Link style={{color:"red",position:"relative"}} to="/event/gamex">Subevent</Link>
             <Link style={{color:"red",position:"relative"}} to="/sponsors">Sponsor</Link>
             <Link style={{color:"red",position:"relative"}} to="/contact">Contact</Link>
+	    <Link style={{color:"red",position:"relative"}} to="/event">Event</Link>
                <img src={logo} className="logo_main" style={{marginTop:"200px"}}/> 
             </div>
             
