@@ -1,0 +1,81 @@
+.main_ev{
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+    height: 100vh;
+    background-image: url("../../img/MainEventBg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    //background-position-y: bottom 10%;
+    text-align: center;
+    user-select: none;
+    @include md{
+        height:100%;
+        background-position-x: 40%;
+    }
+}
+
+.diamond{
+    display:grid;
+    margin-left: 150px;
+    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit,300px);
+    grid-gap:0px;
+    @include md{
+        grid-template-columns: repeat(auto-fit,140px);  
+        margin-left:-60px; 
+    }
+}
+.upper_img:nth-child(1){
+    margin-top: 80px;
+    margin-left:60px;
+    @include md{
+       width: 150px; 
+       height: 150px;
+       margin-left:70px;
+    }
+}
+
+.upper_img:nth-child(2){
+   
+    @include md{
+        width: 150px;
+        height:150px;
+        margin-left: 10px;
+    }
+}
+
+.upper_img:nth-child(3){
+    margin-top: 120px;
+    margin-left:-80px; 
+    @include md{
+        width: 150px; 
+        height: 150px;
+        margin-top: 80px;
+        margin-left: -50px;
+     }
+}
+
+.upper_img:nth-child(4){
+    margin-left: -140px;
+    margin-top:40px;
+    @include md{
+        margin-left:100px;
+        margin-top: 20px;
+        width: 150px;
+        height:150px;
+        
+    }
+}
+
+.upper_img:nth-child(5){
+    margin-top: 200px;
+    margin-left: -240px;
+    @include md{
+        margin-left: 60px;
+        margin-top: 40px;
+        width: 150px;
+        height: 150px;
+     }
+}

@@ -1,0 +1,67 @@
+.pronite_main{
+    background-image:url(../../img/pronite.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height:100vh;
+    width: 100vw;
+    @include xl{
+       height:100%;
+       background-attachment: fixed;
+    }
+   // display: flex;
+}
+
+.card_pro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0 auto;
+    padding-top: 20px;
+    
+}
+
+h1{
+    user-select: none;
+}
+
+.main_img{
+    width: 400px;
+    height:500px;
+    @include md{
+        width: 280px;
+        height:350px;
+    }
+   
+}
+
+.img_con{
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    user-select: none;
+    @include xl{
+        flex-direction: column;
+       
+    }
+}
+
+.epro{
+    //display: flex;
+    font-family: 'Oswald',sans-serif;
+    width:200px;
+    border-radius:30px;
+    padding:10px;
+    font-size:2em;
+    color:white;
+    background-color:#ed145b;
+    cursor: pointer;
+    margin-top: 20px;
+    border:none;
+    @include md{
+        padding:5px;
+        
+    }
+    
+}

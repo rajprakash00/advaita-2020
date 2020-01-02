@@ -1,0 +1,34 @@
+.exa{
+   /* width: 100%;
+    //height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include xl{
+        height: 100%;
+    }*/
+
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+    height: 100vh;
+    background-image: url("../../img/newland.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    //background-position-y: bottom 10%;
+    text-align: center;
+    user-select: none;
+    @include md{
+        background-position-x: 20%;
+    }
+}
+
+
+/*.exa{
+   position: fixed; 
+   top:-50%;
+   left: -50%;
+   width: 200%;
+   height: 200%;
+}*/

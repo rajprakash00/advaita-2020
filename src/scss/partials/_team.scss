@@ -1,0 +1,118 @@
+.team_bg{
+    background-image:url(../../img/team.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-position-y: bottom 10%;
+    height:100vh;
+    width: 100vw;
+    
+    @include xl{
+        height:100%;
+       
+        background-position-x: 30%;
+    }
+}
+
+.team_cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+   
+    margin-top: 100px;
+    @include lg{
+        flex-direction: column;
+        align-items: center;
+       
+    }
+}
+
+.img_team{
+    position: relative;  
+    user-select: none; 
+   
+   // z-index: 1;
+}
+
+.img_frame{
+    position: relative;
+    top:-480px;
+    left:30px; 
+    //background-image: url("../../img/test.jpeg") ;
+    width:220px;
+    height:200px;
+    user-select: none;
+    transform: translateZ(20px);
+    @include md{
+        top:-460px;
+    }
+   // z-index: 3;
+}
+
+.circle_fr{
+    height:280px;
+    width: 280px;
+    //translate: translateZ(10px);
+    @include md{
+        width: 260px;
+        height:260px;
+    }
+}
+
+.content_card{
+    position: absolute;
+    margin-top:-220px;
+    margin-left: 70px;
+    transform: translateZ(10px);
+}
+
+.outer_ele{
+  transform-style: preserve-3d;
+}
+
+.name_head{
+    font-family: 'Oswald',sans-serif;
+    color:white;
+    font-size: 2.3em;
+    text-align: center;
+}
+.pos_head{
+    font-family: 'Abel' ,sans-serif;
+    font-size: 1.8em;
+    color:#00ffa8;
+    text-align: center;
+}
+
+.cont_no{
+    font-family:  'Abel' ,sans-serif;
+    color: aquamarine;
+    margin-top: 14px;
+    text-align: center;
+    font-size: 1.7em;
+}
+
+.social_icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 15px;
+    filter: drop-shadow(0 0 10px #fea999);
+    cursor: pointer;
+}
+
+.team_adv{
+    //width:350px;
+
+    @include md{
+        
+        width:320px;
+    }
+}
+
+.team_card{
+    
+    @include md{
+        padding-bottom: 50px;
+    }
+}

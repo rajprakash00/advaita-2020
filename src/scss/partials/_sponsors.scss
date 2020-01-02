@@ -1,0 +1,54 @@
+.sponsor_main{
+    background-image:url(../../img/team.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-position-y: bottom 10%;
+    height:100vh;
+    width: 100vw;
+    @include xl{
+        height:100%;
+        
+    }
+}
+
+.title_section{
+    margin-top: 50px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.spon_title{
+    color: white;
+    font-family: 'Abel',sans-serif;
+    font-weight: 200;
+    font-size: 3em;
+    @include md{
+        font-size: 2.5em;
+    }
+}
+
+.spon_img{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+    @include md{
+        flex-direction: column;
+        align-items: center;
+    }
+   
+}
+
+.company{
+    padding-left: 100px;
+    @include md{
+    padding-left:0;
+    margin-top:30px;
+    //width:250px;
+    }
+}
+
