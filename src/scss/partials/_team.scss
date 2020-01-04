@@ -1,27 +1,31 @@
 .team_bg{
+    
     background-image:url(../../img/team.jpg) ;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-position-y: bottom 10%;
-    height:100vh;
-    width: 100vw;
-    
+    height:150vh;
+    max-width: 100%;
     @include xl{
         height:100%;
-       
-        background-position-x: 30%;
+        
+        background-position: 30%;
     }
 }
 
 .team_cont{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    //flex-direction: row;
+    //flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit,380px);
+    
     justify-content: space-evenly;
-   
+ 
     margin-top: 100px;
     @include lg{
+        display: flex;
         flex-direction: column;
         align-items: center;
        
@@ -98,7 +102,7 @@
     justify-content: space-evenly;
     margin-top: 15px;
     filter: drop-shadow(0 0 10px #fea999);
-    cursor: pointer;
+    
 }
 
 .team_adv{
@@ -111,7 +115,7 @@
 }
 
 .team_card{
-    
+ 
     @include md{
         padding-bottom: 50px;
     }

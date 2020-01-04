@@ -9,7 +9,7 @@ export default class Sponsors extends Component {
     render() {
         return (
             <div className="sponsor_main">
-                <Link to="/" style={{color:"red"}}>Home</Link>
+               
                 <h1>SPONSORS</h1>
                <section className="title_section">
                 <h2 className="spon_title">Title Sponsor</h2>

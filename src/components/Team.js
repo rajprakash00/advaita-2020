@@ -7,13 +7,15 @@ export default class Team extends Component {
     render() {
         return (
             <div className="team_bg">
-            <Link style={{color:"red"}} to="/">Home</Link>
-              <h1>The Team</h1>  
+            
+              <h1>THE TEAM</h1>  
               <div className="team_cont">
                 <TeamCard />
                 <TeamCard />
                 <TeamCard />
-            
+                <TeamCard />
+                <TeamCard />
+                <TeamCard />
               </div>
             </div>
         )

@@ -12,7 +12,7 @@ export default class Contact extends Component {
     render() {
         return (
             <div className="contact_main">
-            <Link to="/" style={{color:"red"}}>Home</Link>
+           
                 <h1>CONTACT US</h1>
                 <div className="venue_box">
                     <div className="text_box">

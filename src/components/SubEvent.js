@@ -83,7 +83,7 @@ export default class SubEvent extends Component {
   render() {
     return (
       <div className="container_event">
-      <Link style={{color:"red"}} to="/">Home</Link>
+     
         <h1>GAMEX</h1>
         <Carousel 
             focusOnSelect

@@ -9,7 +9,7 @@ export default class Pronite extends Component {
     render() {
         return (
             <div className="pronite_main">
-            <Link style={{color:"red"}} to="/">Home</Link>
+            
                <h1 style={{fontSize:"3.5em"}}>PRONITES</h1> 
                <div className="img_con">
                    <div className="card_pro">
