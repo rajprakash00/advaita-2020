@@ -99,8 +99,7 @@ export default class LandingMain extends Component {
             <img src={hook} alt="hanging anchor" />
           </div>
         </div>
-        <img className="fire" src={fire} height="100"  alt=""/>
-        <div className="overlay-bg" ></div>
+        <div className="overlay-bg" />
       </div>  
             </div>
         )
