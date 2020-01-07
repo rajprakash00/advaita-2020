@@ -19,7 +19,9 @@
 
 .diamond{
     display:grid;
-    margin-left: 150px;
+    //margin-left: 205px;
+    //align-items: center;
+    justify-content: center;
     margin-top: 30px;
     grid-template-columns: repeat(auto-fit,300px);
     grid-gap:0px;
@@ -27,6 +29,11 @@
         grid-template-columns: repeat(auto-fit,140px);  
         margin-left:-60px; 
     }
+    @include sm-lt{
+        grid-template-columns: repeat(auto-fit, 180px);
+        margin-left:-20pxpx;
+    }
+
 }
 .upper_img:nth-child(1){
     margin-top: 80px;
@@ -48,7 +55,7 @@
 }
 
 .upper_img:nth-child(3){
-    margin-top: 120px;
+    margin-top: 140px;
     margin-left:-80px; 
     @include md{
         width: 150px; 
@@ -60,7 +67,7 @@
 
 .upper_img:nth-child(4){
     margin-left: -140px;
-    margin-top:40px;
+    margin-top:70px;
     @include md{
         margin-left:100px;
         margin-top: 20px;
@@ -71,7 +78,7 @@
 }
 
 .upper_img:nth-child(5){
-    margin-top: 200px;
+    margin-top: 220px;
     margin-left: -240px;
     @include md{
         margin-left: 60px;

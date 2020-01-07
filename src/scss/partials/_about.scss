@@ -1,0 +1,17 @@
+.about-page {
+  background: url("../../img/about-bg.jpg");
+  background-size: cover;
+  @include md {
+    padding-bottom: 30px;
+  }
+  .about-text {
+    background-color: rgba(black, 0.7);
+    padding: 50px;
+    border-radius: 20px;
+  }
+  p {
+    color: white;
+    font-size: 1.25rem;
+    text-align: justify;
+  }
+}
