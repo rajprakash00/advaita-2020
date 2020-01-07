@@ -25,3 +25,28 @@ $screen-xl-min: 1200px;
     @content;
   }
 }
+
+@mixin sm-lt {
+  @media (min-width: #{$screen-sm-min}) and (max-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin md-lt {
+  @media (min-width: #{$screen-md-min}) and (max-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin lg-lt {
+  @media (min-width: #{$screen-lg-min}) and (max-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin xl-lt {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+

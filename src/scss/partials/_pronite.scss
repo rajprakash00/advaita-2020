@@ -1,67 +1,48 @@
-.pronite_main{
-    background-image:url(../../img/pronite.jpg) ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    height:100vh;
-    width: 100vw;
-    @include xl{
-       height:100%;
-       background-attachment: fixed;
-    }
-   // display: flex;
-}
-
-.card_pro{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin:0 auto;
-    padding-top: 20px;
-    
-}
-
-h1{
-    user-select: none;
-}
-
-.main_img{
-    width: 400px;
-    height:500px;
-    @include md{
-        width: 280px;
-        height:350px;
-    }
-   
-}
-
-.img_con{
+.pronite-page {
+  background-image: url(../../img/pronite.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  .pronite-container {
     display: flex;
     flex-direction: row;
-    margin-top: 100px;
-    user-select: none;
-    @include xl{
-        flex-direction: column;
-       
+    justify-content: space-evenly;
+    height: 400px;
+    @include md {
+      flex-direction: column;
     }
-}
+    .pronite-card {
+      flex-basis: 0;
+      flex: 1 1 0px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 10px;
+      display: flex;
+      text-align: center;
+      @include md {
+        margin: 20px 0;
+      }
+      img {
+        width: 100%;
 
-.epro{
-    //display: flex;
-    font-family: 'Oswald',sans-serif;
-    width:200px;
-    border-radius:30px;
-    padding:10px;
-    font-size:2em;
-    color:white;
-    background-color:#ed145b;
-    cursor: pointer;
-    margin-top: 20px;
-    border:none;
-    @include md{
-        padding:5px;
-        
+        transition: all 0.25s ease-in-out;
+        &:hover {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          transform: scale(1.1);
+        }
+      }
+      .pronite-button {
+        text-decoration: none;
+        width: 200px;
+        border-radius: 30px;
+        padding: 10px;
+        font-size: 1.5rem;
+        color: white;
+        background-color: #ed145b;
+        margin: 20px auto 0 auto;
+      }
     }
-    
+  }
 }
