@@ -51,7 +51,7 @@ $screen-lg-max: 576px;*/
 }
 
 @mixin xl-lt {
-  @media (min-width: #{$screen-xl-min}) and(max-width:#{$screen-dxl-min}) {
+  @media (min-width: #{$screen-xl-min}) and (max-width:#{$screen-dxl-min}) {
     @content;
   }
 }
