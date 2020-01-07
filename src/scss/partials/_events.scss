@@ -31,7 +31,20 @@
     }
     @include sm-lt{
         grid-template-columns: repeat(auto-fit, 180px);
-        margin-left:-20pxpx;
+        margin-left:-70px;
+    }
+
+    @include md-lt{
+        grid-template-columns: repeat(auto-fit, 170px);
+        margin-left:-30px;
+    }
+
+    @include lg-lt{
+        grid-template-columns: repeat(auto-fit, 200px);
+    }
+    @include xl-lt{
+        grid-template-columns: repeat(auto-fit, 260px);  
+       // margin-left: -20px;
     }
 
 }
@@ -43,6 +56,24 @@
        height: 150px;
        margin-left:70px;
     }
+    @include sm-lt{
+        width: 180px;
+        height: 180px;
+    }
+    
+    @include md-lt{
+        width:200px;
+        height:200px;
+    }
+    @include lg-lt{
+        width:250px;
+        height:250px;
+    }
+    @include xl-lt{
+        width:280px;
+        height:280px;
+    }
+    
 }
 
 .upper_img:nth-child(2){
@@ -51,6 +82,23 @@
         width: 150px;
         height:150px;
         margin-left: 10px;
+    }
+    @include sm-lt{
+        margin-left: -20px;
+        width: 180px;
+        height: 180px;
+    }
+    @include md-lt{
+        width:200px;
+        height:200px;
+    }
+    @include lg-lt{
+        width:250px;
+        height:250px;
+    }
+    @include xl-lt{
+        width:280px;
+        height:280px;
     }
 }
 
@@ -63,6 +111,23 @@
         margin-top: 80px;
         margin-left: -50px;
      }
+     @include sm-lt{
+        margin-left: -100px;
+        width: 180px;
+        height: 180px;
+    }
+     @include md-lt{
+        width:200px;
+        height:200px;
+    }
+    @include lg-lt{
+        width:250px;
+        height:250px;
+    }
+    @include xl-lt{
+        width:280px;
+        height:280px;
+    }
 }
 
 .upper_img:nth-child(4){
@@ -75,6 +140,23 @@
         height:150px;
         
     }
+    @include sm-lt{
+       // margin-left: -20px;
+       width: 180px;
+       height: 180px;
+    }
+    @include md-lt{
+        width:200px;
+        height:200px;
+    }
+    @include lg-lt{
+        width:250px;
+        height:250px;
+    }
+    @include xl-lt{
+        width:280px;
+        height:280px;
+    }
 }
 
 .upper_img:nth-child(5){
@@ -86,4 +168,21 @@
         width: 150px;
         height: 150px;
      }
+     @include sm-lt{
+        margin-left:35px; 
+        width: 180px;
+        height: 180px;
+    }
+     @include md-lt{
+        width:200px;
+        height:200px;
+    }
+    @include lg-lt{
+        width:250px;
+        height:250px;
+    }
+    @include xl-lt{
+        width:280px;
+        height:280px;
+    }
 }

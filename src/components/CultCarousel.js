@@ -1,62 +1,48 @@
 import React, { Component } from 'react'
-import data from '../events_new'
+
 import {Link} from 'react-router-dom'
 import Carousel from 'react-multi-carousel'
-import 'react-multi-carousel/lib/styles.css';
-import Battlefield from '../img/Battlefield.png';
-import SwigNCode from '../img/SwigNCode.png';
-import Princi from '../img/Princi.png';
-import Technova from '../img/Technova.png';
-import CTF from '../img/CTF.png';
-import WebD from '../img/WebD.png';
-import PaperP from '../img/PaperP.png';
-import Encoded from '../img/Encoded.png';
-import LineFol from '../img/LineFol.png';
-import Blueprint from '../img/Blueprint.png';
-import Dirt from '../img/Dirt.png';
-import Arduinoob from '../img/Arduinoob.png';
-import tech from "../img/TechBG.jpg"
+import 'react-multi-carousel/lib/styles.css'
+import Cypher from '../img/Cypher.png'
+import Joker from '../img/Joker.png'
+import Foot from '../img/Foot.png'
+import Card from '../img/Card.png'
+import Lamode from '../img/Lamode.png'
+import HaqSe from '../img/HaqSe.png'
+import Rock from '../img/Rock.png'
+import cult from "../img/CultBg.jpg"
+
+
+
 
 const images=[
-  Battlefield,
-SwigNCode,
-Princi,
-Technova,
-CTF,
-WebD,
-PaperP,
-Encoded,
-LineFol,
-Blueprint,
-Dirt,
-Arduinoob,
+  Cypher,
+  Joker,
+  Foot,
+  Card,
+  Lamode,
+  HaqSe,
+  Rock,
+  
 ]
 
 const thumbnail=[
-  <h1 className="thumb_name">Battlefield</h1>,
-<h1 className="thumb_name">SwigNCode</h1>,
-<h1 className="thumb_name">Princi</h1>,
-<h1 className="thumb_name">Technova</h1>,
-<h1 className="thumb_name">CTF</h1>,
-<h1 className="thumb_name">WebD</h1>,
-<h1 className="thumb_name">PaperP</h1>,
-<h1 className="thumb_name">Encoded</h1>,
-<h1 className="thumb_name">LineFol</h1>,
-<h1 className="thumb_name">Blueprint</h1>,
-<h1 className="thumb_name">Dirt</h1>,
-<h1 className="thumb_name">Arduinoob</h1>,
-<h1 className="thumb_name">Battlefield</h1>,
-<h1 className="thumb_name">SwigNCode</h1>,
-<h1 className="thumb_name">Princi</h1>,
-<h1 className="thumb_name">Technova</h1>,
-<h1 className="thumb_name">CTF</h1>,
-<h1 className="thumb_name">WebD</h1>,
-<h1 className="thumb_name">PaperP</h1>,
-<h1 className="thumb_name">Encoded</h1>,
-<h1 className="thumb_name">LineFol</h1>,
-<h1 className="thumb_name">Blueprint</h1>,
-<h1 className="thumb_name">Dirt</h1>,
-<h1 className="thumb_name">Arduinoob</h1>,
+<h1 className="thumb_name">Cypher</h1>,
+<h1 className="thumb_name">Joker</h1>,
+<h1 className="thumb_name">Foot</h1>,
+<h1 className="thumb_name">Acoustica</h1>,
+<h1 className="thumb_name">Lamode</h1>,
+<h1 className="thumb_name">HaqSe</h1>,
+<h1 className="thumb_name">Rock</h1>,
+<h1 className="thumb_name">Cypher</h1>,
+<h1 className="thumb_name">Joker</h1>,
+<h1 className="thumb_name">Foot</h1>,
+<h1 className="thumb_name">Acoustica</h1>,
+<h1 className="thumb_name">Lamode</h1>,
+<h1 className="thumb_name">HaqSe</h1>,
+<h1 className="thumb_name">Rock</h1>,
+
+
 ]
 
 const responsive={
@@ -84,24 +70,21 @@ export default class SubEvent extends Component {
   
 
   render() {
-    //const {category} = this.props.match.params
-    //console.log(category)
-    //console.log(Object.values(data.categories[category])[0].bg);
     let index;
     const CustomButtonGroup = ({ next, previous, goToSlide, carouselState}) => {
       const { totalItems, currentSlide } = carouselState;
  
       
     
-      index=currentSlide+4
-      while (index>=14){
-        index=index-12
+      index=currentSlide+2
+      while (index>=9){
+        index=index-7
       }
 
       console.log(currentSlide,index)
 
       if(window.innerWidth <= 992 && window.innerWidth >= 576){
-        index=index+3
+        index=index
         return (
           <div className="custom-button-group">
           <button className="thumb_slider" onClick={() => previous()} >{React.Children.toArray(thumbnail)[index-1]}</button>
@@ -116,8 +99,8 @@ export default class SubEvent extends Component {
         );
       }
       if(window.innerWidth <= 576){
-        index=index+6
-                return (
+        index=index+3
+        return (
           <div className="custom-button-group">
          
           <button className="thumb_slider" onClick={() => previous()} >{React.Children.toArray(thumbnail)[index-1]}</button>
@@ -147,11 +130,35 @@ export default class SubEvent extends Component {
         </div>
       );
     };
-   
+  /*  const CustomDot = ({
+      index,
+      onClick,
+      active,
+      carouselState: { currentSlide }
+    }) => {
+      
+      return (
+        <button
+          onClick={e => {
+            onClick();
+            
+            e.preventDefault();
+
+          }}
+          className={classNames("custom-dot", {
+            "custom-dot--active": active
+          })}
+        >
+          {index}
+        </button>
+      );
+        };*/
+    
     return (
-      <div className="container_event" style={{backgroundImage:`url(${tech})`}}>
      
-        <h1>TECH </h1>
+      <div className="container_event" style={{backgroundImage:`url(${cult})`}}>
+     
+        <h1>GAMEX</h1>
         <Carousel 
             focusOnSelect={false}
             arrows={false}
@@ -167,7 +174,7 @@ export default class SubEvent extends Component {
           {
             images.map((card,i) =>{
               return (
-               <Link to={'/tech/'+i+1}><img src={card} className="slide_card"  /></Link> 
+               <Link to={'/cult/'+i+1}><img src={card} className="slide_card"  /></Link> 
               
               )
             })
@@ -177,4 +184,3 @@ export default class SubEvent extends Component {
     )
   }
 }
-

@@ -4,6 +4,12 @@ $screen-sm-min: 576px;
 $screen-md-min: 768px;
 $screen-lg-min: 992px;
 $screen-xl-min: 1200px;
+$screen-dxl-min: 1520px;
+
+/*$screen-sm-max: 577px;
+$screen-md-max: 576px;
+$screen-lg-max: 576px;*/
+
 
 @mixin sm {
   @media (max-width: #{$screen-sm-min}) {
@@ -45,7 +51,7 @@ $screen-xl-min: 1200px;
 }
 
 @mixin xl-lt {
-  @media (min-width: #{$screen-xl-min}) {
+  @media (min-width: #{$screen-xl-min}) and (max-width:#{$screen-dxl-min}) {
     @content;
   }
 }

@@ -15,9 +15,9 @@ export default class Event extends Component {
 		 
                <div className="diamond">
                 
-                <img className="upper_img"  src={tech} height="350" width="350"/>  
+                <img className="upper_img"  src={tech} height="350" width="350"/>
                 <img className="upper_img"  src={cult} height="350" width="350"/>
-                <img className="upper_img" src={food} height="350" width="350"/>
+                 <img className="upper_img" src={food} height="350" width="350"/>
                 <img className="upper_img" src={art} height="350" width="350"/>
                 <img className="upper_img" src={game} height="350" width="350"/>
                </div>

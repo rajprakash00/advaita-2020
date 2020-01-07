@@ -1,4 +1,4 @@
-export const eventDetails=[
+export const data=[
     {
             "cult": [{
                     "Rockathon": {
