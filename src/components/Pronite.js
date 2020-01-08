@@ -2,7 +2,7 @@ import React from "react";
 import ProniteCard from "./ProniteCard";
 import fifa from "../img/fifa.jpeg";
 import pubg from "../img/pubg.jpeg";
-import tech from "../img/TechBG.jpg";
+import tech from "../img/backgrounds/TechBG.jpg";
 
 const Pronite = () => {
   return (

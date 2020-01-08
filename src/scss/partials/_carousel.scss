@@ -1,32 +1,32 @@
-.slide_card_two{
-    height:100%;
-    width:60%;
-    padding-top:100px;
-   // margin-left: -100px;
-    display: flex;
-    align-items: center;
-    margin:0 auto;
-    border-radius: 20px;
-    @include xl{
-        width:70%;
-    }
+.slide_card_two {
+  height: 100%;
+  width: 60%;
+  padding-top: 100px;
+  // margin-left: -100px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 20px;
+  @include xl {
+    width: 70%;
+  }
 }
-.container_eve_art{
- background-image:url(../../img/ArtBg.jpg) ;
- background-size: cover;
- background-repeat: no-repeat;
- background-attachment: fixed;
- background-position: center;
- height:100vh;
- width: 100vw;
+.container_eve_art {
+  background-image: url(../../img/backgrounds/ArtBg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
 }
 
-.container_eve_food{
- background-image:url(../../img/FoodBg.jpg) ;
- background-size: cover;
- background-repeat: no-repeat;
- background-attachment: fixed;
- background-position: center;
- height:100vh;
- width: 100vw;
+.container_eve_food {
+  background-image: url(../../img/backgrounds/FoodBg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
 }

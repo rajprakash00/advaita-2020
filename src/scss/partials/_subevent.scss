@@ -1,77 +1,72 @@
-.container_event{
- //background-image:url(../../img/GamexBg.jpg) ;
- background-size: cover;
- background-repeat: no-repeat;
- background-attachment: fixed;
- background-position: center;
- height:100vh;
- width: 100vw;
+.container_event {
+  //background-image:url(../../img/GamexBg.jpg) ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
 }
 
-h1{
-    color:white;
-    font-size: 3rem;
-    text-align:center;
-    font-family: 'Oswald', sans-serif;
-    
+h1 {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
 }
 
+.container-padding-bottom {
+  padding-bottom: 100px;
 
-.container-padding-bottom{
-    padding-bottom: 100px;
-
-    @include md{
-        padding-bottom: 70px;
-    }
-  
+  @include md {
+    padding-bottom: 70px;
+  }
 }
 
-.custom-button-group{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+.custom-button-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.thumb_slider{
-    border: none;
-    border-radius:5px;
-    width: 200px;
-    background: black;
-    padding-right: 10px;
-    padding-left: 10px;
-    @include md{
-        width: 150px;
-    }
+.thumb_slider {
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  background: black;
+  padding-right: 10px;
+  padding-left: 10px;
+  @include md {
+    width: 150px;
+  }
 }
-.zoom{
-    transform:scale(1.2);
-    display: block;
-    margin:1px;
+.zoom {
+  transform: scale(1.2);
+  display: block;
+  margin: 1px;
 }
-.slide_card{
-    width:80%;
-    height:100%;
-    //transform: scale(1.5);
-    padding-top:100px;
-    //margin-left: 100px;
-    display: flex;
-    align-items: center;
-    margin:0 auto;
-    border-radius: 20px;
-    @include md{
-        width:70%;
-    }
-}
-
-.slide{
-    width:70px;
-    height:50px;
-    
+.slide_card {
+  width: 80%;
+  height: 100%;
+  //transform: scale(1.5);
+  padding-top: 100px;
+  //margin-left: 100px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 20px;
+  @include md {
+    width: 70%;
+  }
 }
 
-.thumb_name{
-    font-size: 2em;
-    @include md{
-        font-size: 1.5em;
-    }
+.slide {
+  width: 70px;
+  height: 50px;
+}
+
+.thumb_name {
+  font-size: 2em;
+  @include md {
+    font-size: 1.5em;
+  }
 }

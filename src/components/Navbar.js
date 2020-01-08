@@ -21,10 +21,10 @@ const NavMenu = props => {
           Home
         </NavLink>
         <NavLink className="nav-link" to="/event" onClick={props.toggleMenu}>
-          Event
+          Events
         </NavLink>
         <NavLink className="nav-link" to="/pronite" onClick={props.toggleMenu}>
-          Pronite
+          Pronites
         </NavLink>
         <NavLink className="nav-link" to="/team" onClick={props.toggleMenu}>
           The Team
@@ -33,10 +33,10 @@ const NavMenu = props => {
           Sponsors
         </NavLink>
         <NavLink className="nav-link" to="/about" onClick={props.toggleMenu}>
-          About
+          About Us
         </NavLink>
         <NavLink className="nav-link" to="/contact" onClick={props.toggleMenu}>
-          Contact
+          Contact Us
         </NavLink>
       </div>
     </Menu>

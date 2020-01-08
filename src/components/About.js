@@ -1,10 +1,16 @@
 import React from "react";
+import Tilt from "react-parallax-tilt";
 
 const About = () => {
   return (
     <section className="about-page">
-      <h1>About Page</h1>
-      <div className="about-text">
+      <h1>About Us</h1>
+      <Tilt
+        className="about-text"
+        tiltMaxAngleX={5}
+        tiltMaxAngleY={5}
+        perspective={1000}
+      >
         <p>
           ADVAITA is the annual Techno-Cult fest of IIIT Bhubaneswar. It was
           named “ADVAITA”, meaning “non-duality”, which was the intention, to
@@ -44,7 +50,7 @@ const About = () => {
           We welcome you to this new edition of ADVAITA, let's enter the cosmo
           carnival...
         </p>
-      </div>
+      </Tilt>
     </section>
   );
 };

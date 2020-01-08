@@ -1,6 +1,6 @@
 $contact-map-width: 70vw;
 .contact-page {
-  background-image: url("../../img/team.jpg");
+  background-image: url("../../img/backgrounds/contact-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -20,12 +20,21 @@ $contact-map-width: 70vw;
       }
       h3 {
         margin: 10px 0;
+        color: yellow;
       }
       p {
         font-size: 1.25rem;
         a {
           text-decoration: none;
           color: #eee;
+        }
+      }
+      .social-icons {
+        svg {
+          fill: #fff;
+          &:hover {
+            fill: yellow;
+          }
         }
       }
     }
@@ -44,6 +53,6 @@ $contact-map-width: 70vw;
     font-size: 2rem;
     vertical-align: middle;
     margin-right: 10px;
-    color: white;
+    color: yellow;
   }
 }

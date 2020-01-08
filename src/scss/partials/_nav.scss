@@ -29,15 +29,16 @@
 }
 
 .bm-menu {
-  background: #a13942;
-  opacity: 0.65;
-  // padding: 2.5em 1.5em 0;
+  background: #2b685d;
+  opacity: 0.85;
   font-size: 1.15em;
+  backdrop-filter: blur(10px);
 }
 
 .bm-morph-shape {
-  fill: #a13942;
-  opacity: 0.65;
+  fill: #2b685d;
+  opacity: 0.85;
+  backdrop-filter: blur(10px);
 }
 
 .bm-item-list {
@@ -65,12 +66,11 @@
     margin: 10px 0;
     text-align: center;
     color: #e0d065;
-    font-family: "Oswald", sans-serif;
     font-size: 1.5em;
     &:hover {
-      background-color: #fff;
+      background-color: darken(#2b685d, 5%);
       border: none;
-      color: #373a47;
+      color: #fff;
     }
   }
 }
