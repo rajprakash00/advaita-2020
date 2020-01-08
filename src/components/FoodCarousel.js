@@ -22,17 +22,17 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 992 },
     items: 3,
-    partialVisibilityGutter: 40 // this is optional if you are not using partialVisible props
+    partialVisibilityGutter: 40
   },
   tablet: {
     breakpoint: { max: 992, min: 576 },
     items: 3,
-    partialVisibilityGutter: 30 // this is optional if you are not using partialVisible props
+    partialVisibilityGutter: 30
   },
   mobile: {
     breakpoint: { max: 576, min: 0 },
     items: 1,
-    partialVisibilityGutter: 30 // this is optional if you are not using partialVisible props
+    partialVisibilityGutter: 30
   }
 };
 
@@ -45,7 +45,7 @@ export default class FoodCarousel extends Component {
       goToSlide,
       carouselState
     }) => {
-      const { totalItems, currentSlide } = carouselState;
+      const { currentSlide } = carouselState;
 
       index = currentSlide + 2;
       while (index >= 5) {
@@ -54,9 +54,6 @@ export default class FoodCarousel extends Component {
 
       if (window.innerWidth <= 576) {
         index = currentSlide + 1;
-        /* while(index>=2)
-              {index=index-2}*/
-        console.log(currentSlide, index);
         return (
           <div className="custom-button-group">
             <button className="thumb_slider" onClick={() => previous()}>
@@ -75,7 +72,7 @@ export default class FoodCarousel extends Component {
       return null;
     };
     return (
-      <div
+      <section
         className="container_event"
         style={{ backgroundImage: `url(${food})` }}
       >
@@ -93,13 +90,13 @@ export default class FoodCarousel extends Component {
         >
           {images.map((card, i) => {
             return (
-              <Link to={"/food/" + i + 1}>
-                <img src={card} className="slide_card_two" />
+              <Link key={i} to={`/event/food/${i + 1}`}>
+                <img src={card} className="slide_card_two" alt="food card" />
               </Link>
             );
           })}
         </Carousel>
-      </div>
+      </section>
     );
   }
 }

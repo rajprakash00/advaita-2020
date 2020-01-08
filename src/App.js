@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import SubEvent from "../src/components/SubEvent";
+import TechCarousel from "./components/TechCarousel";
 
-import SubEventCult from "../src/components/CultCarousel";
-import Eventdetails from "./components/Eventdetails";
+import CultCarousel from "../src/components/CultCarousel";
+
 import LandingMain from "./components/LandingMain";
 import Pronite from "./components/Pronite";
 import Team from "./components/Team";
@@ -17,26 +17,28 @@ import FoodCarousel from "./components/FoodCarousel";
 import About from "./components/About";
 import Error from "./components/Error404";
 
+import EventDetails from "./components/EventDetails";
+
 function App() {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
     <>
       <Navbar isOpen={isOpen} toggleMenu={setIsOpen} />
       <Switch>
-        <Route exact path="/pronite" component={Pronite} />
-        <Route exact path="/team" component={Team} />
-        <Route exact path="/pronite" component={Pronite} />
-        <Route exact path="/team" component={Team} />
-        <Route exact path="/contact" component={Contact} />
-        <Route exact path="/sponsors" component={Sponsors} />
-        <Route exact path="/event" component={Event} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/" component={LandingMain} />
-        <Route exact path="/event/cult" component={SubEventCult} />
-        <Route exact path="/event/tech" component={SubEvent} />
-        <Route exact path="/event/gamex" component={GamexCarousel} />
-        <Route exact path="/event/art" component={ArtCarousel} />
-        <Route exact path="/event/food" component={FoodCarousel} />
+        <Route path="/pronite" component={Pronite} />
+        <Route path="/team" component={Team} />
+        <Route path="/event/cult" component={CultCarousel} exact />
+        <Route path="/event/tech" component={TechCarousel} exact />
+        <Route path="/event/gamex" component={GamexCarousel} exact />
+        <Route path="/event/art" component={ArtCarousel} exact />
+        <Route path="/event/food" component={FoodCarousel} exact />
+        <Route path="/event/:category/:id" component={EventDetails} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/sponsors" component={Sponsors} />
+        <Route path="/event" component={Event} />
+        <Route path="/about" component={About} />
+        <Route path="/" component={LandingMain} exact />
+
         <Route component={Error} />
       </Switch>
     </>

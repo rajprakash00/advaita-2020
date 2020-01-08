@@ -35,17 +35,17 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 992 },
     items: 5,
-    partialVisibilityGutter: 40 // this is optional if you are not using partialVisible props
+    partialVisibilityGutter: 40
   },
   tablet: {
     breakpoint: { max: 992, min: 576 },
     items: 3,
-    partialVisibilityGutter: 30 // this is optional if you are not using partialVisible props
+    partialVisibilityGutter: 30
   },
   mobile: {
     breakpoint: { max: 576, min: 0 },
     items: 1,
-    partialVisibilityGutter: 30 // this is optional if you are not using partialVisible props
+    partialVisibilityGutter: 30
   }
 };
 
@@ -58,14 +58,15 @@ export default class SubEvent extends Component {
       goToSlide,
       carouselState
     }) => {
-      const { totalItems, currentSlide } = carouselState;
+      const { currentSlide } = carouselState;
 
       index = currentSlide + 2;
-      while (index >= 9) {
+      while (index >= 12) {
         index = index - 7;
       }
-
-      console.log(currentSlide, index);
+      if (index <= 1) {
+        index = index + 7;
+      }
 
       if (window.innerWidth <= 992 && window.innerWidth >= 576) {
         index = index;
@@ -108,57 +109,34 @@ export default class SubEvent extends Component {
 
       return (
         <div className="custom-button-group">
-          <button className="thumb_slider" onClick={() => goToSlide(index - 2)}>
-            {React.Children.toArray(thumbnail)[index - 2]}{" "}
+          <button className="thumb_slider" onClick={() => goToSlide(index - 4)}>
+            {React.Children.toArray(thumbnail)[index - 2]}
           </button>
           <button className="thumb_slider" onClick={() => previous()}>
             {React.Children.toArray(thumbnail)[index - 1]}
           </button>
           <button
             className="thumb_slider zoom"
-            onClick={() => goToSlide(index)}
+            onClick={() => goToSlide(index + 5)}
           >
             {React.Children.toArray(thumbnail)[index]}
           </button>
           <button className="thumb_slider" onClick={() => next()}>
             {React.Children.toArray(thumbnail)[index + 1]}
           </button>
-          <button className="thumb_slider" onClick={() => goToSlide(index + 2)}>
-            {React.Children.toArray(thumbnail)[index + 2]}{" "}
+          <button className="thumb_slider" onClick={() => goToSlide(index)}>
+            {React.Children.toArray(thumbnail)[index + 2]}
           </button>
         </div>
       );
     };
-    /*  const CustomDot = ({
-      index,
-      onClick,
-      active,
-      carouselState: { currentSlide }
-    }) => {
-      
-      return (
-        <button
-          onClick={e => {
-            onClick();
-            
-            e.preventDefault();
-
-          }}
-          className={classNames("custom-dot", {
-            "custom-dot--active": active
-          })}
-        >
-          {index}
-        </button>
-      );
-        };*/
 
     return (
-      <div
+      <section
         className="container_event"
         style={{ backgroundImage: `url(${cult})` }}
       >
-        <h1>GAMEX</h1>
+        <h1>Cult</h1>
         <Carousel
           focusOnSelect={false}
           arrows={false}
@@ -172,13 +150,18 @@ export default class SubEvent extends Component {
         >
           {images.map((card, i) => {
             return (
-              <Link to={`/cult/${i + 1}`}>
-                <img src={card} alt="cult card" className="slide_card" />
+              <Link key={i} to={`/event/cult/${i + 1}`}>
+                <img
+                  src={card}
+                  alt="cult card"
+                  className="slide_card"
+                  alt="cult card"
+                />
               </Link>
             );
           })}
         </Carousel>
-      </div>
+      </section>
     );
   }
 }

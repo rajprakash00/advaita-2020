@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import csgo from "../img/GameFinal/CSGO.png";
-import fifa from "../img/GameFinal/FIFA.png";
+import csgo from "../img/GamexFinal/CSGO.png";
+import fifa from "../img/GamexFinal/FIFA.png";
 import game from "../img/backgrounds/GamexBg.jpg";
 
 const images = [csgo, fifa];
@@ -19,17 +19,17 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 992 },
     items: 2,
-    partialVisibilityGutter: 40 // this is optional if you are not using partialVisible props
+    partialVisibilityGutter: 40
   },
   tablet: {
     breakpoint: { max: 992, min: 576 },
     items: 2,
-    partialVisibilityGutter: 30 // this is optional if you are not using partialVisible props
+    partialVisibilityGutter: 30
   },
   mobile: {
     breakpoint: { max: 576, min: 0 },
     items: 1,
-    partialVisibilityGutter: 30 // this is optional if you are not using partialVisible props
+    partialVisibilityGutter: 30
   }
 };
 
@@ -42,7 +42,7 @@ export default class GamexCarousel extends Component {
       goToSlide,
       carouselState
     }) => {
-      const { totalItems, currentSlide } = carouselState;
+      const { currentSlide } = carouselState;
 
       if (window.innerWidth <= 576) {
         index = currentSlide;
@@ -65,7 +65,7 @@ export default class GamexCarousel extends Component {
       return null;
     };
     return (
-      <div
+      <section
         className="container_event"
         style={{ backgroundImage: `url(${game})` }}
       >
@@ -83,13 +83,13 @@ export default class GamexCarousel extends Component {
         >
           {images.map((card, i) => {
             return (
-              <Link to={"/gamex/" + i + 1}>
-                <img src={card} className="slide_card_two" />
+              <Link key={i} to={`/event/gamex/${i + 1}`}>
+                <img src={card} className="slide_card_two" alt="game card" />
               </Link>
             );
           })}
         </Carousel>
-      </div>
+      </section>
     );
   }
 }

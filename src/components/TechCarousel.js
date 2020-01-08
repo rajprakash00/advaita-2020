@@ -15,7 +15,7 @@ import LineFol from "../img/TechFinal/LineFol.png";
 import Blueprint from "../img/TechFinal/Blueprint.png";
 import Dirt from "../img/TechFinal/Dirt.png";
 import Arduinoob from "../img/TechFinal/Arduinoob.png";
-import tech from "../img/backgrounds/TechBG.jpg";
+import tech from "../img/backgrounds/TechBg.jpg";
 
 const images = [
   Battlefield,
@@ -63,25 +63,22 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 992 },
     items: 5,
-    partialVisibilityGutter: 40 // this is optional if you are not using partialVisible props
+    partialVisibilityGutter: 40
   },
   tablet: {
     breakpoint: { max: 992, min: 576 },
     items: 3,
-    partialVisibilityGutter: 30 // this is optional if you are not using partialVisible props
+    partialVisibilityGutter: 30
   },
   mobile: {
     breakpoint: { max: 576, min: 0 },
     items: 1,
-    partialVisibilityGutter: 30 // this is optional if you are not using partialVisible props
+    partialVisibilityGutter: 30
   }
 };
 
-export default class SubEvent extends Component {
+export default class TechCarousel extends Component {
   render() {
-    //const {category} = this.props.match.params
-    //console.log(category)
-    //console.log(Object.values(data.categories[category])[0].bg);
     let index;
     const CustomButtonGroup = ({
       next,
@@ -89,14 +86,15 @@ export default class SubEvent extends Component {
       goToSlide,
       carouselState
     }) => {
-      const { totalItems, currentSlide } = carouselState;
+      const { currentSlide } = carouselState;
 
       index = currentSlide + 4;
-      while (index >= 14) {
+      if (index >= 22) {
         index = index - 12;
       }
-
-      console.log(currentSlide, index);
+      if (index <= 1) {
+        index = index + 12;
+      }
 
       if (window.innerWidth <= 992 && window.innerWidth >= 576) {
         index = index + 3;
@@ -105,10 +103,7 @@ export default class SubEvent extends Component {
             <button className="thumb_slider" onClick={() => previous()}>
               {React.Children.toArray(thumbnail)[index - 1]}
             </button>
-            <button
-              className="thumb_slider zoom"
-              onClick={() => goToSlide(index)}
-            >
+            <button className="thumb_slider zoom">
               {React.Children.toArray(thumbnail)[index]}
             </button>
             <button className="thumb_slider" onClick={() => next()}>
@@ -119,15 +114,13 @@ export default class SubEvent extends Component {
       }
       if (window.innerWidth <= 576) {
         index = index + 6;
+
         return (
           <div className="custom-button-group">
             <button className="thumb_slider" onClick={() => previous()}>
               {React.Children.toArray(thumbnail)[index - 1]}
             </button>
-            <button
-              className="thumb_slider zoom"
-              onClick={() => goToSlide(index)}
-            >
+            <button className="thumb_slider zoom">
               {React.Children.toArray(thumbnail)[index]}
             </button>
             <button className="thumb_slider" onClick={() => next()}>
@@ -136,37 +129,36 @@ export default class SubEvent extends Component {
           </div>
         );
       }
-
       return (
         <div className="custom-button-group">
-          <button className="thumb_slider" onClick={() => goToSlide(index - 2)}>
-            {React.Children.toArray(thumbnail)[index - 2]}{" "}
+          <button className="thumb_slider" onClick={() => goToSlide(index - 6)}>
+            {React.Children.toArray(thumbnail)[index - 2]}
           </button>
           <button className="thumb_slider" onClick={() => previous()}>
             {React.Children.toArray(thumbnail)[index - 1]}
           </button>
           <button
             className="thumb_slider zoom"
-            onClick={() => goToSlide(index)}
+            onClick={() => goToSlide(index + 8)}
           >
             {React.Children.toArray(thumbnail)[index]}
           </button>
           <button className="thumb_slider" onClick={() => next()}>
             {React.Children.toArray(thumbnail)[index + 1]}
           </button>
-          <button className="thumb_slider" onClick={() => goToSlide(index + 2)}>
-            {React.Children.toArray(thumbnail)[index + 2]}{" "}
+          <button className="thumb_slider" onClick={() => goToSlide(index - 2)}>
+            {React.Children.toArray(thumbnail)[index + 2]}
           </button>
         </div>
       );
     };
 
     return (
-      <div
+      <section
         className="container_event"
         style={{ backgroundImage: `url(${tech})` }}
       >
-        <h1>TECH </h1>
+        <h1>Tech</h1>
         <Carousel
           focusOnSelect={false}
           arrows={false}
@@ -180,13 +172,13 @@ export default class SubEvent extends Component {
         >
           {images.map((card, i) => {
             return (
-              <Link to={"/tech/" + i + 1}>
-                <img src={card} className="slide_card" />
+              <Link key={i} to={`/event/tech/${i + 1}`}>
+                <img src={card} className="slide_card" alt="tech events" />
               </Link>
             );
           })}
         </Carousel>
-      </div>
+      </section>
     );
   }
 }
