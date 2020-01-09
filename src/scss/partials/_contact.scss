@@ -1,70 +1,60 @@
-.contact_main{
-   /* background-image:url(../../img/team.jpg)  ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-position-y: bottom 10%;
-    height:100vh;
-    width: 100vw;
-    @include xl{
-        height:100%;
-        //background-position: 20%;        
-    }*/
-    min-height: 100vh;
-    min-height: calc(var(--vh, 1vh) * 100);
-    height: 100vh;
-    background-image: url("../../img/team.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
-    background-position-y: bottom 10%;
-    @include lg{
-        background-position-x: 20%;
-        //background-position-y: 30%;
-        height: 100%;
-    }
-}
-
-.venue_box{
+$contact-map-width: 70vw;
+$contact-accent-color: pink;
+.contact-page {
+  background-image: url("../../img/backgrounds/contact-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  .info-box {
     display: flex;
-    flex-direction: row;
-    margin-top: 120px;
-    justify-content: space-evenly;
-    @include lg{
-        margin-top: 80px;
-        flex-direction: column;
-        align-items: center;
+    justify-content: space-between;
+    @include md {
+      flex-direction: column;
     }
-}
-.venue_title{
-    color: white;
-    font-size: 2.3em;
-    font-family: 'Oswald',sans-serif;
-    @include md{
-        font-size: 2em;
+    .address {
+      width: calc(100vw - #{$contact-map-width});
+      color: #fff;
+      @include md {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      h3 {
+        margin: 10px 0;
+        color: $contact-accent-color;
+      }
+      p {
+        font-size: 1.25rem;
+        a {
+          text-decoration: none;
+          color: #eee;
+        }
+      }
+      .social-icons {
+        svg {
+          fill: #fff;
+          &:hover {
+            fill: $contact-accent-color;
+          }
+        }
+      }
     }
-}
-
-.adress{
-    font-family: 'Abel',sans-serif;
-    font-size: 2em;
-    font-weight: 100;
-    color: white;
-    @include md{
-        font-size: 1.8em;
+    .map {
+      width: $contact-map-width;
+      @include md {
+        width: 100%;
+      }
     }
-}
-
-iframe{
-    width:700px;
-    height: 600px;
-    margin-top: 50px;
-    @include md{
-        //width:330px;
-        width:95%;
-        height:350px;
+    iframe {
+      height: 70vh;
+      width: 100%;
     }
-    
+  }
+  .contact-icon {
+    font-size: 2rem;
+    vertical-align: middle;
+    margin-right: 10px;
+    color: $contact-accent-color;
+  }
 }
