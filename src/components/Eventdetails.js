@@ -1,61 +1,60 @@
-import React, { Component } from 'react'
-import data from "../events_new"
-import games from "../img/Gamex.jpg"
-import gamex from "../img/GamexBg.jpg";
-import cult from "../img/CultBg.jpg";
-import tech from "../img/TechBG.jpg";
-import food from "../img/FoodBg.jpg";
-import art from "../img/ArtBg.jpg";
+import React from "react";
+import { Redirect } from "react-router-dom";
+import data from "../events.json";
 
-export default class Eventdetails extends Component {
-   
-  render() {
-    const {category} = this.props.match.params
-    const {id} = this.props.match.params
+const toTitleCase = text =>
+  text.replace(/\w\S*/g, function(txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
 
-   // console.log(Object.values())
+const EventDetails = props => {
+  const { category, id } = props.match.params;
+  const bgImg = require(`../img/backgrounds/${toTitleCase(category)}Bg.jpg`);
+  const details = Object.values(data.categories[category]).filter(
+    x => Object.values(x)[0].id === parseInt(id)
+  )[0];
+  if (details === undefined || details.length === 0) {
+    return <Redirect to="/404" />;
+  }
 
-            return (
-            
-            <div className="card_details" style={{backgroundImage:`url(${gamex})`}}>
-                <h1>{category}</h1>
-                { Object.values(data.categories[category]).map(x => 
-                Object.values(x)[0].id == id ? //(<h1>{Object.values(x)[0].description}</h1>): ""
-                (
-                  <div className="card_indi">
-                     <img src={games} className="event_decard" style={{borderRadius:"20px"}} height="460" width="400"/> 
-                    <div className="written">
-                     <p>{Object.values(x)[0].description}</p> 
-                     <div className="but_eve">
-                     <button className="event_but">
-                            RULES
-                        </button>
-                        <button className="event_but">
-                            REGISTER
-                        </button>
-                        </div>
-                        </div>
-                  </div>
-                  
-                ):""
-         ) }
-             </div>
-         
-        )
-    }
+  const title = Object.keys(details)[0];
+  const { description, rules, img_path } = Object.values(details)[0];
+  return (
+    <section
+      style={{
+        backgroundImage: `url(${bgImg})`,
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed"
+      }}
+      className="event-detail-wrapper"
+    >
+      <h1>{toTitleCase(category)}</h1>
+      <div className="event-card">
+        <div className="event-img">
+          <img
+            src={require(`../img/${toTitleCase(
+              category
+            )}Final/${img_path}.png`)}
+            alt={title}
+          />
+        </div>
+        <div className="event-details">
+          <div className="event-text">
+            <h3>{title}</h3>
+            <div className="description">
+              {description.split("\n").map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+          </div>
+          <div className="event-buttons">
+            <button>Rules</button>
+            <button>Register</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-}
-
-
-
-/*
-const mapStateToProps = (state,ownProps) =>{
-    let id= ownProps.match.params.id
-    return{
-        detail:state.categories.gamex.find(detail => detail.id===id)
-    }
-}
-
-export default connect(mapStateToProps)(Eventdetails)
-
-*/
+export default EventDetails;

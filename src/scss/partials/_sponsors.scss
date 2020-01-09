@@ -1,7 +1,8 @@
 .sponsor-page {
-  background-image: url(../../img/team.jpg);
+  background-image: url("../../img/backgrounds/sponsor-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   padding-bottom: 20px;
   .sponsors-container {
     display: flex;

@@ -1,188 +1,184 @@
-.main_ev{
-    min-height: 100vh;
-    min-height: calc(var(--vh, 1vh) * 100);
-    height: 100vh;
-    background-image: url("../../img/MainEventBg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
-    //background-position-y: bottom 10%;
-    text-align: center;
-    user-select: none;
-    @include md{
-        height:100%;
-        background-position-x: 40%;
-    }
+.main_ev {
+  background-image: url("../../img/backgrounds/MainEventBg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 0 !important;
+  text-align: center;
+  @include sm {
+    padding: 0 !important;
+  }
+  @include md {
+    height: 100%;
+    background-position-x: 40%;
+  }
 }
 
+.diamond {
+  display: grid;
+  margin-top: -20px !important;
+  justify-content: center;
+  margin-top: 30px;
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-gap: 0px;
+  img {
+    cursor: pointer;
+  }
+  @include md {
+    grid-template-columns: repeat(auto-fit, 140px);
+    margin-left: -60px;
+  }
+  @include sm-lt {
+    grid-template-columns: repeat(auto-fit, 180px);
+    margin-left: -70px;
+  }
 
-.diamond{
-    display:grid;
-    //margin-left: 205px;
-    //align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-    grid-template-columns: repeat(auto-fit,300px);
-    grid-gap:0px;
-    @include md{
-        grid-template-columns: repeat(auto-fit,140px);  
-        margin-left:-60px; 
-    }
-    @include sm-lt{
-        grid-template-columns: repeat(auto-fit, 180px);
-        margin-left:-70px;
-    }
+  @include md-lt {
+    grid-template-columns: repeat(auto-fit, 170px);
+    margin-left: -30px;
+  }
 
-    @include md-lt{
-        grid-template-columns: repeat(auto-fit, 170px);
-        margin-left:-30px;
-    }
-
-    @include lg-lt{
-        grid-template-columns: repeat(auto-fit, 200px);
-    }
-    @include xl-lt{
-        grid-template-columns: repeat(auto-fit, 260px);  
-       // margin-left: -20px;
-    }
-
+  @include lg-lt {
+    grid-template-columns: repeat(auto-fit, 200px);
+  }
+  @include xl-lt {
+    grid-template-columns: repeat(auto-fit, 260px);
+    // margin-left: -20px;
+  }
 }
-.upper_img:nth-child(1){
+.upper_img:nth-child(1) {
+  margin-top: 80px;
+  margin-left: 60px;
+  @include md {
+    width: 150px;
+    height: 150px;
+    margin-left: 70px;
+  }
+  @include sm-lt {
+    width: 180px;
+    height: 180px;
+  }
+
+  @include md-lt {
+    width: 200px;
+    height: 200px;
+  }
+  @include lg-lt {
+    width: 250px;
+    height: 250px;
+  }
+  @include xl-lt {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+.upper_img:nth-child(2) {
+  @include md {
+    width: 150px;
+    height: 150px;
+    margin-left: 10px;
+  }
+  @include sm-lt {
+    margin-left: -20px;
+    width: 180px;
+    height: 180px;
+  }
+  @include md-lt {
+    width: 200px;
+    height: 200px;
+  }
+  @include lg-lt {
+    width: 250px;
+    height: 250px;
+  }
+  @include xl-lt {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+.upper_img:nth-child(3) {
+  margin-top: 140px;
+  margin-left: -80px;
+  @include md {
+    width: 150px;
+    height: 150px;
     margin-top: 80px;
-    margin-left:60px;
-    @include md{
-       width: 150px; 
-       height: 150px;
-       margin-left:70px;
-    }
-    @include sm-lt{
-        width: 180px;
-        height: 180px;
-    }
-    
-    @include md-lt{
-        width:200px;
-        height:200px;
-    }
-    @include lg-lt{
-        width:250px;
-        height:250px;
-    }
-    @include xl-lt{
-        width:280px;
-        height:280px;
-    }
-    
+    margin-left: -50px;
+  }
+  @include sm-lt {
+    margin-left: -100px;
+    width: 180px;
+    height: 180px;
+  }
+  @include md-lt {
+    width: 200px;
+    height: 200px;
+  }
+  @include lg-lt {
+    width: 250px;
+    height: 250px;
+  }
+  @include xl-lt {
+    width: 280px;
+    height: 280px;
+  }
 }
 
-.upper_img:nth-child(2){
-   
-    @include md{
-        width: 150px;
-        height:150px;
-        margin-left: 10px;
-    }
-    @include sm-lt{
-        margin-left: -20px;
-        width: 180px;
-        height: 180px;
-    }
-    @include md-lt{
-        width:200px;
-        height:200px;
-    }
-    @include lg-lt{
-        width:250px;
-        height:250px;
-    }
-    @include xl-lt{
-        width:280px;
-        height:280px;
-    }
+.upper_img:nth-child(4) {
+  margin-left: -140px;
+  margin-top: 70px;
+  @include md {
+    margin-left: 100px;
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+  }
+  @include sm-lt {
+    // margin-left: -20px;
+    width: 180px;
+    height: 180px;
+  }
+  @include md-lt {
+    width: 200px;
+    height: 200px;
+  }
+  @include lg-lt {
+    width: 250px;
+    height: 250px;
+  }
+  @include xl-lt {
+    width: 280px;
+    height: 280px;
+  }
 }
 
-.upper_img:nth-child(3){
-    margin-top: 140px;
-    margin-left:-80px; 
-    @include md{
-        width: 150px; 
-        height: 150px;
-        margin-top: 80px;
-        margin-left: -50px;
-     }
-     @include sm-lt{
-        margin-left: -100px;
-        width: 180px;
-        height: 180px;
-    }
-     @include md-lt{
-        width:200px;
-        height:200px;
-    }
-    @include lg-lt{
-        width:250px;
-        height:250px;
-    }
-    @include xl-lt{
-        width:280px;
-        height:280px;
-    }
-}
-
-.upper_img:nth-child(4){
-    margin-left: -140px;
-    margin-top:70px;
-    @include md{
-        margin-left:100px;
-        margin-top: 20px;
-        width: 150px;
-        height:150px;
-        
-    }
-    @include sm-lt{
-       // margin-left: -20px;
-       width: 180px;
-       height: 180px;
-    }
-    @include md-lt{
-        width:200px;
-        height:200px;
-    }
-    @include lg-lt{
-        width:250px;
-        height:250px;
-    }
-    @include xl-lt{
-        width:280px;
-        height:280px;
-    }
-}
-
-.upper_img:nth-child(5){
-    margin-top: 220px;
-    margin-left: -240px;
-    @include md{
-        margin-left: 60px;
-        margin-top: 40px;
-        width: 150px;
-        height: 150px;
-     }
-     @include sm-lt{
-        margin-left:35px; 
-        width: 180px;
-        height: 180px;
-    }
-     @include md-lt{
-        width:200px;
-        height:200px;
-    }
-    @include lg-lt{
-        width:250px;
-        height:250px;
-    }
-    @include xl-lt{
-        width:280px;
-        height:280px;
-    }
+.upper_img:nth-child(5) {
+  margin-top: 220px;
+  margin-left: -240px;
+  @include md {
+    margin-left: 60px;
+    margin-top: 40px;
+    width: 150px;
+    height: 150px;
+  }
+  @include sm-lt {
+    margin-left: 35px;
+    width: 180px;
+    height: 180px;
+  }
+  @include md-lt {
+    width: 200px;
+    height: 200px;
+  }
+  @include lg-lt {
+    width: 250px;
+    height: 250px;
+  }
+  @include xl-lt {
+    width: 280px;
+    height: 280px;
+  }
 }

@@ -1,46 +1,54 @@
-import React from 'react';
-import {Route,Switch} from 'react-router-dom';
-import SubEvent from "../src/components/SubEvent"
+import React from "react";
+import { Route, Switch, Link, withRouter } from "react-router-dom";
 
-import SubEventCult from "../src/components/CultCarousel"
-import Eventdetails from './components/Eventdetails';
-import LandingMain from './components/LandingMain';
-import Pronite from './components/Pronite';
+import LandingMain from "./components/LandingMain";
 import Team from "./components/Team";
-import Contact from './components/Contact';
-import Sponsors from './components/Sponsors';
-import Event from './components/Event';
+import Pronite from "./components/Pronite";
 import Navbar from "./components/Navbar";
-import GamexCarousel from './components/GamexCarousel';
-import ArtCarousel from './components/ArtCarousel';
-import FoodCarousel from './components/FoodCarousel';
+import Sponsors from "./components/Sponsors";
+import Event from "./components/Event";
 import About from "./components/About";
+import Contact from "./components/Contact";
+import TechCarousel from "./components/TechCarousel";
+import CultCarousel from "../src/components/CultCarousel";
+import GamexCarousel from "./components/GamexCarousel";
+import EventDetails from "./components/EventDetails";
+import ArtCarousel from "./components/ArtCarousel";
+import FoodCarousel from "./components/FoodCarousel";
 import Error from "./components/Error404";
 
-function App() {
+import logo from "./img/logo.png";
+
+const App = ({ location }) => {
   const [isOpen, setIsOpen] = React.useState(false);
-  return ( 
+  //const [displayLogo, setDisplayLogo] = React.useState(false);
+  return (
     <>
+      {location.pathname !== "/" && (
+        <Link to="/">
+          <img className="main-logo" src={logo} alt="advaita" />
+        </Link>
+      )}
       <Navbar isOpen={isOpen} toggleMenu={setIsOpen} />
       <Switch>
-    <Route exact path="/event/tech" component= {SubEvent}  />
-        <Route exact path="/event/cult" component= {SubEventCult}  />
-        <Route exact path="/pronite" component= {Pronite} />
-        <Route exact path="/team" component= {Team} />
-        <Route exact path="/pronite" component={Pronite} />
-        <Route exact path="/team" component={Team} />
-        <Route exact path="/contact" component={Contact} />
-        <Route exact path="/sponsors" component={Sponsors} />
-        <Route exact path="/event" component={Event} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/" component={LandingMain} />
-        <Route exact path="/event/gamex" component={GamexCarousel} />
-        <Route exact path="/event/art" component={ArtCarousel} />
-        <Route exact path="/event/food" component={FoodCarousel} />
+        <Route path="/event/cult" component={CultCarousel} exact />
+        <Route path="/event/tech" component={TechCarousel} exact />
+        <Route path="/event/gamex" component={GamexCarousel} exact />
+        <Route path="/event/art" component={ArtCarousel} exact />
+        <Route path="/event/food" component={FoodCarousel} exact />
+        <Route path="/event/:category/:id" component={EventDetails} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/sponsors" component={Sponsors} />
+        <Route path="/pronite" component={Pronite} />
+        <Route path="/event" component={Event} />
+        <Route path="/team" component={Team} />
+        <Route path="/about" component={About} />
+        <Route path="/" component={LandingMain} exact />
+
         <Route component={Error} />
       </Switch>
     </>
-  )
-}
+  );
+};
 
-export default App;
+export default withRouter(App);

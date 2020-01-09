@@ -43,21 +43,21 @@ const Contact = () => {
               <a
                 href="https://www.facebook.com/advaita.iiit/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noreferrer noopener"
               >
                 <AiFillFacebook />
               </a>
               <a
                 href="https://instagram.com/advaita_iiitbh"
                 target="_blank"
-                rel="noreferrer"
+                rel="noreferrer noopener"
               >
                 <AiFillInstagram />
               </a>
               <a
                 href="https://www.youtube.com/channel/UCkULTsUj0_Ukm9DWOtin5yw"
                 target="_blank"
-                rel="noreferrer"
+                rel="noreferrer noopener"
               >
                 <AiFillYoutube />
               </a>
