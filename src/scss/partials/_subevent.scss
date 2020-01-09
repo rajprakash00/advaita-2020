@@ -1,0 +1,64 @@
+.container_event {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  h1 {
+    text-align: center;
+    color: white;
+  }
+  .container-padding-bottom {
+    padding-bottom: 100px;
+
+    @include md {
+      padding-bottom: 70px;
+    }
+  }
+
+  .custom-button-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .thumb_name {
+      color: white;
+      padding: 5px 0;
+      font-size: 2em;
+      @include md {
+        font-size: 1.5em;
+      }
+    }
+
+    .thumb_slider {
+      border: none;
+      border-radius: 5px;
+      width: 200px;
+      background: black;
+      padding-right: 10px;
+      padding-left: 10px;
+      @include md {
+        width: 150px;
+      }
+    }
+  }
+  .zoom {
+    transform: scale(1.2);
+    display: block;
+    margin: 1px;
+  }
+  .slide_card {
+    width: 80%;
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 20px;
+    @include md {
+      width: 70%;
+    }
+  }
+
+  .slide {
+    width: 70px;
+    height: 50px;
+  }
+}
