@@ -6,29 +6,33 @@ import collart from "../img/ArtFinal/Coll.png";
 import photo from "../img/ArtFinal/Exhiu.png";
 import imagen from "../img/ArtFinal/Imag.png";
 import picasso from "../img/ArtFinal/Pic.png";
+import photoGeek from "../img/ArtFinal/PhotoGeek.png"
+import artBg from "../img/backgrounds/ArtBg.jpg"
 
-const images = [collart, photo, imagen, picasso];
+const images = [collart, photo, imagen, picasso,photoGeek];
 
 const thumbnail = [
   <h1 className="thumb_name">COLLART</h1>,
   <h1 className="thumb_name">PHOTO</h1>,
   <h1 className="thumb_name">IMAGEN</h1>,
   <h1 className="thumb_name">PICASSO</h1>,
+  <h1 className="thumb_name">Photo Geek</h1>,
   <h1 className="thumb_name">COLLART</h1>,
   <h1 className="thumb_name">PHOTO</h1>,
   <h1 className="thumb_name">IMAGEN</h1>,
-  <h1 className="thumb_name">PICASSO</h1>
+  <h1 className="thumb_name">PICASSO</h1>,
+  <h1 className="thumb_name">Photo Geek</h1>
 ];
 
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 992 },
-    items: 2,
+    items: 5,
     partialVisibilityGutter: 40
   },
   tablet: {
     breakpoint: { max: 992, min: 576 },
-    items: 2,
+    items: 3,
     partialVisibilityGutter: 30
   },
   mobile: {
@@ -53,29 +57,67 @@ export default class ArtCarousel extends Component {
       while (index >= 4) {
         index = index - 2;
       }
-      if (window.innerWidth <= 576) {
-        index = index + 2;
+ 
+        if (window.innerWidth <= 992 && window.innerWidth >= 576) {
+          index = index + 3;
+          return (
+            <div className="custom-button-group">
+              <button className="thumb_slider" onClick={() => previous()}>
+                {React.Children.toArray(thumbnail)[index - 1]}
+              </button>
+              <button className="thumb_slider zoom">
+                {React.Children.toArray(thumbnail)[index]}
+              </button>
+              <button className="thumb_slider" onClick={() => next()}>
+                {React.Children.toArray(thumbnail)[index + 1]}
+              </button>
+            </div>
+          );
+        }
+        if (window.innerWidth <= 576) {
+          index = index + 6;
+  
+          return (
+            <div className="custom-button-group">
+              <button className="thumb_slider" onClick={() => previous()}>
+                {React.Children.toArray(thumbnail)[index - 1]}
+              </button>
+              <button className="thumb_slider zoom">
+                {React.Children.toArray(thumbnail)[index]}
+              </button>
+              <button className="thumb_slider" onClick={() => next()}>
+                {React.Children.toArray(thumbnail)[index + 1]}
+              </button>
+            </div>
+          );
+        }
         return (
           <div className="custom-button-group">
+            <button className="thumb_slider" onClick={() => goToSlide(index - 6)}>
+              {React.Children.toArray(thumbnail)[index - 2]}
+            </button>
             <button className="thumb_slider" onClick={() => previous()}>
               {React.Children.toArray(thumbnail)[index - 1]}
             </button>
-
-            <button className="thumb_slider" onClick={() => goToSlide(index)}>
+            <button
+              className="thumb_slider zoom"
+              onClick={() => goToSlide(index + 8)}
+            >
               {React.Children.toArray(thumbnail)[index]}
             </button>
-
             <button className="thumb_slider" onClick={() => next()}>
               {React.Children.toArray(thumbnail)[index + 1]}
             </button>
+            <button className="thumb_slider" onClick={() => goToSlide(index - 2)}>
+              {React.Children.toArray(thumbnail)[index + 2]}
+            </button>
           </div>
         );
-      }
-
-      return null;
-    };
+        };
     return (
-      <section className="container_eve_art">
+      <section className="container_event"
+      style={{ backgroundImage: `url(${artBg})` }}
+      >
         <h1>Art & Photography</h1>
         <Carousel
           focusOnSelect={false}
@@ -91,7 +133,7 @@ export default class ArtCarousel extends Component {
           {images.map((card, i) => {
             return (
               <Link key={i} to={`/event/art/${i + 1}`}>
-                <img src={card} className="slide_card_two" alt="art card" />
+                <img src={card} className="slide_card" alt="art card" />
               </Link>
             );
           })}

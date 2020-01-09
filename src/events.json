@@ -46,7 +46,7 @@
       },
       {
         "TillICollapse": {
-          "id": 8,
+          "id": 9,
           "description": "Rapping is a form of music that has something called a beat to it, something that sounds very attractive and appealing.\n Coming down to the beginning of a new decade,Hip-hop is making a lot of noise & It should get some more spotlight. To all the underground rappers in the city, Bhubaneswar had it coming.<br>With the growing number of rappers in the city, we gladly present to you “Till I Collapse”, the rap battle competition of Advaita 2K20, a perfect platform to showcase your talent.",
           "rules": "rules.pdf",
           "img_path": "RapBattle"
@@ -54,7 +54,7 @@
       },
       {
         "Pradarshan": {
-          "id": 9,
+          "id": 8,
           "description": "Street theatre has acquired an image of a more moral nature with just the right kind of fun. Better known as ‘nukad natak’, is perhaps the best way to connect with the common man and the youth. These are much more intimate, brief, direct and address the social/political message head-on with the help of drama. Nukad nataks are an important tool in creating awareness, empowering the youth and utilizing our right to freedom of speech and expression positively. Nukkad nataks have evolved through the years conveying a message to the society. Boost yourself with all your energy and let your choices be heard DEEP, LOUD AND CLEAR.\nHere by we present to you 'PRADARSHAN', the nukkad natak competition of Advaita 2k20! A platform where you get to voice your opinions through this colloquial form of drama with all the catchy phrases and songs, crisp script, humor and loudness, making a long lasting and powerful effect on the audience",
           "rules": "rules.pdf",
           "img_path": "Pradarshan"
@@ -131,10 +131,10 @@
       },
       {
         "Battlefield": {
-          "id": 16,
+          "id": 1,
           "description": "Advaita brings you the knockout programming event in which 32 individuals will battle against each other based on programming questions.So total 16 battles in   each round. The winners move on to the next round where there will be 8 matches. And this process will go on and finally in the last round we get the winner. ", 
           "rules": "rules.pdf",
-          "img_path": ""
+          "img_path": "Battlefield"
         }
       },
       {
@@ -150,31 +150,31 @@
           "id": 9,
           "description": "It is an extreme automated robot challenge that pivots on the robot to follow a specific path. Participants have to develop an algorithm as well as design robot to follow the path and overcome hindrances and obstacles in the path.",
           "rules": "rules.pdf",
-          "img_path": "LineFollower"
+          "img_path": "LineFol"
         }
       },
       {
         "Encoded": {
-          "id": 19,
+          "id": 8,
           "description": "Advaita brings you a 36 hours hackathon event to showcase your skills in the tech field. So if you have some idea, build it, show it and have a chance to take home some hefty prizes, from the premiere​ hackathon event of ADVAITA. ", 
           "rules": "rules.pdf",
-          "img_path": ""
+          "img_path": "Encoded"
         }
       },
       {
         "CTF": {
-          "id": 20,
+          "id": 5,
           "description": "This time Advaita gives you a chance to display your hacking and cracking skills by breaking through our custom vulnerable machines and capturing the flags we have hidden for you.<br>In this event a platform will be given providing you with few machines and challenges to crack in the stipulated amount of time.<br>Each machine/challenge will have a flag which you have to find. The winner will be that person who will be able to reach to all our flags first", 
           "rules": "rules.pdf",
-          "img_path": ""
+          "img_path": "CTF"
         }
       },
       {
         "Arduinoob": {
-          "id": 21,
+          "id": 12,
           "description": "Advaita brings you an arduino based hackathon event. This event invites all the young minds who can code their arduino and compete in this hackathon event. ",
           "rules": "rules.pdf",
-          "img_path": ""
+          "img_path": "Arduinoob"
         }
       }
     ],
@@ -253,34 +253,34 @@
       },
       {
         "InterCollegeFootball": {
-          "id": 3,
+          "id": 6,
           "description": "An inter-college football tournament where teams from different colleges will take part. The winning and the runners up team will be felicitated and cash prizes will be awarded. There will also be prizes for the best player and an emerging player.", 
           "rules": "rules.pdf",
-          "img_path": "CSGO"
+          "img_path": "Football"
         }
       },
       {
         "InterCollegeBasketball": {
-          "id": 4,
+          "id": 3,
           "description": "An inter-college basketball tournament will be organized for both boys and girls where teams from different colleges will take part.", 
           "rules": "rules.pdf",
-          "img_path": "CSGO"
+          "img_path": "Basket"
         }
       },
       {
         "InterCollegeChess": {
-          "id": 5,
+          "id": 4,
           "description": "An inter-college chess tournament will be organized where teams from different colleges will take part. The winners and the runners up team will be facilitated.", 
           "rules": "rules.pdf",
-          "img_path": "CSGO"
+          "img_path": "Chess"
         }
       },
       {
         "SuperSix": {
-          "id": 6,
+          "id": 5,
           "description": "A fun event with different rules in the game of cricket is organized. ", 
           "rules": "rules.pdf",
-          "img_path": "CSGO"
+          "img_path": "Six"
         }
       },
       
@@ -310,7 +310,7 @@
           "id": 4,
           "description": "This will be a fastest paratha eating competition with some exciting twists<br>like chilies, spices, etc. In case of a tie a tie breaker round will be decided on the spot.", 
           "rules": "rules.pdf",
-          "img_path": ""
+          "img_path": "Shole"
         }
       },
       {
@@ -358,7 +358,7 @@
           "id": 5,
           "description": "Teamwork is the ability to work together towards a common vision. It is a team event where teams will compete in a race to eat Doughnuts hanging from a string. In this event one can experience the joy of eating with a twist of exciting challenges and dares.", 
           "rules": "rules.pdf",
-          "img_path": ""
+          "img_path": "String"
         }
       }
     ]
