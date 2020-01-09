@@ -68,7 +68,7 @@ export default class FoodCarousel extends Component {
             <button className="thumb_slider" onClick={() => previous()}>
               {React.Children.toArray(thumbnail)[index - 1]}
             </button>
-            <button className="thumb_slider zoom">
+            <button className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}>
               {React.Children.toArray(thumbnail)[index]}
             </button>
             <button className="thumb_slider" onClick={() => next()}>
@@ -85,7 +85,7 @@ export default class FoodCarousel extends Component {
             <button className="thumb_slider" onClick={() => previous()}>
               {React.Children.toArray(thumbnail)[index - 1]}
             </button>
-            <button className="thumb_slider" onClick={() => goToSlide(index)}>
+            <button className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}} onClick={() => goToSlide(index)}>
               {React.Children.toArray(thumbnail)[index]}
             </button>
             <button className="thumb_slider" onClick={() => next()}>
@@ -103,7 +103,7 @@ export default class FoodCarousel extends Component {
             {React.Children.toArray(thumbnail)[index - 1]}
           </button>
           <button
-            className="thumb_slider zoom"
+            className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}
             onClick={() => goToSlide(index + 8)}
           >
             {React.Children.toArray(thumbnail)[index]}
