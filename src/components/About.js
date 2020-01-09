@@ -7,8 +7,8 @@ const About = () => {
       <h1>About Us</h1>
       <Tilt
         className="about-text"
-        tiltMaxAngleX={5}
-        tiltMaxAngleY={5}
+        tiltMaxAngleX={0}
+        tiltMaxAngleY={1}
         perspective={1000}
       >
         <p>

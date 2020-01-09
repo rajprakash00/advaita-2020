@@ -1,6 +1,6 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
-import data from "../events_new.json";
+import data from "../events.json";
 
 const toTitleCase = text =>
   text.replace(/\w\S*/g, function(txt) {
@@ -23,7 +23,8 @@ const EventDetails = props => {
     <section
       style={{
         backgroundImage: `url(${bgImg})`,
-        backgroundSize: "cover"
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed"
       }}
       className="event-detail-wrapper"
     >
@@ -40,7 +41,11 @@ const EventDetails = props => {
         <div className="event-details">
           <div className="event-text">
             <h3>{title}</h3>
-            <p>{description}</p>
+            <div className="description">
+              {description.split("\n").map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
           </div>
           <div className="event-buttons">
             <button>Rules</button>

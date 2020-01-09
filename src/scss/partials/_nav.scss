@@ -30,40 +30,26 @@
 
 .bm-menu {
   background: #2b685d;
-  opacity: 0.85;
+  opacity: 0.7;
   font-size: 1.15em;
-  backdrop-filter: blur(10px);
-}
-
-.bm-morph-shape {
-  fill: #2b685d;
-  opacity: 0.85;
   backdrop-filter: blur(10px);
 }
 
 .bm-item-list {
   color: #b8b7ad;
-  padding: 0.8em;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.nav-links {
   &:focus {
     outline: none;
   }
   .nav-link {
     text-decoration: none;
-    display: block;
     width: 100%;
     padding: 20px 0;
-    margin: 10px 0;
+    margin: 10px -10px;
     text-align: center;
     color: #e0d065;
     font-size: 1.5em;
@@ -73,4 +59,8 @@
       color: #fff;
     }
   }
+}
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
 }

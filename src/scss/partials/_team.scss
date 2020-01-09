@@ -6,7 +6,8 @@
   background-position: center;
   .team-heading {
     font-size: 3rem;
-    margin: 10px 0;
+    margin: 20px 0 10px 0;
+    padding-top: 0 !important;
   }
   .team-container {
     display: flex;
@@ -30,7 +31,7 @@
     text-align: center;
     color: #fff;
     img {
-      width: 80%;
+      width: 100%;
     }
     @include md {
       margin: 10px 0;
@@ -44,10 +45,12 @@
     .tilt-content {
       transform: translateZ(20px);
       h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        font-family: "Arimo", sans-serif;
       }
       h3 {
-        font-size: 1.5rem;
+        font-size: 1rem;
+        font-family: "Arimo", sans-serif;
       }
       .social-icons {
         svg {

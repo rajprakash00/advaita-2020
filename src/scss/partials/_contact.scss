@@ -1,9 +1,11 @@
 $contact-map-width: 70vw;
+$contact-accent-color: pink;
 .contact-page {
   background-image: url("../../img/backgrounds/contact-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
   .info-box {
     display: flex;
     justify-content: space-between;
@@ -20,7 +22,7 @@ $contact-map-width: 70vw;
       }
       h3 {
         margin: 10px 0;
-        color: yellow;
+        color: $contact-accent-color;
       }
       p {
         font-size: 1.25rem;
@@ -33,7 +35,7 @@ $contact-map-width: 70vw;
         svg {
           fill: #fff;
           &:hover {
-            fill: yellow;
+            fill: $contact-accent-color;
           }
         }
       }
@@ -53,6 +55,6 @@ $contact-map-width: 70vw;
     font-size: 2rem;
     vertical-align: middle;
     margin-right: 10px;
-    color: yellow;
+    color: $contact-accent-color;
   }
 }
