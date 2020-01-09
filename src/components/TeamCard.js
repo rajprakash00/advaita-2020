@@ -19,17 +19,17 @@ const TeamCard = props => {
         <h3>{props.number}</h3>
         <div className="social-icons">
           {props.fb ? (
-            <a href={props.fb} target="_blank" rel="noreferrer">
+            <a href={props.fb} target="_blank" rel="noopener noreferrer">
               <FaFacebookSquare />
             </a>
           ) : null}
           {props.insta ? (
-            <a href={props.insta} target="_blank" rel="noreferrer">
+            <a href={props.insta} target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
           ) : null}
           {props.tweet ? (
-            <a href={props.tweet} target="_blank" rel="noreferrer">
+            <a href={props.tweet} target="_blank" rel="noopener noreferrer">
               <FaTwitterSquare />
             </a>
           ) : null}

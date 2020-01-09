@@ -69,7 +69,6 @@ export default class SubEvent extends Component {
       }
 
       if (window.innerWidth <= 992 && window.innerWidth >= 576) {
-        index = index;
         return (
           <div className="custom-button-group">
             <button className="thumb_slider" onClick={() => previous()}>
@@ -151,12 +150,7 @@ export default class SubEvent extends Component {
           {images.map((card, i) => {
             return (
               <Link key={i} to={`/event/cult/${i + 1}`}>
-                <img
-                  src={card}
-                  alt="cult card"
-                  className="slide_card"
-                  alt="cult card"
-                />
+                <img src={card} alt="cult card" className="slide_card" />
               </Link>
             );
           })}

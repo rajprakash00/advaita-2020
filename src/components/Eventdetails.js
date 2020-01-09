@@ -11,7 +11,7 @@ const EventDetails = props => {
   const { category, id } = props.match.params;
   const bgImg = require(`../img/backgrounds/${toTitleCase(category)}Bg.jpg`);
   const details = Object.values(data.categories[category]).filter(
-    x => Object.values(x)[0].id == id
+    x => Object.values(x)[0].id === parseInt(id)
   )[0];
   if (details === undefined || details.length === 0) {
     return <Redirect to="/404" />;
