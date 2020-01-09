@@ -167,7 +167,7 @@ export default class SubEvent extends Component {
           {
             images.map((card,i) =>{
               return (
-               <Link to={'/tech/'+i+1}><img src={card} className="slide_card"  /></Link> 
+               <Link to={`/event/tech/${i+1}`}><img src={card} className="slide_card"  /></Link> 
               
               )
             })

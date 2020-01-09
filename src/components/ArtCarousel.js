@@ -25,6 +25,7 @@ const thumbnail=[
     <h1 className="thumb_name">IMAGEN</h1>,
     <h1 className="thumb_name">PICASSO</h1>,    
     
+    
     ]
 
     const responsive={
@@ -52,12 +53,12 @@ export default class ArtCarousel extends Component {
             const { totalItems, currentSlide } = carouselState;
               
             index=currentSlide+4
-            while (index>=4){
-              index=index-2
+            while (index>=6){
+              index=index-4
             }
             console.log(currentSlide,index)
             if(window.innerWidth <= 576){
-              index=index +2
+              index=index -2
               /*while(index>=2)
               {index=index-2}*/
               return (
@@ -94,7 +95,7 @@ export default class ArtCarousel extends Component {
                 {
                     images.map((card,i) =>{
                     return (
-                        <Link to={'/art/'+i+1}><img src={card} className="slide_card_two"  /></Link> 
+                        <Link to={`/event/art/${i+1}`}><img src={card} className="slide_card_two"  /></Link> 
                     
                     )
                     })

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import TeamCard from './TeamCard'
+import asd from "../img/asd.png"
 
 
 export default class Team extends Component {
@@ -11,11 +12,8 @@ export default class Team extends Component {
               <h1>THE TEAM</h1>  
               <div className="team_cont">
                 <TeamCard />
-                <TeamCard />
-                <TeamCard />
-                <TeamCard />
-                <TeamCard />
-                <TeamCard />
+                
+
               </div>
             </div>
         )

@@ -81,7 +81,7 @@ export default class GamexCarousel extends Component {
                 {
                     images.map((card,i) =>{
                     return (
-                        <Link to={'/gamex/'+i+1}><img src={card} className="slide_card_two"  /></Link> 
+                        <Link to={`/event/gamex/${i+1}`}><img src={card} className="slide_card_two"  /></Link> 
                     
                     )
                     })

@@ -130,29 +130,7 @@ export default class SubEvent extends Component {
         </div>
       );
     };
-  /*  const CustomDot = ({
-      index,
-      onClick,
-      active,
-      carouselState: { currentSlide }
-    }) => {
-      
-      return (
-        <button
-          onClick={e => {
-            onClick();
-            
-            e.preventDefault();
-
-          }}
-          className={classNames("custom-dot", {
-            "custom-dot--active": active
-          })}
-        >
-          {index}
-        </button>
-      );
-        };*/
+  
     
     return (
      
@@ -174,7 +152,7 @@ export default class SubEvent extends Component {
           {
             images.map((card,i) =>{
               return (
-               <Link to={'/cult/'+i+1}><img src={card} className="slide_card"  /></Link> 
+               <Link to={`/event/cult/${i+1}`}><img src={card} className="slide_card"  /></Link> 
               
               )
             })

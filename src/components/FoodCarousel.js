@@ -90,7 +90,7 @@ export default class FoodCarousel extends Component {
                 {
                     images.map((card,i) =>{
                     return (
-                        <Link to={'/food/'+i+1}><img src={card} className="slide_card_two"  /></Link> 
+                        <Link to={`/event/food/${i+1}`}><img src={card} className="slide_card_two"  /></Link> 
                     
                     )
                     })
