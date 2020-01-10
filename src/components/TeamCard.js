@@ -11,6 +11,7 @@ const TeamCard = props => {
       perspective={800}
       scale={1}
       gyroscope
+      reset
     >
       <div className="tilt-content">
         <img src={require(`./../img/Team/${props.img}`)} alt={props.name} />
