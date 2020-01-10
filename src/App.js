@@ -18,6 +18,7 @@ import EventDetails from "./components/EventDetails";
 import ArtCarousel from "./components/ArtCarousel";
 import FoodCarousel from "./components/FoodCarousel";
 import Error from "./components/Error404";
+import Lastsponsor from "./components/Lastsponsor"
 
 import logo from "./img/logo.png";
 
@@ -50,7 +51,8 @@ const App = ({ location }) => {
         <Route path="/event/food" component={FoodCarousel} exact />
         <Route path="/event/:category/:id" component={EventDetails} />
         <Route path="/contact" component={Contact} />
-        <Route path="/sponsors" component={Sponsors} />
+        <Route path="/sponsors" component={Lastsponsor} />
+        <Route path="/sponsors_old" component={Sponsors} />
         {/* <Route path="/pronite" component={Pronite} /> */}
         <Route path="/event" component={Event} />
         <Route path="/team" component={Team} />
