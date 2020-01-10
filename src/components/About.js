@@ -40,15 +40,10 @@ const About = () => {
           In addition to that, our Cultural events also witness a unique
           footfall of students from different colleges of our country. With some
           illustriou stars like Mohammed Irfan, Pandit Hariprasad Chaurasia,
-          Divya Kumar, and The Raghu Dixit, Gajendra Verma alongside the most
-          famous EDM bands in the country, The Sunburn, Lagori, and The Lost
-          Stories, ADVAITA has been successful in hosting some famous celebrity
-          over the past years.
-        </p>
-        <br />
-        <p>
-          We welcome you to this new edition of ADVAITA, let's enter the cosmo
-          carnival...
+          Divya Kumar, and The Raghu Dixit, Gajendra Verma, Arjun Kanungo
+          alongside the most famous EDM bands in the country, The Sunburn,
+          Lagori, and The Lost Stories, ADVAITA has been successful in hosting
+          some famous celebrity over the past years.
         </p>
       </Tilt>
     </section>

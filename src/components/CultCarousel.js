@@ -11,30 +11,40 @@ import Lamode from "../img/CultFinal/Lamode.png";
 import HaqSe from "../img/CultFinal/HaqSe.png";
 import Rock from "../img/CultFinal/Rock.png";
 import Cult from "../img/backgrounds/CultBg.jpg";
-import Pradarshan from "../img/CultFinal/Pradarshan.png"
-import RapBattle from "../img/CultFinal/RapBattle.png"
+import Pradarshan from "../img/CultFinal/Pradarshan.png";
+import RapBattle from "../img/CultFinal/RapBattle.png";
 
-const images = [Cypher, Joker, Foot, Card, Lamode, HaqSe, Rock,Pradarshan,RapBattle];
+const images = [
+  Cypher,
+  Joker,
+  Foot,
+  Card,
+  Lamode,
+  HaqSe,
+  Rock,
+  Pradarshan,
+  RapBattle
+];
 
 const thumbnail = [
   <h1 className="thumb_name">Cypher</h1>,
-  <h1 className="thumb_name">Joker</h1>,
-  <h1 className="thumb_name">Foot</h1>,
+  <h1 className="thumb_name">MeraNaamJoker</h1>,
+  <h1 className="thumb_name">Footloose</h1>,
   <h1 className="thumb_name">Acoustica</h1>,
-  <h1 className="thumb_name">Lamode</h1>,
-  <h1 className="thumb_name">HaqSe</h1>,
-  <h1 className="thumb_name">Rock</h1>,
+  <h1 className="thumb_name">LaMoDe</h1>,
+  <h1 className="thumb_name">HaqSe Rj</h1>,
+  <h1 className="thumb_name">Rockathon</h1>,
   <h1 className="thumb_name">Pradarshan</h1>,
-  <h1 className="thumb_name">RapBattle</h1>,
+  <h1 className="thumb_name">Till I Collapse</h1>,
   <h1 className="thumb_name">Cypher</h1>,
-  <h1 className="thumb_name">Joker</h1>,
-  <h1 className="thumb_name">Foot</h1>,
+  <h1 className="thumb_name">MeraNaamJoker</h1>,
+  <h1 className="thumb_name">Footloose</h1>,
   <h1 className="thumb_name">Acoustica</h1>,
-  <h1 className="thumb_name">Lamode</h1>,
-  <h1 className="thumb_name">HaqSe</h1>,
-  <h1 className="thumb_name">Rock</h1>,
+  <h1 className="thumb_name">LaMoDe</h1>,
+  <h1 className="thumb_name">HaqSe Rj</h1>,
+  <h1 className="thumb_name">Rockathon</h1>,
   <h1 className="thumb_name">Pradarshan</h1>,
-  <h1 className="thumb_name">RapBattle</h1>,
+  <h1 className="thumb_name">Till I Collapse</h1>
 ];
 
 const responsive = {
@@ -75,15 +85,15 @@ export default class SubEvent extends Component {
       }
 
       if (window.innerWidth <= 992 && window.innerWidth >= 576) {
-        index=index+2
+        index = index + 2;
         return (
-
           <div className="custom-button-group">
             <button className="thumb_slider" onClick={() => previous()}>
               {React.Children.toArray(thumbnail)[index - 1]}
             </button>
             <button
-              className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}
+              className="thumb_slider zoom"
+              style={{ backgroundColor: "#fdb688" }}
               onClick={() => goToSlide(index)}
             >
               {React.Children.toArray(thumbnail)[index]}
@@ -95,14 +105,15 @@ export default class SubEvent extends Component {
         );
       }
       if (window.innerWidth <= 576) {
-        index = index +5;
+        index = index + 5;
         return (
           <div className="custom-button-group">
             <button className="thumb_slider" onClick={() => previous()}>
               {React.Children.toArray(thumbnail)[index - 1]}
             </button>
             <button
-              className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}
+              className="thumb_slider zoom"
+              style={{ backgroundColor: "#fdb688" }}
               onClick={() => goToSlide(index)}
             >
               {React.Children.toArray(thumbnail)[index]}
@@ -123,7 +134,8 @@ export default class SubEvent extends Component {
             {React.Children.toArray(thumbnail)[index - 1]}
           </button>
           <button
-            className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}
+            className="thumb_slider zoom"
+            style={{ backgroundColor: "#fdb688" }}
             onClick={() => goToSlide(index + 5)}
           >
             {React.Children.toArray(thumbnail)[index]}
@@ -146,7 +158,7 @@ export default class SubEvent extends Component {
         <h1>Cultural Events</h1>
         <Carousel
           focusOnSelect={false}
-          arrows={false}
+          arrows={true}
           showDots={false}
           infinite={true}
           containerClass="container-padding-bottom"

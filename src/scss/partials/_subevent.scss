@@ -6,15 +6,15 @@
   h1 {
     text-align: center;
     color: white;
-    @include md{
+    @include md {
       font-size: 2.3rem;
     }
   }
   .container-padding-bottom {
-    padding-bottom: 100px;
+    padding: 100px 0;
 
     @include md {
-      margin-top:-50px;
+      margin-top: -50px;
       padding-bottom: 70px;
     }
   }
@@ -51,11 +51,11 @@
   }
   .slide_card {
     width: 80%;
-    padding-top: 100px;
     display: flex;
     align-items: center;
     margin: 0 auto;
     border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     @include md {
       width: 70%;
     }

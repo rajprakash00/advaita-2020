@@ -15,6 +15,7 @@ const NavMenu = props => {
       isOpen={props.isOpen}
       onStateChange={() => props.toggleMenu(!props.isOpen)}
       right
+      disableAutoFocus
     >
       <NavLink className="nav-link" to="/" onClick={props.toggleMenu}>
         Home
@@ -22,9 +23,9 @@ const NavMenu = props => {
       <NavLink className="nav-link" to="/event" onClick={props.toggleMenu}>
         Events
       </NavLink>
-      <NavLink className="nav-link" to="/pronite" onClick={props.toggleMenu}>
+      {/* <NavLink className="nav-link" to="/pronite" onClick={props.toggleMenu}>
         Pronites
-      </NavLink>
+      </NavLink> */}
       <NavLink className="nav-link" to="/team" onClick={props.toggleMenu}>
         The Team
       </NavLink>

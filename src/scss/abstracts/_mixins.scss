@@ -6,11 +6,6 @@ $screen-lg-min: 992px;
 $screen-xl-min: 1200px;
 $screen-dxl-min: 1520px;
 
-/*$screen-sm-max: 577px;
-$screen-md-max: 576px;
-$screen-lg-max: 576px;*/
-
-
 @mixin sm {
   @media (max-width: #{$screen-sm-min}) {
     @content;
@@ -55,4 +50,3 @@ $screen-lg-max: 576px;*/
     @content;
   }
 }
-
