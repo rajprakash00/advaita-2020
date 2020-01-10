@@ -2,29 +2,29 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import cake from "../img/FoodFinal/Cake.png";
 import gol from "../img/FoodFinal/Gol.png";
 import maggie from "../img/FoodFinal/Maggie.png";
 import food from "../img/backgrounds/FoodBg.jpg";
 import shole from "../img/FoodFinal/Shole.png";
 import string from "../img/FoodFinal/String.png";
-import trait from "../img/FoodFinal/Trait.png"
+import trait from "../img/FoodFinal/Trait.png";
+import misc from "../img/FoodFinal/Misc.png";
 
-const images = [cake, gol, maggie,shole,string,trait];
+const images = [gol, maggie, shole, string, trait, misc];
 
 const thumbnail = [
-  <h1 className="thumb_name">cake</h1>,
-  <h1 className="thumb_name">golgappa</h1>,
-  <h1 className="thumb_name">maggie</h1>,
-  <h1 className="thumb_name">shole</h1>,
-  <h1 className="thumb_name">string</h1>,
-  <h1 className="thumb_name">trait</h1>,
-  <h1 className="thumb_name">cake</h1>,
-  <h1 className="thumb_name">golgappa</h1>,
-  <h1 className="thumb_name">maggie</h1>,
-  <h1 className="thumb_name">shole</h1>,
-  <h1 className="thumb_name">string</h1>,
-  <h1 className="thumb_name">trait</h1>
+  <h1 className="thumb_name">Golgappa King</h1>,
+  <h1 className="thumb_name">Maggie Chef</h1>,
+  <h1 className="thumb_name">Shole Parathe</h1>,
+  <h1 className="thumb_name">String Delegacy</h1>,
+  <h1 className="thumb_name">Track Bait</h1>,
+  <h1 className="thumb_name">Misc Games</h1>,
+  <h1 className="thumb_name">Golgappa King</h1>,
+  <h1 className="thumb_name">Maggie Chef</h1>,
+  <h1 className="thumb_name">Shole Parathe</h1>,
+  <h1 className="thumb_name">String Delegacy</h1>,
+  <h1 className="thumb_name">Track Bait</h1>,
+  <h1 className="thumb_name">Misc Games</h1>
 ];
 
 const responsive = {
@@ -62,13 +62,16 @@ export default class FoodCarousel extends Component {
       }
 
       if (window.innerWidth <= 992 && window.innerWidth >= 576) {
-        index = index -1;
+        index = index - 1;
         return (
           <div className="custom-button-group">
             <button className="thumb_slider" onClick={() => previous()}>
               {React.Children.toArray(thumbnail)[index - 1]}
             </button>
-            <button className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}>
+            <button
+              className="thumb_slider zoom"
+              style={{ backgroundColor: "#fdb688" }}
+            >
               {React.Children.toArray(thumbnail)[index]}
             </button>
             <button className="thumb_slider" onClick={() => next()}>
@@ -79,13 +82,17 @@ export default class FoodCarousel extends Component {
       }
 
       if (window.innerWidth <= 576) {
-        index=index+2
+        index = index + 2;
         return (
           <div className="custom-button-group">
             <button className="thumb_slider" onClick={() => previous()}>
               {React.Children.toArray(thumbnail)[index - 1]}
             </button>
-            <button className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}} onClick={() => goToSlide(index)}>
+            <button
+              className="thumb_slider zoom"
+              style={{ backgroundColor: "#fdb688" }}
+              onClick={() => goToSlide(index)}
+            >
               {React.Children.toArray(thumbnail)[index]}
             </button>
             <button className="thumb_slider" onClick={() => next()}>
@@ -94,7 +101,7 @@ export default class FoodCarousel extends Component {
           </div>
         );
       }
- return (
+      return (
         <div className="custom-button-group">
           <button className="thumb_slider" onClick={() => goToSlide(index - 6)}>
             {React.Children.toArray(thumbnail)[index - 2]}
@@ -103,7 +110,8 @@ export default class FoodCarousel extends Component {
             {React.Children.toArray(thumbnail)[index - 1]}
           </button>
           <button
-            className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}
+            className="thumb_slider zoom"
+            style={{ backgroundColor: "#fdb688" }}
             onClick={() => goToSlide(index + 8)}
           >
             {React.Children.toArray(thumbnail)[index]}
@@ -117,7 +125,7 @@ export default class FoodCarousel extends Component {
         </div>
       );
     };
-      
+
     return (
       <section
         className="container_event"
@@ -126,7 +134,7 @@ export default class FoodCarousel extends Component {
         <h1>Food Events</h1>
         <Carousel
           focusOnSelect={false}
-          arrows={false}
+          arrows={true}
           showDots={false}
           infinite={true}
           containerClass="container-padding-bottom"
@@ -137,7 +145,7 @@ export default class FoodCarousel extends Component {
         >
           {images.map((card, i) => {
             return (
-              <Link key={i} to={`/event/food/${i + 1}`}>
+              <Link key={i} to={`/event/food/${i + 2}`}>
                 <img src={card} className="slide_card" alt="food card" />
               </Link>
             );

@@ -1,16 +1,20 @@
 .event-detail-wrapper {
   color: white;
+  padding-bottom: 20px;
   .event-card {
     padding-bottom: 20px;
     width: 70%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    @include md {
+    @include lg {
       width: 100%;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+    @include lg-lt {
+      width: 100%;
     }
     .event-img {
       margin: auto 0 auto -20px;
@@ -28,7 +32,7 @@
       background-color: rgba(black, 0.7);
       border-radius: 20px;
       backdrop-filter: blur(5px);
-      @include sm {
+      @include lg {
         margin-top: -50px;
       }
       h3 {
@@ -38,6 +42,9 @@
         font-size: 1.25rem;
         line-height: 1.25;
         margin-bottom: 10px;
+        @include lg-lt {
+          // width: 400px;
+        }
       }
       .event-buttons {
         display: flex;
@@ -55,154 +62,20 @@
       }
     }
   }
-}
-
-.card_details {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-
-  .card_details_art {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-  }
-
-  .card_indi {
-    display: flex;
-    flex-direction: row;
-    margin-top: 50px;
-    @include lg {
-      flex-direction: column;
-      width: 500px;
-    }
-    @include sm-lt {
-      width: 250px;
-      align-items: center;
-    }
-    @include sm {
-      align-items: flex-start;
-      width: 300px;
-    }
-
-    .written {
-      display: flex;
-      flex-direction: column;
-      margin: -50px;
-      background: rgba(128, 128, 128, 0.55);
-      padding: 40px;
-
-      border-radius: 20px;
-      z-index: 1;
-      @include md-lt {
-        margin-left: -90px;
-        margin-top: -300px;
-        z-index: 4;
-        opacity: 0.6;
-        padding: 10px;
-      }
-      @include sm-lt {
-        margin-left: -10px;
-        margin-top: -300px;
-        z-index: 4;
-        width: 450px;
-        //background-clip: border-box;
-        // padding:16px;
-      }
-      @include sm {
-        margin-top: -280px;
-        width: 330px;
-        z-index: 4;
-        margin-left: -16px;
-        padding: 16px;
-        background: rgba(128, 128, 128, 0);
-      }
-      /* @include sm{
-       width:310px;
-   }*/
-      p {
-        margin-top: 50px;
-        font-family: "Abel", sans-serif;
-        font-size: 1.2em;
-        color: white;
-
-        background: rgba(0, 0, 0, 0.79);
-        padding: 60px;
-        border-radius: 20px;
-        @include md-lt {
-          width: 500px;
-          text-align: center;
-          margin-left: 40px;
-          margin-top: 50px;
-          opacity: 1;
-          padding: 50px;
-        }
-        @include sm-lt {
-          padding: 6px;
-          margin-top: 40px;
-          width: 400px;
-          margin-left: -10px;
-          //   white-space: nowrap;
-        }
-        @include sm {
-          padding: 6px;
-          width: 300px;
-          margin-top: 50px;
-          background: rgba(0, 0, 0, 0.69);
-        } /*
-    @include sm{
-        padding:6px;
-        width:300px;
-    }*/
-      }
-    }
-  }
-
-  .event_decard {
-    width: 60%;
-    height: auto;
-    z-index: 3;
-    @include sm-lt {
-      width: 350px;
-    }
-    @include sm {
-      width: 300px;
-      height: 400px;
-    }
-  }
-
-  .event_but {
-    font-family: "Oswald", sans-serif;
-    width: 170px;
-    border-radius: 30px;
-    padding: 5px;
-    font-size: 2em;
+  .go-back-button {
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
     color: white;
     background-color: #ed145b;
+    padding: 10px 30px;
+    border-radius: 20px;
     cursor: pointer;
-    margin-top: 50px;
-    border: none;
-    @include md {
-      margin-top: 30px;
-      font-size: 1.5em;
-    }
-  }
-
-  .but_eve {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    @include md {
-      //padding-left:50px;
-    }
-  }
-
-  .event_but:nth-child(2) {
-    @include md {
-      margin-left: 30px;
-      width: 200px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    svg {
+      vertical-align: middle;
     }
   }
 }

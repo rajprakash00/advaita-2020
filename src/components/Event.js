@@ -50,7 +50,7 @@ export default class Event extends Component {
             src={game}
             height="350"
             width="350"
-            onClick={() => this.props.history.push("/event/gamex")}
+            onClick={() => this.props.history.push("/event/sports")}
           />
         </div>
       </section>

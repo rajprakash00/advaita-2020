@@ -1,5 +1,6 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
+import { TiChevronLeftOutline } from "react-icons/ti";
 import data from "../events.json";
 
 const toTitleCase = text =>
@@ -28,7 +29,7 @@ const EventDetails = props => {
       }}
       className="event-detail-wrapper"
     >
-      <h1>{toTitleCase(category)}</h1>
+      <h1>{`${toTitleCase(category)} Event`}</h1>
       <div className="event-card">
         <div className="event-img">
           <img
@@ -53,6 +54,10 @@ const EventDetails = props => {
           </div>
         </div>
       </div>
+      <button className="go-back-button" onClick={() => props.history.goBack()}>
+        <TiChevronLeftOutline />
+        Go Back
+      </button>
     </section>
   );
 };

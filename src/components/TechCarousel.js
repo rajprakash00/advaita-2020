@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
+
 import "react-multi-carousel/lib/styles.css";
+
 import Battlefield from "../img/TechFinal/Battlefield.png";
 import SwigNCode from "../img/TechFinal/SwigNCode.png";
 import Princi from "../img/TechFinal/Princi.png";
@@ -34,27 +36,27 @@ const images = [
 const thumbnail = [
   <h1 className="thumb_name">Battlefield</h1>,
   <h1 className="thumb_name">SwigNCode</h1>,
-  <h1 className="thumb_name">Princi</h1>,
+  <h1 className="thumb_name">Principium</h1>,
   <h1 className="thumb_name">Technova</h1>,
   <h1 className="thumb_name">CTF</h1>,
   <h1 className="thumb_name">WebD</h1>,
-  <h1 className="thumb_name">PaperP</h1>,
+  <h1 className="thumb_name">PaperPresentation</h1>,
   <h1 className="thumb_name">Encoded</h1>,
-  <h1 className="thumb_name">LineFol</h1>,
+  <h1 className="thumb_name">LineFollower</h1>,
   <h1 className="thumb_name">Blueprint</h1>,
-  <h1 className="thumb_name">Dirt</h1>,
+  <h1 className="thumb_name">Dirt Rush</h1>,
   <h1 className="thumb_name">Arduinoob</h1>,
   <h1 className="thumb_name">Battlefield</h1>,
   <h1 className="thumb_name">SwigNCode</h1>,
-  <h1 className="thumb_name">Princi</h1>,
+  <h1 className="thumb_name">Principium</h1>,
   <h1 className="thumb_name">Technova</h1>,
   <h1 className="thumb_name">CTF</h1>,
   <h1 className="thumb_name">WebD</h1>,
-  <h1 className="thumb_name">PaperP</h1>,
+  <h1 className="thumb_name">PaperPresentation</h1>,
   <h1 className="thumb_name">Encoded</h1>,
-  <h1 className="thumb_name">LineFol</h1>,
+  <h1 className="thumb_name">LineFollower</h1>,
   <h1 className="thumb_name">Blueprint</h1>,
-  <h1 className="thumb_name">Dirt</h1>,
+  <h1 className="thumb_name">Dirt Rush</h1>,
   <h1 className="thumb_name">Arduinoob</h1>
 ];
 
@@ -102,7 +104,10 @@ export default class TechCarousel extends Component {
             <button className="thumb_slider" onClick={() => previous()}>
               {React.Children.toArray(thumbnail)[index - 1]}
             </button>
-            <button className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}>
+            <button
+              className="thumb_slider zoom"
+              style={{ backgroundColor: "#fdb688" }}
+            >
               {React.Children.toArray(thumbnail)[index]}
             </button>
             <button className="thumb_slider" onClick={() => next()}>
@@ -119,7 +124,10 @@ export default class TechCarousel extends Component {
             <button className="thumb_slider" onClick={() => previous()}>
               {React.Children.toArray(thumbnail)[index - 1]}
             </button>
-            <button className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}>
+            <button
+              className="thumb_slider zoom"
+              style={{ backgroundColor: "#fdb688" }}
+            >
               {React.Children.toArray(thumbnail)[index]}
             </button>
             <button className="thumb_slider" onClick={() => next()}>
@@ -137,7 +145,8 @@ export default class TechCarousel extends Component {
             {React.Children.toArray(thumbnail)[index - 1]}
           </button>
           <button
-            className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}
+            className="thumb_slider zoom"
+            style={{ backgroundColor: "#fdb688" }}
             onClick={() => goToSlide(index + 8)}
           >
             {React.Children.toArray(thumbnail)[index]}
@@ -157,7 +166,7 @@ export default class TechCarousel extends Component {
         className="container_event"
         style={{ backgroundImage: `url(${tech})` }}
       >
-        <h1>Tech</h1>
+        <h1>Technology Events</h1>
         <Carousel
           focusOnSelect={false}
           arrows={true}
@@ -168,7 +177,6 @@ export default class TechCarousel extends Component {
           customButtonGroup={<CustomButtonGroup />}
           renderButtonGroupOutside={true}
           renderDotsOutside={false}
-          
         >
           {images.map((card, i) => {
             return (

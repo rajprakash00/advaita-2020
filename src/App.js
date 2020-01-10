@@ -1,9 +1,11 @@
 import React from "react";
 import { Route, Switch, Link, withRouter } from "react-router-dom";
+import ReactGA from "react-ga";
 
+import Loader from "./components/Loader";
 import LandingMain from "./components/LandingMain";
 import Team from "./components/Team";
-import Pronite from "./components/Pronite";
+// import Pronite from "./components/Pronite";
 import Navbar from "./components/Navbar";
 import Sponsors from "./components/Sponsors";
 import Event from "./components/Event";
@@ -11,7 +13,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import TechCarousel from "./components/TechCarousel";
 import CultCarousel from "../src/components/CultCarousel";
-import GamexCarousel from "./components/GamexCarousel";
+import SportsCarousel from "./components/SportsCarousel";
 import EventDetails from "./components/EventDetails";
 import ArtCarousel from "./components/ArtCarousel";
 import FoodCarousel from "./components/FoodCarousel";
@@ -19,11 +21,21 @@ import Error from "./components/Error404";
 
 import logo from "./img/logo.png";
 
+// Initializing React Google Analytics
+ReactGA.initialize("UA-155949666-1");
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 const App = ({ location }) => {
   const [isOpen, setIsOpen] = React.useState(false);
-  //const [displayLogo, setDisplayLogo] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(true);
+  React.useState(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
   return (
     <>
+      {isLoading ? <Loader /> : ""}
       {location.pathname !== "/" && (
         <Link to="/">
           <img className="main-logo" src={logo} alt="advaita" />
@@ -33,13 +45,13 @@ const App = ({ location }) => {
       <Switch>
         <Route path="/event/cult" component={CultCarousel} exact />
         <Route path="/event/tech" component={TechCarousel} exact />
-        <Route path="/event/gamex" component={GamexCarousel} exact />
+        <Route path="/event/sports" component={SportsCarousel} exact />
         <Route path="/event/art" component={ArtCarousel} exact />
         <Route path="/event/food" component={FoodCarousel} exact />
         <Route path="/event/:category/:id" component={EventDetails} />
         <Route path="/contact" component={Contact} />
         <Route path="/sponsors" component={Sponsors} />
-        <Route path="/pronite" component={Pronite} />
+        {/* <Route path="/pronite" component={Pronite} /> */}
         <Route path="/event" component={Event} />
         <Route path="/team" component={Team} />
         <Route path="/about" component={About} />

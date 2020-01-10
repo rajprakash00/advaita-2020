@@ -47,8 +47,11 @@ $contact-accent-color: pink;
       }
     }
     iframe {
-      height: 70vh;
+      height: 100%;
       width: 100%;
+      @include md {
+        height: 400px;
+      }
     }
   }
   .contact-icon {
