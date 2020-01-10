@@ -71,7 +71,7 @@ export default class GamexCarousel extends Component {
             <button className="thumb_slider" onClick={() => previous()}>
               {React.Children.toArray(thumbnail)[index - 1]}
             </button>
-            <button className="thumb_slider zoom">
+            <button className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}>
               {React.Children.toArray(thumbnail)[index]}
             </button>
             <button className="thumb_slider" onClick={() => next()}>
@@ -88,7 +88,7 @@ export default class GamexCarousel extends Component {
             <button className="thumb_slider" onClick={() => previous()}>
               {React.Children.toArray(thumbnail)[index - 1]}
             </button>
-            <button className="thumb_slider zoom">
+            <button className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}>
               {React.Children.toArray(thumbnail)[index]}
             </button>
             <button className="thumb_slider" onClick={() => next()}>
@@ -106,7 +106,7 @@ export default class GamexCarousel extends Component {
             {React.Children.toArray(thumbnail)[index - 1]}
           </button>
           <button
-            className="thumb_slider zoom"
+            className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}
             onClick={() => goToSlide(index + 8)}
           >
             {React.Children.toArray(thumbnail)[index]}
@@ -125,7 +125,7 @@ export default class GamexCarousel extends Component {
         className="container_event"
         style={{ backgroundImage: `url(${game})` }}
       >
-        <h1>GAMEX</h1>
+        <h1>Sports & GameX</h1>
         <Carousel
           focusOnSelect={false}
           arrows={false}

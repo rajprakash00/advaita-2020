@@ -74,6 +74,11 @@
       font-size: 4rem;
       margin-top: -80px;
       user-select: none;
+      @include xl{
+        width:70%;
+    
+        
+      }
       b {
         font-family: "Vibur", cursive;
         color: #fee;

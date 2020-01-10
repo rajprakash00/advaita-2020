@@ -54,8 +54,8 @@ export default class ArtCarousel extends Component {
       const { currentSlide } = carouselState;
 
       index = currentSlide + 4;
-      while (index >= 4) {
-        index = index - 2;
+      while (index >= 7) {
+        index = index - 5;
       }
  
         if (window.innerWidth <= 992 && window.innerWidth >= 576) {
@@ -65,7 +65,7 @@ export default class ArtCarousel extends Component {
               <button className="thumb_slider" onClick={() => previous()}>
                 {React.Children.toArray(thumbnail)[index - 1]}
               </button>
-              <button className="thumb_slider zoom">
+              <button className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}>
                 {React.Children.toArray(thumbnail)[index]}
               </button>
               <button className="thumb_slider" onClick={() => next()}>
@@ -82,7 +82,7 @@ export default class ArtCarousel extends Component {
               <button className="thumb_slider" onClick={() => previous()}>
                 {React.Children.toArray(thumbnail)[index - 1]}
               </button>
-              <button className="thumb_slider zoom">
+              <button className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}>
                 {React.Children.toArray(thumbnail)[index]}
               </button>
               <button className="thumb_slider" onClick={() => next()}>
@@ -91,6 +91,7 @@ export default class ArtCarousel extends Component {
             </div>
           );
         }
+        index=index+3;
         return (
           <div className="custom-button-group">
             <button className="thumb_slider" onClick={() => goToSlide(index - 6)}>
@@ -100,7 +101,7 @@ export default class ArtCarousel extends Component {
               {React.Children.toArray(thumbnail)[index - 1]}
             </button>
             <button
-              className="thumb_slider zoom"
+              className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}
               onClick={() => goToSlide(index + 8)}
             >
               {React.Children.toArray(thumbnail)[index]}

@@ -102,7 +102,7 @@ export default class TechCarousel extends Component {
             <button className="thumb_slider" onClick={() => previous()}>
               {React.Children.toArray(thumbnail)[index - 1]}
             </button>
-            <button className="thumb_slider zoom">
+            <button className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}>
               {React.Children.toArray(thumbnail)[index]}
             </button>
             <button className="thumb_slider" onClick={() => next()}>
@@ -119,7 +119,7 @@ export default class TechCarousel extends Component {
             <button className="thumb_slider" onClick={() => previous()}>
               {React.Children.toArray(thumbnail)[index - 1]}
             </button>
-            <button className="thumb_slider zoom">
+            <button className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}>
               {React.Children.toArray(thumbnail)[index]}
             </button>
             <button className="thumb_slider" onClick={() => next()}>
@@ -137,7 +137,7 @@ export default class TechCarousel extends Component {
             {React.Children.toArray(thumbnail)[index - 1]}
           </button>
           <button
-            className="thumb_slider zoom"
+            className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}
             onClick={() => goToSlide(index + 8)}
           >
             {React.Children.toArray(thumbnail)[index]}

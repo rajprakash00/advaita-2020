@@ -83,7 +83,7 @@ export default class SubEvent extends Component {
               {React.Children.toArray(thumbnail)[index - 1]}
             </button>
             <button
-              className="thumb_slider zoom"
+              className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}
               onClick={() => goToSlide(index)}
             >
               {React.Children.toArray(thumbnail)[index]}
@@ -102,7 +102,7 @@ export default class SubEvent extends Component {
               {React.Children.toArray(thumbnail)[index - 1]}
             </button>
             <button
-              className="thumb_slider zoom"
+              className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}
               onClick={() => goToSlide(index)}
             >
               {React.Children.toArray(thumbnail)[index]}
@@ -123,7 +123,7 @@ export default class SubEvent extends Component {
             {React.Children.toArray(thumbnail)[index - 1]}
           </button>
           <button
-            className="thumb_slider zoom"
+            className="thumb_slider zoom" style={{backgroundColor:"#fdb688"}}
             onClick={() => goToSlide(index + 5)}
           >
             {React.Children.toArray(thumbnail)[index]}
