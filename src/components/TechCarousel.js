@@ -160,7 +160,7 @@ export default class TechCarousel extends Component {
         <h1>Tech</h1>
         <Carousel
           focusOnSelect={false}
-          arrows={false}
+          arrows={true}
           showDots={false}
           infinite={true}
           containerClass="container-padding-bottom"
@@ -168,6 +168,7 @@ export default class TechCarousel extends Component {
           customButtonGroup={<CustomButtonGroup />}
           renderButtonGroupOutside={true}
           renderDotsOutside={false}
+          
         >
           {images.map((card, i) => {
             return (

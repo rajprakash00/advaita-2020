@@ -10,9 +10,11 @@ import Card from "../img/CultFinal/Card.png";
 import Lamode from "../img/CultFinal/Lamode.png";
 import HaqSe from "../img/CultFinal/HaqSe.png";
 import Rock from "../img/CultFinal/Rock.png";
-import cult from "../img/backgrounds/CultBg.jpg";
+import Cult from "../img/backgrounds/CultBg.jpg";
+import Pradarshan from "../img/CultFinal/Pradarshan.png"
+import RapBattle from "../img/CultFinal/RapBattle.png"
 
-const images = [Cypher, Joker, Foot, Card, Lamode, HaqSe, Rock];
+const images = [Cypher, Joker, Foot, Card, Lamode, HaqSe, Rock,Pradarshan,RapBattle];
 
 const thumbnail = [
   <h1 className="thumb_name">Cypher</h1>,
@@ -22,13 +24,17 @@ const thumbnail = [
   <h1 className="thumb_name">Lamode</h1>,
   <h1 className="thumb_name">HaqSe</h1>,
   <h1 className="thumb_name">Rock</h1>,
+  <h1 className="thumb_name">Pradarshan</h1>,
+  <h1 className="thumb_name">RapBattle</h1>,
   <h1 className="thumb_name">Cypher</h1>,
   <h1 className="thumb_name">Joker</h1>,
   <h1 className="thumb_name">Foot</h1>,
   <h1 className="thumb_name">Acoustica</h1>,
   <h1 className="thumb_name">Lamode</h1>,
   <h1 className="thumb_name">HaqSe</h1>,
-  <h1 className="thumb_name">Rock</h1>
+  <h1 className="thumb_name">Rock</h1>,
+  <h1 className="thumb_name">Pradarshan</h1>,
+  <h1 className="thumb_name">RapBattle</h1>,
 ];
 
 const responsive = {
@@ -61,15 +67,17 @@ export default class SubEvent extends Component {
       const { currentSlide } = carouselState;
 
       index = currentSlide + 2;
-      while (index >= 12) {
-        index = index - 7;
+      while (index >= 14) {
+        index = index - 9;
       }
       if (index <= 1) {
-        index = index + 7;
+        index = index + 9;
       }
 
       if (window.innerWidth <= 992 && window.innerWidth >= 576) {
+        index=index+2
         return (
+
           <div className="custom-button-group">
             <button className="thumb_slider" onClick={() => previous()}>
               {React.Children.toArray(thumbnail)[index - 1]}
@@ -87,7 +95,7 @@ export default class SubEvent extends Component {
         );
       }
       if (window.innerWidth <= 576) {
-        index = index + 3;
+        index = index +5;
         return (
           <div className="custom-button-group">
             <button className="thumb_slider" onClick={() => previous()}>
@@ -133,9 +141,9 @@ export default class SubEvent extends Component {
     return (
       <section
         className="container_event"
-        style={{ backgroundImage: `url(${cult})` }}
+        style={{ backgroundImage: `url(${Cult})` }}
       >
-        <h1>Cult</h1>
+        <h1>Cultural Events</h1>
         <Carousel
           focusOnSelect={false}
           arrows={false}
