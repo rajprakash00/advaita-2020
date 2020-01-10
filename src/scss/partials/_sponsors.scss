@@ -21,8 +21,12 @@
       img {
         margin: 0 10px;
         transition: all 250ms ease-in;
+        width:30%;
+        height:70%;
         @include sm {
-          margin: 10px 0;
+          height:100%;
+          width:50%;
+          margin: 10px auto;
         }
         &:hover {
           transform: scale(1.05);
@@ -30,4 +34,23 @@
       }
     }
   }
+}
+
+.sponsor_button{
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  background-color: #ed145b;
+  padding: 10px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  
+}
+.sponsor_outer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:100px;
+
 }
