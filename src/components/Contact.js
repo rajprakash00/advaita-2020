@@ -27,16 +27,16 @@ const Contact = () => {
               Phone
             </h3>
             <p>
-              <a href="tel:7978756707">+91 7978756707</a>
+              <a href="tel:7006176006">+91 7006176006</a>
               <br />
-              <a href="tel:6371096213">+91 6371096213</a>
+              <a href="tel:8333882613">+91 8333882613</a>
             </p>
             <h3>
               <FaEnvelope />
               Email
             </h3>
             <p>
-              <a href="mailto:contact@advaita.io">contact@advaita.io</a>
+              <a href="mailto:iiitadvaita@gmail.com">iiitadvaita@gmail.com</a>
             </p>
             <h3>Follow Us On</h3>
             <div className="social-icons">

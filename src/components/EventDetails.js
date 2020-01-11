@@ -49,8 +49,20 @@ const EventDetails = props => {
             </div>
           </div>
           <div className="event-buttons">
-            <button>Rules</button>
-            <button>Register</button>
+            <button
+              onClick={() => {
+                alert("Coming Soon");
+              }}
+            >
+              Rules
+            </button>
+            <button
+              onClick={() => {
+                alert("Coming Soon");
+              }}
+            >
+              Register
+            </button>
           </div>
         </div>
       </div>

@@ -198,24 +198,24 @@
         }
       },
       {
-        "FacePainting": {
-          "id": 25,
-          "description": "Old are the days when we used to paint and colour on the papers.In Advaita'19, Paracosm presents FACE PAINTING where you all get the chance to paint your faces or your friend’s face silly and let your imagination unleash. P.S. - The colours provided by us are absolutely skin friendly. ",
+        "PhotoGallery": {
+          "id": 5,
+          "description": "Presenting to you Gallery , which is the annual installment of the display of the 24 flagship photos to have come from the creators within our society, not limited to to genre or equipment , just peerless vision reflected in each single photo.",
           "rules": "rules.pdf",
-          "img_path": ""
+          "img_path": "PhotoGeek"
         }
       },
       {
-        "MysteryBox": {
-          "id": 26,
-          "description": "Mystery Box is for innovators, drawing on the challenge we all face everyday - using limited resources to create something extraordinary. The ordinary and diverse items in the kit are transformed into something remarkable. There are no instructions, just a few rules to make things interesting. You get an engaging experience that opens you up to new materials, techniques, and ways of thinking. As you find unexpected solutions and creative alternatives, you'll get an artistic workout and discover new talents and abilities. The kit includes all the materials you need to complete your project and compete for prizes, and it’s ridiculously fun. ",
+        "PhotoExhibition": {
+          "id": 2,
+          "description": "Exhibition, our annual exhibit of photos on select genre(s) ,  unique to each year , come visit for the pleasant surprise and immerse yourself in the photos and take a moment out of your life to connect to the story we mean to convey in them.",
           "rules": "rules.pdf",
-          "img_path": ""
+          "img_path": "Exhiu"
         }
       },
       {
         "Picasso": {
-          "id": 2,
+          "id": 4,
           "description": "Picasso is the annual painting competition conducted by Photogeeks. Photogeeks believe in creating magic with not just cameras but brushes as well. Nothing can replace the sheer beauty of a painting. So grab your brushes, switch your creative modes on and let the colours speak of your behalf. ",
           "rules": "rules.pdf",
           "img_path": "Pic"
@@ -275,7 +275,7 @@
       {
         "FIFA": {
           "id": 2,
-          "description": "A CS:GO 5v5 LAN tournament will be held on 9th and 10th of January and the 2v2 LAN tournament will be held on 8th, 9th, and 10th of January. All players irrespective of their college, branch and semester can participate. The tournament will be held in the IIIT Bhubaneswar campus. Teams will be divided into pools for the group league matches. All matches will be Best of 1. Final Match will be best of 3. The tournament is Steam only and everyone will be provided with systems and gear that they need. If you have your own gear, you can bring them out and play with them too. Participating teams are requested to send us their personal configuration files. ",
+          "description": "This is a one day fun event where you will be competing against other player and win prizes",
           "rules": "rules.pdf",
           "img_path": "FIFA"
         }

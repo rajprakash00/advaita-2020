@@ -72,10 +72,11 @@
       text-align: center;
       width: 100%;
       font-size: 4rem;
-      margin-top: -80px;
+      margin-top: -50px;
       user-select: none;
       @include xl {
         width: 70%;
+        margin: 0 auto;
       }
       b {
         font-family: "Vibur", cursive;

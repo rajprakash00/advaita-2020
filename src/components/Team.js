@@ -75,7 +75,7 @@ export default class Team extends Component {
             insta="https://www.instagram.com/_ashu._gupta_/"
           />
         </div>
-        <h1 className="team-heading">Web Dev Team</h1>
+        <h1 className="team-heading">Web and Designing Team</h1>
         <div className="team-container">
           <TeamCard
             name="Pranshu Kumbhare"
@@ -110,6 +110,32 @@ export default class Team extends Component {
             number="8077749161"
             insta="https://www.instagram.com/prakhar.kaush/"
             tweet="https://twitter.com/me_prakhar"
+          />
+        </div>
+        <div className="team-container" style={{ marginTop: "20px" }}>
+          <TeamCard
+            name="Chinmay Singh"
+            des="Design Head"
+            img="35.png"
+            number="9079274188"
+            fb="https://www.facebook.com/chinmay.bing"
+            insta="https://instagram.com/chin.m.a.y"
+          />
+          <TeamCard
+            name="Sandeep Patel"
+            des="Web Head"
+            img="34.png"
+            number="9064507905"
+            fb="https://www.facebook.com/sandeep.patel.756412"
+            insta="https://www.instagram.com/sandeep.patel11/"
+          />
+          <TeamCard
+            name="Pranay Agarwal"
+            des="Web Head"
+            img="33.png"
+            number="9149341125"
+            fb="https://www.facebook.com/pranayag15"
+            insta="https://www.instagram.com/pranayag16/"
           />
         </div>
 
@@ -157,17 +183,6 @@ export default class Team extends Component {
             img="22.png"
             number="7479924956"
             insta="https://www.instagram.com/sunidhisinghh/"
-          />
-        </div>
-        <h1 className="team-heading">Discipline Committee</h1>
-        <div className="team-container">
-          <TeamCard
-            name="Rajarshee Basu"
-            des="Discipline Committee Head"
-            img="3.png"
-            number="8240624256"
-            fb="https://www.facebook.com/rajarshee1234"
-            tweet="https://twitter.com/basu_rajarshee"
           />
         </div>
         <h1 className="team-heading">Publicity</h1>
@@ -298,24 +313,7 @@ export default class Team extends Component {
             insta="https://instagram.com/__asutosh__?igshid=4x8fzqohrvv7"
           />
         </div>
-        <h1 className="team-heading">Print & Media</h1>
-        <div className="team-container">
-          <TeamCard
-            name="Alok Kumar Sahoo"
-            des="Print & Media Head"
-            img="13.png"
-            number="8763178492"
-            insta="https://www.instagram.com/alok_sahoo98/"
-          />
-          <TeamCard
-            name="Sayan De Bhowmick"
-            des="Print & Media Head"
-            img="21.png"
-            number="9668511262"
-            fb="https://www.facebook.com/sayan.debhowmick"
-            insta="https://www.instagram.com/_ecbert_lothbrok_/"
-          />
-        </div>
+
         <h1 className="team-heading">Disciplinary Committee</h1>
         <div className="team-container">
           <TeamCard
@@ -332,6 +330,14 @@ export default class Team extends Component {
             img="25.png"
             number="7064514017"
             insta="https://www.instagram.com/_a.n.j.i.e_/"
+          />
+          <TeamCard
+            name="Rajarshee Basu"
+            des="Discipline Committee Head"
+            img="3.png"
+            number="8240624256"
+            fb="https://www.facebook.com/rajarshee1234"
+            tweet="https://twitter.com/basu_rajarshee"
           />
         </div>
       </section>
