@@ -29,7 +29,7 @@ export default class Team extends Component {
 
           <TeamCard
             name="Sumeet Sagar Lenka"
-            des="Cultural Head"
+            des="Cult Head"
             img="16.png"
             number="7008421762"
             insta="https://www.instagram.com/sumeet_3010/"

@@ -155,7 +155,7 @@ export default class SubEvent extends Component {
         className="container_event"
         style={{ backgroundImage: `url(${Cult})` }}
       >
-        <h1>Cultural Events</h1>
+        <h1>Cult and Theatre Events</h1>
         <Carousel
           focusOnSelect={false}
           arrows={true}

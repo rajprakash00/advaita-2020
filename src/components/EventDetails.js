@@ -29,7 +29,7 @@ const EventDetails = props => {
       }}
       className="event-detail-wrapper"
     >
-      <h1>{`${toTitleCase(category)} Event`}</h1>
+      <h1>About Event</h1>
       <div className="event-card">
         <div className="event-img">
           <img
