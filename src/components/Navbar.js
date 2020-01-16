@@ -17,6 +17,9 @@ const NavMenu = props => {
       right
       disableAutoFocus
     >
+      <NavLink className="nav-link" to="/login" onClick={props.toggleMenu}>
+        Login
+      </NavLink>
       <NavLink className="nav-link" to="/" onClick={props.toggleMenu}>
         Home
       </NavLink>

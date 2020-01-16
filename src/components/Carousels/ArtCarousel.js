@@ -2,29 +2,26 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import csgo from "../img/SportsFinal/CSGO.png";
-import fifa from "../img/SportsFinal/FIFA.png";
-import game from "../img/backgrounds/SportsBg.jpg";
-import basketball from "../img/SportsFinal/Basket.png";
-import chess from "../img/SportsFinal/Chess.png";
-import six from "../img/SportsFinal/Six.png";
-import football from "../img/SportsFinal/Football.png";
+import collart from "../../img/ArtFinal/Coll.png";
+import photo from "../../img/ArtFinal/Exhiu.png";
+import imagen from "../../img/ArtFinal/Imag.png";
+import picasso from "../../img/ArtFinal/Pic.png";
+import photoGeek from "../../img/ArtFinal/PhotoGeek.png";
+import artBg from "../../img/backgrounds/ArtBg.jpg";
 
-const images = [csgo, fifa, basketball, chess, six, football];
+const images = [collart, photo, imagen, picasso, photoGeek];
 
 const thumbnail = [
-  <h1 className="thumb_name">CSGO</h1>,
-  <h1 className="thumb_name">FIFA</h1>,
-  <h1 className="thumb_name">Basketball</h1>,
-  <h1 className="thumb_name">Chess</h1>,
-  <h1 className="thumb_name">Super Six</h1>,
-  <h1 className="thumb_name">Football</h1>,
-  <h1 className="thumb_name">CSGO</h1>,
-  <h1 className="thumb_name">FIFA</h1>,
-  <h1 className="thumb_name">Basketball</h1>,
-  <h1 className="thumb_name">Chess</h1>,
-  <h1 className="thumb_name">Super Six</h1>,
-  <h1 className="thumb_name">Football</h1>
+  <h1 className="thumb_name">CollArt</h1>,
+  <h1 className="thumb_name">Photo Exhibition</h1>,
+  <h1 className="thumb_name">Imagen</h1>,
+  <h1 className="thumb_name">Picasso</h1>,
+  <h1 className="thumb_name">Photo Geek</h1>,
+  <h1 className="thumb_name">CollArt</h1>,
+  <h1 className="thumb_name">Photo Exhibition</h1>,
+  <h1 className="thumb_name">Imagen</h1>,
+  <h1 className="thumb_name">Picasso</h1>,
+  <h1 className="thumb_name">Photo Geek</h1>
 ];
 
 const responsive = {
@@ -45,7 +42,7 @@ const responsive = {
   }
 };
 
-export default class SportsCarousel extends Component {
+export default class ArtCarousel extends Component {
   render() {
     let index;
     const CustomButtonGroup = ({
@@ -55,16 +52,14 @@ export default class SportsCarousel extends Component {
       carouselState
     }) => {
       const { currentSlide } = carouselState;
-      index = currentSlide + 9;
-      if (index >= 9) {
-        index = index - 7;
-      }
-      if (index <= 1) {
-        index = index + 7;
+
+      index = currentSlide + 4;
+      while (index >= 7) {
+        index = index - 5;
       }
 
       if (window.innerWidth <= 992 && window.innerWidth >= 576) {
-        index = index - 7;
+        index = index + 2;
         return (
           <div className="custom-button-group">
             <button className="thumb_slider" onClick={() => previous()}>
@@ -83,7 +78,7 @@ export default class SportsCarousel extends Component {
         );
       }
       if (window.innerWidth <= 576) {
-        index = index + 2;
+        index = index + 6;
 
         return (
           <div className="custom-button-group">
@@ -102,6 +97,7 @@ export default class SportsCarousel extends Component {
           </div>
         );
       }
+      index = index + 3;
       return (
         <div className="custom-button-group">
           <button className="thumb_slider" onClick={() => goToSlide(index - 6)}>
@@ -129,9 +125,9 @@ export default class SportsCarousel extends Component {
     return (
       <section
         className="container_event"
-        style={{ backgroundImage: `url(${game})` }}
+        style={{ backgroundImage: `url(${artBg})` }}
       >
-        <h1>Sports & GameX Events</h1>
+        <h1>Art & Photography Events</h1>
         <Carousel
           focusOnSelect={false}
           arrows={true}
@@ -145,8 +141,8 @@ export default class SportsCarousel extends Component {
         >
           {images.map((card, i) => {
             return (
-              <Link key={i} to={`/event/sports/${i + 1}`}>
-                <img src={card} className="slide_card" alt="game card" />
+              <Link key={i} to={`/event/art/${i + 1}`}>
+                <img src={card} className="slide_card" alt="art card" />
               </Link>
             );
           })}
