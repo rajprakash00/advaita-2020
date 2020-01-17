@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { loginFunc } from "../../utils/api";
 
 const LoginPage = () => {
@@ -23,22 +23,37 @@ const LoginPage = () => {
     <section className="login-page">
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-        <label>Username</label>
+        <label for="username">
+          <b>Username</b>
+        </label>
         <input
           name="username"
+          placeholder=""
+          type="text"
           value={username}
           onChange={e => setUsername(e.target.value)}
           required
         />
-        <label>Password</label>
+        <label for="psw">
+          <b>Password</b>
+        </label>
         <input
-          name="password"
+          type="password"
+          name="psw"
+          placeholder=""
           value={password}
           onChange={e => setPassword(e.target.value)}
           required
         />
-        <button>Submit</button>
+        <button
+          type="submit"
+          class="registerbtn"
+          style={{ backgroundColor: "#00a651" }}
+        >
+          <b>Log In</b>
+        </button>
       </form>
+      <Link to="/register">Register</Link>
     </section>
   );
 };

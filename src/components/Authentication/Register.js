@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { registerFunc } from "../../utils/api";
 
 // Using a custom hook
@@ -48,46 +48,83 @@ const RegisterPage = () => {
     });
   };
   return (
-    <section className="register-page">
+    <section className="login-page">
       <h1>Register</h1>
       <form
         onSubmit={handleSubmit}
         style={{ display: "flex", flexDirection: "column" }}
       >
-        <label>Username</label>
+        <label for="usrname">
+          <b>Username</b>
+        </label>
         <input
-          name="login"
+          type="text"
+          placeholder=""
+          name="usrname"
           value={username.value}
           onChange={username.handleChange}
+          required
         />
-        <label>Email</label>
-        <input name="email" value={email.value} onChange={email.handleChange} />
-        <label>First Name</label>
+        <label for="email">
+          <b>Email</b>
+        </label>
+        <input
+          type="text"
+          placeholder=""
+          name="email"
+          value={email.value}
+          onChange={email.handleChange}
+          required
+        />
+        <label>
+          <b>First Name</b>
+        </label>
         <input
           name="first_name"
+          type="text"
+          placeholder=""
           value={firstName.value}
           onChange={firstName.handleChange}
+          required
         />
-        <label>Last Name</label>
+        <label>
+          <b>Last Name</b>
+        </label>
         <input
           name="Last_name"
+          type="text"
+          placeholder=""
           value={lastName.value}
           onChange={lastName.handleChange}
+          required
         />
-        <label>Password</label>
+        <label>
+          <b>Password</b>
+        </label>
         <input
           name="password"
+          type="text"
+          placeholder=""
           value={password.value}
           onChange={password.handleChange}
+          required
         />
-        <label>Confirm Password</label>
+        <label>
+          <b>Confirm Password</b>
+        </label>
         <input
           name="confirm_password"
+          type="text"
+          placeholder=""
           value={confirmPassword.value}
           onChange={confirmPassword.handleChange}
+          required
         />
-        <button>Submit</button>
+        <button type="submit" class="registerbtn">
+          <b>Sign Up</b>
+        </button>
       </form>
+      <Link to="/login">Login</Link>
     </section>
   );
 };

@@ -1,0 +1,58 @@
+.login-page {
+  display: flex;
+  //text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../../img/backgrounds/DashBg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 150%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border-radius: 30px;
+    background: #f1f1f1;
+    color: black;
+    @include md {
+      width: 100%;
+    }
+  }
+
+  b {
+    font-size: 1.5rem;
+    color: #ddd;
+    font-family: "Abel", sans-serif;
+  }
+
+  .registerbtn {
+    background-color: #ed1c24;
+    color: white;
+    padding: 14px;
+    margin: 8px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 130px;
+    font-size: 1.2rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    border: none;
+  }
+
+  .registerbtn:hover {
+    opacity: 0.9;
+  }
+
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+}

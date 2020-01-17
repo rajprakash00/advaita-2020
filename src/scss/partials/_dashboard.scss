@@ -1,0 +1,87 @@
+.dashboard {
+  background-image: url("../../img/backgrounds/DashBg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.team-registration {
+  background-image: url("../../img/backgrounds/DashBg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.team-details {
+  background-color: rgba(black, 0.5);
+  padding: 50px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.dashboard_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  @include lg {
+    flex-direction: column;
+  }
+}
+
+.team_form {
+  background-color: rgba(black, 0.5);
+  padding: 50px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.team_events {
+  background-color: rgba(black, 0.5);
+  padding: 50px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  @include lg {
+    margin-top: 50px;
+  }
+}
+.new_table {
+  display: flex;
+
+  justify-content: center;
+}
+tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  background-color: rgba(black, 0.7);
+  padding: 10px;
+  width: 100%;
+  color: white;
+  border: none;
+}
+.upper_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  @include md {
+    flex-direction: column;
+  }
+}
+
+.register_button {
+  margin-top: 50px;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  background-color: #ed145b;
+  padding: 10px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
