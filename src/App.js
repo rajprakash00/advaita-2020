@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch, Link, withRouter } from "react-router-dom";
+import { Route, Switch, Link, withRouter ,Redirect } from "react-router-dom";
 import ReactGA from "react-ga";
 
 import Loader from "./components/Loader";
@@ -21,12 +21,20 @@ import Error from "./components/Error404";
 import Lastsponsor from "./components/Lastsponsor"
 
 import logo from "./img/logo.png";
+import Dashboard from "./components/Dashboard";
+import Profile from "./components/Profile";
+import Signout from "./components/Signout";
+import Register from "./components/Register";
+import Login from "./components/Login";
+import {GlobalContext} from "./context/GlobalContext"
+
 
 // Initializing React Google Analytics
 ReactGA.initialize("UA-155949666-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 const App = ({ location }) => {
+  const {isAuthenticated } =React.useContext(GlobalContext);
   const [isOpen, setIsOpen] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(true);
   React.useState(() => {
@@ -57,12 +65,44 @@ const App = ({ location }) => {
         <Route path="/event" component={Event} />
         <Route path="/team" component={Team} />
         <Route path="/about" component={About} />
+        <Route path="/register" component={Register} />
+        <Route path="/login" component={Login} />
         <Route path="/" component={LandingMain} exact />
-
+        <PrivateRoute authed={isAuthenticated} path="/profile">
+          <Profile />
+        </PrivateRoute>
+        <PrivateRoute authed={isAuthenticated} path="/dashboard">
+          <Dashboard />
+        </PrivateRoute>
+        <PrivateRoute authed={isAuthenticated} path="/signout">
+          <Signout />
+        </PrivateRoute>
         <Route component={Error} />
       </Switch>
     </>
   );
 };
+
+function PrivateRoute({ children, authed, ...rest }) {
+  return (
+    <Route
+      {...rest}
+      render={({ location }) =>
+        authed ? (
+          children
+        ) : (
+          <Redirect
+            to={{
+              pathname: "/login",
+              state: {
+                from: location
+              }
+            }}
+          />
+        )
+      }
+    />
+  );
+}
 
 export default withRouter(App);
