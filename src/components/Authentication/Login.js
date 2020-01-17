@@ -8,9 +8,6 @@ const LoginPage = () => {
   const [password, setPassword] = React.useState("");
   const handleSubmit = event => {
     event.preventDefault();
-    if (username.length === 0) {
-      alert("");
-    }
     loginFunc({ username, password })
       .then(res => {
         if (res.status === 200) {
@@ -23,18 +20,18 @@ const LoginPage = () => {
     <section className="login-page">
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-        <label for="username">
+        <label htmlFor="username">
           <b>Username</b>
         </label>
         <input
           name="username"
-          placeholder=""
+          placeholder="username"
           type="text"
           value={username}
           onChange={e => setUsername(e.target.value)}
           required
         />
-        <label for="psw">
+        <label htmlFor="psw">
           <b>Password</b>
         </label>
         <input
@@ -47,7 +44,7 @@ const LoginPage = () => {
         />
         <button
           type="submit"
-          class="registerbtn"
+          className="registerbtn"
           style={{ backgroundColor: "#00a651" }}
         >
           <b>Log In</b>

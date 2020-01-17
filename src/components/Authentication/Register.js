@@ -28,14 +28,6 @@ const RegisterPage = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log({
-      username: username.value,
-      password: password.value,
-      password_confirm: confirmPassword.value,
-      first_name: firstName.value,
-      last_name: lastName.value,
-      email: email.value
-    });
     registerFunc({
       username: username.value,
       password: password.value,
@@ -60,7 +52,7 @@ const RegisterPage = () => {
         <input
           type="text"
           placeholder=""
-          name="usrname"
+          name="username"
           value={username.value}
           onChange={username.handleChange}
           required
