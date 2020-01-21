@@ -49,20 +49,46 @@ const EventDetails = props => {
             </div>
           </div>
           <div className="event-buttons">
-            <button
-              onClick={() => {
-                alert("Coming Soon");
-              }}
-            >
-              Rules
-            </button>
-            <button
-              onClick={() => {
-                alert("Coming Soon");
-              }}
-            >
-              Register
-            </button>
+            {id === "1" && category === "tech" ? (
+              <>
+                <button onClick={() => window.open(`/assets/${rules}`)}>
+                  Details
+                </button>
+                <button
+                  onClick={() =>
+                    window.open(
+                      "https://docs.google.com/forms/d/e/1FAIpQLSfySQVkGukHTlbflpxbsg-DIMmf3zqJh4Jeewt0B7tcaUtvow/viewform?usp=sf_link"
+                    )
+                  }
+                >
+                  Register
+                </button>
+              </>
+            ) : (
+              <>
+                {category === "tech" ? (
+                  <button onClick={() => window.open(`/assets/${rules}`)}>
+                    Rules
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => {
+                      alert("Coming Soon");
+                    }}
+                  >
+                    Rules
+                  </button>
+                )}
+
+                <button
+                  onClick={() => {
+                    alert("Coming Soon");
+                  }}
+                >
+                  Register
+                </button>
+              </>
+            )}
           </div>
         </div>
       </div>
