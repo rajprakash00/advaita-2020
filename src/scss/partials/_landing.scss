@@ -67,17 +67,20 @@
       filter: drop-shadow(0 0 10px #000);
       margin-top: -50px;
       width: 600px;
+      @include md {
+        margin-top: -80px;
+      }
     }
     .neon-text {
       text-align: center;
       width: 100%;
       font-size: 4rem;
-      margin-top: -50px;
       user-select: none;
       @include xl {
         width: 70%;
         margin: 0 auto;
       }
+
       b {
         font-family: "Vibur", cursive;
         color: #fee;
