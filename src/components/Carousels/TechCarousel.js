@@ -4,22 +4,22 @@ import Carousel from "react-multi-carousel";
 
 import "react-multi-carousel/lib/styles.css";
 
-import Battlefield from "../../img/TechFinal/Battlefield.png";
-import SwigNCode from "../../img/TechFinal/SwigNCode.png";
-import Princi from "../../img/TechFinal/Princi.png";
-import Technova from "../../img/TechFinal/Technova.png";
-import CTF from "../../img/TechFinal/CTF.png";
-import WebD from "../../img/TechFinal/WebD.png";
-import PaperP from "../../img/TechFinal/PaperP.png";
-import Encoded from "../../img/TechFinal/Encoded.png";
-import LineFol from "../../img/TechFinal/LineFol.png";
-import Blueprint from "../../img/TechFinal/Blueprint.png";
-import Dirt from "../../img/TechFinal/Dirt.png";
-import Arduinoob from "../../img/TechFinal/Arduinoob.png";
-import tech from "../../img/backgrounds/TechBg.jpg";
+import IEEE from "../img/TechFinal/IEEE.png";
+import SwigNCode from "../img/TechFinal/SwigNCode.png";
+import Princi from "../img/TechFinal/Princi.png";
+import Technova from "../img/TechFinal/Technova.png";
+import CTF from "../img/TechFinal/CTF.png";
+import WebD from "../img/TechFinal/WebD.png";
+import PaperP from "../img/TechFinal/PaperP.png";
+import Encoded from "../img/TechFinal/Encoded.png";
+import LineFol from "../img/TechFinal/LineFol.png";
+import Blueprint from "../img/TechFinal/Blueprint.png";
+import Dirt from "../img/TechFinal/Dirt.png";
+import Arduinoob from "../img/TechFinal/Arduinoob.png";
+import tech from "../img/backgrounds/TechBg.jpg";
 
 const images = [
-  Battlefield,
+  IEEE,
   SwigNCode,
   Princi,
   Technova,
@@ -34,7 +34,7 @@ const images = [
 ];
 
 const thumbnail = [
-  <h1 className="thumb_name">Battlefield</h1>,
+  <h1 className="thumb_name">IEEE Workshop</h1>,
   <h1 className="thumb_name">SwigNCode</h1>,
   <h1 className="thumb_name">Principium</h1>,
   <h1 className="thumb_name">Technova</h1>,
@@ -46,7 +46,7 @@ const thumbnail = [
   <h1 className="thumb_name">Blueprint</h1>,
   <h1 className="thumb_name">Dirt Rush</h1>,
   <h1 className="thumb_name">Arduinoob</h1>,
-  <h1 className="thumb_name">Battlefield</h1>,
+  <h1 className="thumb_name">IEEE Workshop</h1>,
   <h1 className="thumb_name">SwigNCode</h1>,
   <h1 className="thumb_name">Principium</h1>,
   <h1 className="thumb_name">Technova</h1>,

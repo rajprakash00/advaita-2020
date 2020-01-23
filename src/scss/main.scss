@@ -134,6 +134,9 @@ section {
         margin-top: -10%;
         font-size: 2.5rem;
         text-align: center;
+        @include md {
+          margin-top: -7%;
+        }
       }
     }
     .fire-container {
