@@ -28,14 +28,6 @@ const RegisterPage = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log({
-      username: username.value,
-      password: password.value,
-      password_confirm: confirmPassword.value,
-      first_name: firstName.value,
-      last_name: lastName.value,
-      email: email.value
-    });
     registerFunc({
       username: username.value,
       password: password.value,
@@ -50,22 +42,19 @@ const RegisterPage = () => {
   return (
     <section className="login-page">
       <h1>Register</h1>
-      <form
-        onSubmit={handleSubmit}
-        style={{ display: "flex", flexDirection: "column" }}
-      >
-        <label for="usrname">
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="usrname">
           <b>Username</b>
         </label>
         <input
           type="text"
           placeholder=""
-          name="usrname"
+          name="username"
           value={username.value}
           onChange={username.handleChange}
           required
         />
-        <label for="email">
+        <label htmlFor="email">
           <b>Email</b>
         </label>
         <input
@@ -120,11 +109,15 @@ const RegisterPage = () => {
           onChange={confirmPassword.handleChange}
           required
         />
-        <button type="submit" class="registerbtn">
-          <b>Sign Up</b>
-        </button>
+        <div className="button-group">
+          <button type="submit" className="form-button">
+            <b>Sign Up</b>
+          </button>
+          <button className="form-button">
+            <Link to="/login">Have an account? Login!</Link>
+          </button>
+        </div>
       </form>
-      <Link to="/login">Login</Link>
     </section>
   );
 };
