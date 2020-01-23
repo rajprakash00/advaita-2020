@@ -1,16 +1,24 @@
 import React from "react";
 import { useHistory, Link } from "react-router-dom";
+import { FaSpinner } from "react-icons/fa";
 import { loginFunc } from "../../utils/api";
+import { useAuth } from "./authContext";
 
 const LoginPage = () => {
   const history = useHistory();
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const [isLogginIn, setIsLogginIn] = React.useState(false);
+  const { setAuthTokens } = useAuth();
+
   const handleSubmit = event => {
     event.preventDefault();
+    setIsLogginIn(true);
     loginFunc({ username, password })
       .then(res => {
+        setIsLogginIn(false);
         if (res.status === 200) {
+          setAuthTokens(res.data.access);
           history.push("/dashboard");
         }
       })
@@ -25,7 +33,6 @@ const LoginPage = () => {
         </label>
         <input
           name="username"
-          placeholder="username"
           type="text"
           value={username}
           onChange={e => setUsername(e.target.value)}
@@ -37,20 +44,28 @@ const LoginPage = () => {
         <input
           type="password"
           name="psw"
-          placeholder=""
           value={password}
           onChange={e => setPassword(e.target.value)}
           required
         />
-        <button
-          type="submit"
-          className="registerbtn"
-          style={{ backgroundColor: "#00a651" }}
-        >
-          <b>Log In</b>
-        </button>
+        <div className="button-group">
+          <button type="submit" className="form-button">
+            {isLogginIn ? (
+              <b>
+                <FaSpinner />
+              </b>
+            ) : (
+              <b>Login</b>
+            )}
+          </button>
+
+          <button className="form-button">
+            <Link to="/register">
+              <b>Register</b>
+            </Link>
+          </button>
+        </div>
       </form>
-      <Link to="/register">Register</Link>
     </section>
   );
 };

@@ -19,8 +19,26 @@ export const loginFunc = ({ username, password }) => {
       }
     )
     .then(res => {
+      return res;
+    })
+    .catch(err => console.log(err));
+};
+
+export const logoutFunc = () => {
+  return axios
+    .post(
+      API.LOGOUT,
+      {},
+      {
+        withCredentials: true,
+        headers: {
+          Authorization: `Bearer ${sessionStorage.getItem("jwtToken")}`
+        }
+      }
+    )
+    .then(res => {
       if (res.status === 200) {
-        sessionStorage.setItem("jwtToken", res.data.access);
+        sessionStorage.removeItem("jwtToken");
       }
       return res;
     })
@@ -68,5 +86,20 @@ export const fetchRegistrationFunc = () => {
       .catch(err => console.log(err));
   } else {
     return Promise.reject({ status: 401 });
+  }
+};
+
+export const teamRegisterFunc = (data, slug) => {
+  console.log(`${API.TEAM_REGISTER}${slug}`);
+  if (sessionStorage.getItem("jwtToken") !== null) {
+    return axios
+      .post(`${API.TEAM_REGISTER}${slug}`, data, {
+        withCredentials: true,
+        headers: {
+          Authorization: `Bearer ${sessionStorage.getItem("jwtToken")}`
+        }
+      })
+      .then(res => res)
+      .catch(err => console.log(err));
   }
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import { teamRegisterFunc } from "../../utils/api";
 
 // Using a custom hook
 function useField(defaultValue) {
@@ -15,7 +16,7 @@ function useField(defaultValue) {
   };
 }
 
-const TeamRegistration = () => {
+const TeamRegistration = props => {
   const history = useHistory();
 
   // Form Related State Variables
@@ -36,19 +37,27 @@ const TeamRegistration = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log(
-      teamName.value,
-      eventSlug.value,
-      firstNameOne.value,
-      lastNameOne.value,
-      emailOne.value,
-      firstNameTwo.value,
-      lastNameTwo.value,
-      emailTwo.value,
-      firstNameThree.value,
-      lastNameThree.value,
-      emailThree.value
-    );
+    teamRegisterFunc(
+      {
+        team_name: teamName.value,
+        first_name1: firstNameOne.value,
+        last_name1: lastNameOne.value,
+        email1: emailOne.value,
+        first_name2: firstNameTwo.value,
+        last_name2: lastNameTwo.value,
+        email2: emailTwo.value,
+        first_name3: firstNameThree.value,
+        last_name3: lastNameThree.value,
+        email3: emailThree.value
+      },
+      eventSlug.value
+    )
+      .then(res => {
+        res.status === 201
+          ? history.push("/dashboard")
+          : history.push("/login");
+      })
+      .catch(err => alert("Some error has occured" + err));
   };
 
   return (
@@ -223,6 +232,9 @@ const TeamRegistration = () => {
           SUBMIT
         </button>
       </div>
+      <button className="go-back-button" onClick={() => props.history.goBack()}>
+        Go Back
+      </button>
     </section>
   );
 };

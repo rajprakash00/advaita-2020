@@ -42,11 +42,8 @@ const RegisterPage = () => {
   return (
     <section className="login-page">
       <h1>Register</h1>
-      <form
-        onSubmit={handleSubmit}
-        style={{ display: "flex", flexDirection: "column" }}
-      >
-        <label for="usrname">
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="usrname">
           <b>Username</b>
         </label>
         <input
@@ -57,7 +54,7 @@ const RegisterPage = () => {
           onChange={username.handleChange}
           required
         />
-        <label for="email">
+        <label htmlFor="email">
           <b>Email</b>
         </label>
         <input
@@ -112,11 +109,15 @@ const RegisterPage = () => {
           onChange={confirmPassword.handleChange}
           required
         />
-        <button type="submit" class="registerbtn">
-          <b>Sign Up</b>
-        </button>
+        <div className="button-group">
+          <button type="submit" className="form-button">
+            <b>Sign Up</b>
+          </button>
+          <button className="form-button">
+            <Link to="/login">Have an account? Login!</Link>
+          </button>
+        </div>
       </form>
-      <Link to="/login">Login</Link>
     </section>
   );
 };

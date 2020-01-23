@@ -1,13 +1,18 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { FaSpinner } from "react-icons/fa";
-import { getProfileFunc, fetchRegistrationFunc } from "../../utils/api";
+import {
+  getProfileFunc,
+  fetchRegistrationFunc,
+  logoutFunc
+} from "../../utils/api";
 
 const Dashboard = () => {
   const history = useHistory();
   const [isLoading, setIsLoading] = React.useState(true);
   const [data, setData] = React.useState({});
   const [userRegistration, setUserRegistration] = React.useState([]);
+
   React.useEffect(() => {
     getProfileFunc()
       .then(res => {
@@ -28,6 +33,13 @@ const Dashboard = () => {
         history.push("/login");
       });
   }, []);
+
+  const handleLogout = () => {
+    logoutFunc().then(() => {
+      history.push("/");
+    });
+  };
+
   return (
     <>
       {isLoading ? (
@@ -46,6 +58,8 @@ const Dashboard = () => {
               <h5>username: {data.username}</h5>
               <h5>name: {`${data.first_name} ${data.last_name}`}</h5>
               <h5>email: {data.email}</h5>
+              <Link to="/team-register">Register for Event</Link>
+              <button onClick={handleLogout}>Logout</button>
             </div>
           </div>
           <div className="team_events" style={{ width: "70%" }}>
@@ -74,7 +88,7 @@ const Dashboard = () => {
                           {event.payed ? (
                             <button disabled>Paid</button>
                           ) : (
-                            <button>Pay Now</button>
+                            <button disabled>Pay Now</button>
                           )}
                         </td>
                       </tr>
