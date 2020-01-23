@@ -78,6 +78,7 @@ const TeamRegistration = props => {
           </div>
           <div className="first_info">
             <h6>Event Name</h6>
+            <br />
             <select value={eventSlug.value} onChange={eventSlug.handleChange}>
               <optgroup label="Cultural and Theatre Events">
                 <option value="cult-7">Rockathon</option>
@@ -130,10 +131,10 @@ const TeamRegistration = props => {
             </select>
           </div>
         </div>
-        <h4>
+        <h3>
           Note: It is optional to add Team Members. Maximum size of team is 4
           including the Team Leader.
-        </h4>
+        </h3>
         <div className="new_table">
           <table
             style={{

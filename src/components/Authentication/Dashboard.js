@@ -58,8 +58,16 @@ const Dashboard = () => {
               <h5>username: {data.username}</h5>
               <h5>name: {`${data.first_name} ${data.last_name}`}</h5>
               <h5>email: {data.email}</h5>
-              <Link to="/team-register">Register for Event</Link>
-              <button onClick={handleLogout}>Logout</button>
+              {/*<Link to="/team-register">Register for Event</Link>*/}
+              <button
+                className="team_register_but"
+                onClick={() => history.push("/team-register")}
+              >
+                Register for Event
+              </button>
+              <button className="team_register_but" onClick={handleLogout}>
+                Logout
+              </button>
             </div>
           </div>
           <div className="team_events" style={{ width: "70%" }}>
