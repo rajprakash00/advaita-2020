@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Switch, Link, withRouter } from "react-router-dom";
 import ReactGA from "react-ga";
 import { AuthContext } from "./components/Authentication/authContext";
-import PrivateRoute from "./components/Authentication/privateRoute";
 
 import Loader from "./components/Loader";
 import LandingMain from "./components/LandingMain";
