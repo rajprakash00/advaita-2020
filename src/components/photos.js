@@ -28,7 +28,7 @@ import two6 from "../img/photos/OPTI/49.png";
 import two7 from "../img/photos/OPTI/33.png";
 import two8 from "../img/photos/OPTI/64.png";
 
-export const Photos = [
+export const photos = [
   {
     src: `${six}`,
 
