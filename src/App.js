@@ -29,6 +29,7 @@ import LoginPage from "./components/Authentication/Login";
 import RegisterPage from "./components/Authentication/Register";
 import TeamRegistration from "./components/Authentication/TeamRegistration";
 import Dashboard from "./components/Authentication/Dashboard";
+import VerifyEmail from "./components/Authentication/VerifyEmail";
 
 import logo from "./img/logo.png";
 import ImageGallery from "./components/ImageGallery";
@@ -80,6 +81,7 @@ const App = ({ location }) => {
         {/* Authentication Routes */}
         <Route path="/login" component={LoginPage} />
         <Route path="/register" component={RegisterPage} />
+        <Route path="/verify-email" component={VerifyEmail} />
         <PrivateRoute path="/team-register" component={TeamRegistration} />
         <PrivateRoute path="/dashboard" component={Dashboard} />
 
