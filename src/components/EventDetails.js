@@ -82,7 +82,7 @@ const EventDetails = props => {
 
                 <button
                   onClick={() => {
-                    alert("Coming Soon");
+                    props.history.push("/team-register");
                   }}
                 >
                   Register

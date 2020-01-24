@@ -6,3 +6,4 @@ export const EMAIL_VERIFY = "accounts/verify-registration/";
 export const PROFILE = "accounts/profile/";
 export const FETCH_REGISTRATION = "events/fetchRegistration";
 export const TEAM_REGISTER = "events/register/";
+export const IS_LOGGED_IN = "token/verify/";

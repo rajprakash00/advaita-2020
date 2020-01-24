@@ -3,6 +3,28 @@ import * as API from "./config";
 
 axios.defaults.baseURL = API.URL;
 
+export const checkLoginFunc = () => {
+  if (sessionStorage.getItem("jwtToken") !== null) {
+    return axios
+      .post(
+        API.IS_LOGGED_IN,
+        {
+          token: sessionStorage.getItem("jwtToken")
+        },
+        {
+          withCredentials: true,
+          headers: {
+            Authorization: `Bearer ${sessionStorage.getItem("jwtToken")}`
+          }
+        }
+      )
+      .then(res => res)
+      .catch(err => console.log(err));
+  } else {
+    return Promise.reject({ status: 401 });
+  }
+};
+
 export const loginFunc = ({ username, password }) => {
   return axios
     .post(
