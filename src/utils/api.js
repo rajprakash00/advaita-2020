@@ -57,6 +57,21 @@ export const registerFunc = user => {
     .catch(err => console.log(err));
 };
 
+export const emailVerifyFunc = params => {
+  return axios
+    .post(
+      API.EMAIL_VERIFY + params,
+      {},
+      {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }
+    )
+    .then(res => res)
+    .catch(err => console.log(err));
+};
+
 export const getProfileFunc = () => {
   if (sessionStorage.getItem("jwtToken") !== null) {
     return axios
