@@ -29,6 +29,9 @@ const NavMenu = props => {
       <NavLink className="nav-link" to="/team" onClick={props.toggleMenu}>
         The Team
       </NavLink>
+      <NavLink className="nav-link" to="/gallery" onClick={props.toggleMenu}>
+        Gallery
+      </NavLink>
       <NavLink className="nav-link" to="/sponsors" onClick={props.toggleMenu}>
         Sponsors
       </NavLink>

@@ -31,7 +31,7 @@ import TeamRegistration from "./components/Authentication/TeamRegistration";
 import Dashboard from "./components/Authentication/Dashboard";
 
 import logo from "./img/logo.png";
-import Gallery from "./components/Gallery";
+import ImageGallery from "./components/ImageGallery";
 
 // Initializing React Google Analytics
 ReactGA.initialize("UA-155949666-1");
@@ -71,7 +71,7 @@ const App = ({ location }) => {
         <Route path="/contact" component={Contact} />
         <Route path="/sponsors" component={Lastsponsor} />
         <Route path="/sponsors-old" component={Sponsors} />
-        <Route path="/gallery" component={Gallery} />
+        <Route path="/gallery" component={ImageGallery} />
         {/* <Route path="/pronite" component={Pronite} /> */}
         <Route path="/event" component={Event} />
         <Route path="/team" component={Team} />
