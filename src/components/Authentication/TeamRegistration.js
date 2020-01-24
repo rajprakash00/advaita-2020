@@ -1,6 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { teamRegisterFunc } from "../../utils/api";
+import { useAuth } from "./authContext";
+import { teamRegisterFunc, checkLoginFunc } from "../../utils/api";
 
 // Using a custom hook
 function useField(defaultValue) {
@@ -18,6 +19,7 @@ function useField(defaultValue) {
 
 const TeamRegistration = props => {
   const history = useHistory();
+  const { setAuthTokens } = useAuth();
 
   // Form Related State Variables
   const teamName = useField("");
@@ -33,7 +35,23 @@ const TeamRegistration = props => {
   const lastNameThree = useField("");
   const emailThree = useField("");
 
-  // componentWillMount alternative
+  React.useEffect(() => {
+    if (sessionStorage.getItem("jwtToken") !== null) {
+      checkLoginFunc()
+        .then(res => {
+          if (res.status === 200) {
+            setAuthTokens(sessionStorage.getItem("jwtToken"));
+          }
+        })
+        .catch(err => {
+          if (err.status === 401) {
+            history.push("/login");
+          }
+        });
+    } else {
+      history.push("/login");
+    }
+  }, []);
 
   const handleSubmit = event => {
     event.preventDefault();

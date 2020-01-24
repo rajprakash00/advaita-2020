@@ -1,8 +1,10 @@
 import React from "react";
 import { stack as Menu } from "react-burger-menu";
 import { NavLink } from "react-router-dom";
+import { useAuth } from "./Authentication/authContext";
 
 const NavMenu = props => {
+  const { authTokens } = useAuth();
   return (
     <Menu
       customBurgerIcon={
@@ -17,6 +19,15 @@ const NavMenu = props => {
       right
       disableAutoFocus
     >
+      {authTokens ? (
+        <NavLink
+          className="nav-link"
+          to="/dashboard"
+          onClick={props.toggleMenu}
+        >
+          Dashboard
+        </NavLink>
+      ) : null}
       <NavLink className="nav-link" to="/" onClick={props.toggleMenu}>
         Home
       </NavLink>

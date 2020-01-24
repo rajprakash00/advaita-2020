@@ -1,37 +1,46 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { FaSpinner } from "react-icons/fa";
+import { useAuth } from "./authContext";
 import {
+  checkLoginFunc,
   getProfileFunc,
   fetchRegistrationFunc,
   logoutFunc
 } from "../../utils/api";
 
 const Dashboard = () => {
+  const { setAuthTokens } = useAuth();
   const history = useHistory();
   const [isLoading, setIsLoading] = React.useState(true);
   const [data, setData] = React.useState({});
   const [userRegistration, setUserRegistration] = React.useState([]);
 
   React.useEffect(() => {
-    getProfileFunc()
-      .then(res => {
+    if (sessionStorage.getItem("jwtToken") !== null) {
+      checkLoginFunc()
+        .then(res => {
+          if (res.status === 200) {
+            setAuthTokens(sessionStorage.getItem("jwtToken"));
+          }
+        })
+        .catch(err => {
+          if (err.status === 401) {
+            history.push("/login");
+          }
+        });
+
+      getProfileFunc().then(res => {
         setData(res.data);
-      })
-      .catch(err => {
-        if (err.status === 401) {
-          history.push("/login");
-        }
       });
 
-    fetchRegistrationFunc()
-      .then(res => {
+      fetchRegistrationFunc().then(res => {
         setUserRegistration(res.data.details.reg);
         setIsLoading(false);
-      })
-      .catch(() => {
-        history.push("/login");
       });
+    } else {
+      history.push("/login");
+    }
   }, []);
 
   const handleLogout = () => {

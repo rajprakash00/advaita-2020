@@ -41,13 +41,14 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 const App = ({ location }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(true);
+  const [authTokens, setAuthTokens] = React.useState();
+
   React.useState(() => {
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
   }, []);
 
-  const [authTokens, setAuthTokens] = React.useState();
   const setToken = data => {
     sessionStorage.setItem("jwtToken", data);
     setAuthTokens(data);
@@ -82,8 +83,8 @@ const App = ({ location }) => {
         <Route path="/login" component={LoginPage} />
         <Route path="/register" component={RegisterPage} />
         <Route path="/verify-email" component={VerifyEmail} />
-        <PrivateRoute path="/team-register" component={TeamRegistration} />
-        <PrivateRoute path="/dashboard" component={Dashboard} />
+        <Route path="/team-register" component={TeamRegistration} />
+        <Route path="/dashboard" component={Dashboard} />
 
         <Route path="/" component={LandingMain} exact />
         <Route component={Error} />
