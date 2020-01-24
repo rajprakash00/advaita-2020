@@ -1,4 +1,4 @@
-export const URL = "http://advaita.pythonanywhere.com/";
+export const URL = "https://advaita.pythonanywhere.com/";
 export const LOGIN = "token/";
 export const LOGOUT = "accounts/logout/";
 export const REGISTER = "accounts/register/";
