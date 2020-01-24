@@ -59,10 +59,11 @@ const LoginPage = () => {
             )}
           </button>
 
-          <button className="form-button">
-            <Link to="/register">
-              <b>Register</b>
-            </Link>
+          <button
+            className="form-button"
+            onClick={() => history.push("/register")}
+          >
+            Register
           </button>
         </div>
       </form>
