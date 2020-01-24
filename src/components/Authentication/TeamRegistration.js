@@ -21,7 +21,7 @@ const TeamRegistration = props => {
 
   // Form Related State Variables
   const teamName = useField("");
-  const eventSlug = useField("");
+  const eventSlug = useField("cult-7");
 
   const firstNameOne = useField("");
   const lastNameOne = useField("");

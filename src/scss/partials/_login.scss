@@ -20,7 +20,8 @@
     }
   }
   input[type="text"],
-  input[type="password"] {
+  input[type="password"],
+  input[type="number"] {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -33,6 +34,18 @@
     font-family: "Arimo", sans-serif;
     @include md {
       width: 100%;
+    }
+  }
+
+  .gender-select {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px 0 20px 0;
+    input[type="radio"] {
+      width: 1rem;
+      height: 1rem;
+      margin-left: 10px;
     }
   }
 

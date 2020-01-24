@@ -105,7 +105,6 @@ export const fetchRegistrationFunc = () => {
 };
 
 export const teamRegisterFunc = (data, slug) => {
-  console.log(`${API.TEAM_REGISTER}${slug}`);
   if (sessionStorage.getItem("jwtToken") !== null) {
     return axios
       .post(`${API.TEAM_REGISTER}${slug}`, data, {
