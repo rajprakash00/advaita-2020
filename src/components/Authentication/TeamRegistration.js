@@ -66,7 +66,7 @@ const TeamRegistration = props => {
       <div className="team_form">
         <div className="upper_info">
           <div className="first_info">
-            <h6>Team's Name</h6>
+            <h3>Team's Name</h3>
             <br />
             <input
               type="text"
@@ -77,7 +77,7 @@ const TeamRegistration = props => {
             />
           </div>
           <div className="first_info">
-            <h6>Event Name</h6>
+            <h3>Event Name</h3>
             <br />
             <select value={eventSlug.value} onChange={eventSlug.handleChange}>
               <optgroup label="Cultural and Theatre Events">
@@ -136,9 +136,9 @@ const TeamRegistration = props => {
           including the Team Leader.
         </h4>
         <div className="register-grid">
-          <span style={{ gridArea: "hd1" }}>First Name</span>
-          <span style={{ gridArea: "hd2" }}>Last Name</span>
-          <span style={{ gridArea: "hd3" }}>Email Address</span>
+          <h3 style={{ gridArea: "hd1" }}>First Name</h3>
+          <h3 style={{ gridArea: "hd2" }}>Last Name</h3>
+          <h3 style={{ gridArea: "hd3" }}>Email Address</h3>
           <input
             type="text"
             placeholder="First Name of Member One"

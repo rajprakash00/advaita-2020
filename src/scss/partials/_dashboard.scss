@@ -4,7 +4,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-
+  input[type="text"] {
+    font-family: "Arimo", sans-serif;
+    font-size: 1.5rem;
+  }
   .team_register_but {
     display: flex;
     flex-direction: column;
@@ -185,7 +188,9 @@
       display: flex;
       flex-direction: column;
     }
-    span {
+
+    h3 {
+      font-size: 2rem;
       @include md {
         display: none;
       }
