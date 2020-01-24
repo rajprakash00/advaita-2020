@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 import Particles from "react-particles-js";
 import logo from "../img/logo.png";

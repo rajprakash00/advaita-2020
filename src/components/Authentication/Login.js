@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { FaSpinner } from "react-icons/fa";
 import { loginFunc } from "../../utils/api";
 import { useAuth } from "./authContext";
