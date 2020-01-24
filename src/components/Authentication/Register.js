@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { registerFunc } from "../../utils/api";
 
 // Using a custom hook
@@ -92,7 +92,7 @@ const RegisterPage = () => {
         </label>
         <input
           name="password"
-          type="text"
+          type="password"
           placeholder=""
           value={password.value}
           onChange={password.handleChange}
@@ -103,7 +103,7 @@ const RegisterPage = () => {
         </label>
         <input
           name="confirm_password"
-          type="text"
+          type="password"
           placeholder=""
           value={confirmPassword.value}
           onChange={confirmPassword.handleChange}
@@ -113,8 +113,11 @@ const RegisterPage = () => {
           <button type="submit" className="form-button">
             <b>Sign Up</b>
           </button>
-          <button className="form-button">
-            <Link to="/login">Have an account? Login!</Link>
+          <button
+            className="form-button"
+            onClick={() => history.push("/login")}
+          >
+            <b>Have an account? Login!</b>
           </button>
         </div>
       </form>

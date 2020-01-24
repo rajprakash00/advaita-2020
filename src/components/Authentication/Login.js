@@ -63,7 +63,7 @@ const LoginPage = () => {
             className="form-button"
             onClick={() => history.push("/register")}
           >
-            Register
+            <b>Register</b>
           </button>
         </div>
       </form>

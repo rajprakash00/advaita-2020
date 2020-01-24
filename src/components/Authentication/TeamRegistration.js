@@ -131,104 +131,79 @@ const TeamRegistration = props => {
             </select>
           </div>
         </div>
-        <h3>
+        <h4>
           Note: It is optional to add Team Members. Maximum size of team is 4
           including the Team Leader.
-        </h3>
-        <div className="new_table">
-          <table
-            style={{
-              width: "80%",
-              marginTop: "50px"
-            }}
-          >
-            <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Email Address</th>
-            </tr>
-            <tbody>
-              <tr>
-                <td>
-                  <input
-                    type="text"
-                    placeholder="First Name of Member One"
-                    value={firstNameOne.value}
-                    onChange={firstNameOne.handleChange}
-                  />
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    placeholder="Last Name of Member One"
-                    value={lastNameOne.value}
-                    onChange={lastNameOne.handleChange}
-                  />
-                </td>
-                <td>
-                  <input
-                    type="email"
-                    placeholder="Email of Member One"
-                    value={emailOne.value}
-                    onChange={emailOne.handleChange}
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input
-                    type="text"
-                    placeholder="First Name of Member Two"
-                    value={firstNameTwo.value}
-                    onChange={firstNameTwo.handleChange}
-                  />
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    placeholder="Last Name of Member Two"
-                    value={lastNameTwo.value}
-                    onChange={lastNameTwo.handleChange}
-                  />
-                </td>
-                <td>
-                  <input
-                    type="email"
-                    placeholder="Email of Member Two"
-                    value={emailTwo.value}
-                    onChange={emailTwo.handleChange}
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input
-                    type="text"
-                    placeholder="First Name of Member Three"
-                    value={firstNameThree.value}
-                    onChange={firstNameThree.handleChange}
-                  />
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    placeholder="Last Name of Member Three"
-                    value={lastNameThree.value}
-                    onChange={lastNameThree.handleChange}
-                  />
-                </td>
-                <td>
-                  <input
-                    type="email"
-                    placeholder="Email of Member Three"
-                    value={emailThree.value}
-                    onChange={emailThree.handleChange}
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        </h4>
+        <div className="register-grid">
+          <span style={{ gridArea: "hd1" }}>First Name</span>
+          <span style={{ gridArea: "hd2" }}>Last Name</span>
+          <span style={{ gridArea: "hd3" }}>Email Address</span>
+          <input
+            type="text"
+            placeholder="First Name of Member One"
+            value={firstNameOne.value}
+            onChange={firstNameOne.handleChange}
+            style={{ gridArea: "fn1" }}
+          />
+          <input
+            type="text"
+            placeholder="Last Name of Member One"
+            value={lastNameOne.value}
+            onChange={lastNameOne.handleChange}
+            style={{ gridArea: "ln1" }}
+          />
+          <input
+            type="email"
+            placeholder="Email of Member One"
+            value={emailOne.value}
+            onChange={emailOne.handleChange}
+            style={{ gridArea: "em1" }}
+          />
+          <input
+            type="text"
+            placeholder="First Name of Member Two"
+            value={firstNameTwo.value}
+            onChange={firstNameTwo.handleChange}
+            style={{ gridArea: "fn2" }}
+          />
+          <input
+            type="text"
+            placeholder="Last Name of Member Two"
+            value={lastNameTwo.value}
+            onChange={lastNameTwo.handleChange}
+            style={{ gridArea: "ln2" }}
+          />
+          <input
+            type="email"
+            placeholder="Email of Member Two"
+            value={emailTwo.value}
+            onChange={emailTwo.handleChange}
+            style={{ gridArea: "em2" }}
+          />
+          <input
+            type="text"
+            placeholder="First Name of Member Three"
+            value={firstNameThree.value}
+            onChange={firstNameThree.handleChange}
+            style={{ gridArea: "fn3" }}
+          />
+          <input
+            type="text"
+            placeholder="Last Name of Member Three"
+            value={lastNameThree.value}
+            onChange={lastNameThree.handleChange}
+            style={{ gridArea: "ln3" }}
+          />
+          <input
+            type="email"
+            placeholder="Email of Member Three"
+            value={emailThree.value}
+            onChange={emailThree.handleChange}
+            style={{ gridArea: "em3" }}
+          />
         </div>
+
         <button className="register_button" onClick={handleSubmit}>
           SUBMIT
         </button>
