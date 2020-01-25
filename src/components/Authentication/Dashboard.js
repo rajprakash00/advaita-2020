@@ -92,7 +92,7 @@ const Dashboard = () => {
                   return (
                     <tr key={event.id}>
                       <td>{i + 1}</td>
-                      <td>{event.team_name}</td>
+                      <td>{event.solo ? "-solo-" : event.team_name}</td>
                       <td>{event.event_name}</td>
                       <td>
                         {event.payed ? (

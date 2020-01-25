@@ -123,6 +123,12 @@
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  input[type="checkbox"] {
+    width: 1.25rem;
+    height: 1.25rem;
+    border: none;
+    outline: none;
+  }
   h4 {
     font-size: 1.25rem;
     color: white;
