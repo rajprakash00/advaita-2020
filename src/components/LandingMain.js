@@ -1,5 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
+import { useAuth } from "../components/Authentication/authContext";
+import { logoutFunc, checkLoginFunc } from "../utils/api";
 import Particles from "react-particles-js";
 import logo from "../img/logo.png";
 import hook from "../img/hook.png";
@@ -7,14 +9,44 @@ import fire from "../img/fire.gif";
 
 const LandingMain = () => {
   const history = useHistory();
+  const { authTokens, setAuthTokens } = useAuth();
+
+  React.useEffect(() => {
+    checkLoginFunc()
+      .then(res => {
+        if (res.status === 200) {
+          setAuthTokens(sessionStorage.getItem("jwtToken"));
+        }
+      })
+      .catch(err => {
+        if (err.status === 401) {
+          setAuthTokens("");
+        }
+      });
+  }, []);
+
   return (
     <>
-      <button
-        className="login-register-button"
-        onClick={() => history.push("/login")}
-      >
-        Login/Register
-      </button>
+      {authTokens ? (
+        <button
+          className="login-register-button"
+          onClick={() => {
+            logoutFunc().then(() => {
+              setAuthTokens("");
+              history.push("/");
+            });
+          }}
+        >
+          Logout
+        </button>
+      ) : (
+        <button
+          className="login-register-button"
+          onClick={() => history.push("/login")}
+        >
+          Login/Register
+        </button>
+      )}
       <div id="outer-container">
         <div id="wrapper">
           <Particles

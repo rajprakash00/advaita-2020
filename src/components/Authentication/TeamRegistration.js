@@ -1,6 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { teamRegisterFunc } from "../../utils/api";
+import { useAuth } from "./authContext";
+import { teamRegisterFunc, checkLoginFunc } from "../../utils/api";
 
 // Using a custom hook
 function useField(defaultValue) {
@@ -17,11 +18,17 @@ function useField(defaultValue) {
 }
 
 const TeamRegistration = props => {
+  const [isSolo, setIsSolo] = React.useState(false);
+  const handleCheckbox = event => {
+    setIsSolo(event.target.checked);
+  };
+
   const history = useHistory();
+  const { setAuthTokens } = useAuth();
 
   // Form Related State Variables
   const teamName = useField("");
-  const eventSlug = useField("");
+  const eventSlug = useField("cult-7");
 
   const firstNameOne = useField("");
   const lastNameOne = useField("");
@@ -33,13 +40,30 @@ const TeamRegistration = props => {
   const lastNameThree = useField("");
   const emailThree = useField("");
 
-  // componentWillMount alternative
+  React.useEffect(() => {
+    if (sessionStorage.getItem("jwtToken") !== null) {
+      checkLoginFunc()
+        .then(res => {
+          if (res.status === 200) {
+            setAuthTokens(sessionStorage.getItem("jwtToken"));
+          }
+        })
+        .catch(err => {
+          if (err.status === 401) {
+            history.push("/login");
+          }
+        });
+    } else {
+      history.push("/login");
+    }
+  }, []);
 
   const handleSubmit = event => {
     event.preventDefault();
     teamRegisterFunc(
       {
-        team_name: teamName.value,
+        team_name: isSolo ? null : teamName.value,
+        solo: isSolo,
         first_name1: firstNameOne.value,
         last_name1: lastNameOne.value,
         email1: emailOne.value,
@@ -66,18 +90,29 @@ const TeamRegistration = props => {
       <div className="team_form">
         <div className="upper_info">
           <div className="first_info">
-            <h6>Team's Name</h6>
+            <h3>Team's Name</h3>
             <br />
             <input
               type="text"
-              placeholder="Team's Name"
+              placeholder={isSolo ? "Not Required" : "Team's Name"}
               value={teamName.value}
               onChange={teamName.handleChange}
+              disabled={isSolo}
               required
             />
           </div>
           <div className="first_info">
-            <h6>Event Name</h6>
+            <h3>Solo?</h3>
+            <br />
+            <input
+              type="checkbox"
+              checked={isSolo}
+              onChange={handleCheckbox}
+              required
+            />
+          </div>
+          <div className="first_info">
+            <h3>Event Name</h3>
             <br />
             <select value={eventSlug.value} onChange={eventSlug.handleChange}>
               <optgroup label="Cultural and Theatre Events">
@@ -131,104 +166,83 @@ const TeamRegistration = props => {
             </select>
           </div>
         </div>
-        <h3>
-          Note: It is optional to add Team Members. Maximum size of team is 4
-          including the Team Leader.
-        </h3>
-        <div className="new_table">
-          <table
-            style={{
-              width: "80%",
-              marginTop: "50px"
-            }}
-          >
-            <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Email Address</th>
-            </tr>
-            <tbody>
-              <tr>
-                <td>
-                  <input
-                    type="text"
-                    placeholder="First Name of Member One"
-                    value={firstNameOne.value}
-                    onChange={firstNameOne.handleChange}
-                  />
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    placeholder="Last Name of Member One"
-                    value={lastNameOne.value}
-                    onChange={lastNameOne.handleChange}
-                  />
-                </td>
-                <td>
-                  <input
-                    type="email"
-                    placeholder="Email of Member One"
-                    value={emailOne.value}
-                    onChange={emailOne.handleChange}
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input
-                    type="text"
-                    placeholder="First Name of Member Two"
-                    value={firstNameTwo.value}
-                    onChange={firstNameTwo.handleChange}
-                  />
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    placeholder="Last Name of Member Two"
-                    value={lastNameTwo.value}
-                    onChange={lastNameTwo.handleChange}
-                  />
-                </td>
-                <td>
-                  <input
-                    type="email"
-                    placeholder="Email of Member Two"
-                    value={emailTwo.value}
-                    onChange={emailTwo.handleChange}
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input
-                    type="text"
-                    placeholder="First Name of Member Three"
-                    value={firstNameThree.value}
-                    onChange={firstNameThree.handleChange}
-                  />
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    placeholder="Last Name of Member Three"
-                    value={lastNameThree.value}
-                    onChange={lastNameThree.handleChange}
-                  />
-                </td>
-                <td>
-                  <input
-                    type="email"
-                    placeholder="Email of Member Three"
-                    value={emailThree.value}
-                    onChange={emailThree.handleChange}
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        {isSolo ? null : (
+          <>
+            <h4>
+              Note: It is optional to add Team Members. Maximum size of team is
+              4 including the Team Leader.
+            </h4>
+
+            <div className="register-grid">
+              <h3 style={{ gridArea: "hd1" }}>First Name</h3>
+              <h3 style={{ gridArea: "hd2" }}>Last Name</h3>
+              <h3 style={{ gridArea: "hd3" }}>Email Address</h3>
+              <input
+                type="text"
+                placeholder="First Name of Member One"
+                value={firstNameOne.value}
+                onChange={firstNameOne.handleChange}
+                style={{ gridArea: "fn1" }}
+              />
+              <input
+                type="text"
+                placeholder="Last Name of Member One"
+                value={lastNameOne.value}
+                onChange={lastNameOne.handleChange}
+                style={{ gridArea: "ln1" }}
+              />
+              <input
+                type="email"
+                placeholder="Email of Member One"
+                value={emailOne.value}
+                onChange={emailOne.handleChange}
+                style={{ gridArea: "em1" }}
+              />
+              <input
+                type="text"
+                placeholder="First Name of Member Two"
+                value={firstNameTwo.value}
+                onChange={firstNameTwo.handleChange}
+                style={{ gridArea: "fn2" }}
+              />
+              <input
+                type="text"
+                placeholder="Last Name of Member Two"
+                value={lastNameTwo.value}
+                onChange={lastNameTwo.handleChange}
+                style={{ gridArea: "ln2" }}
+              />
+              <input
+                type="email"
+                placeholder="Email of Member Two"
+                value={emailTwo.value}
+                onChange={emailTwo.handleChange}
+                style={{ gridArea: "em2" }}
+              />
+              <input
+                type="text"
+                placeholder="First Name of Member Three"
+                value={firstNameThree.value}
+                onChange={firstNameThree.handleChange}
+                style={{ gridArea: "fn3" }}
+              />
+              <input
+                type="text"
+                placeholder="Last Name of Member Three"
+                value={lastNameThree.value}
+                onChange={lastNameThree.handleChange}
+                style={{ gridArea: "ln3" }}
+              />
+              <input
+                type="email"
+                placeholder="Email of Member Three"
+                value={emailThree.value}
+                onChange={emailThree.handleChange}
+                style={{ gridArea: "em3" }}
+              />
+            </div>
+          </>
+        )}
         <button className="register_button" onClick={handleSubmit}>
           SUBMIT
         </button>

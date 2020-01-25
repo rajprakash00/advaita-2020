@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { registerFunc } from "../../utils/api";
 
 // Using a custom hook
@@ -19,12 +19,16 @@ function useField(defaultValue) {
 const RegisterPage = () => {
   const history = useHistory();
 
-  const username = useField("");
-  const password = useField("");
-  const confirmPassword = useField("");
-  const firstName = useField("");
-  const lastName = useField("");
-  const email = useField("");
+  const username = useField();
+  const password = useField();
+  const confirmPassword = useField();
+  const firstName = useField();
+  const lastName = useField();
+  const email = useField();
+  const mobileNo = useField();
+  const city = useField();
+  const gender = useField("male");
+  const college = useField();
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -34,7 +38,11 @@ const RegisterPage = () => {
       password_confirm: confirmPassword.value,
       first_name: firstName.value,
       last_name: lastName.value,
-      email: email.value
+      email: email.value,
+      mobile_no: mobileNo.value,
+      city: city.value,
+      gender: gender.value,
+      college: college.value
     }).then(() => {
       history.push("/login");
     });
@@ -88,11 +96,67 @@ const RegisterPage = () => {
           required
         />
         <label>
+          <b>Gender</b>
+        </label>
+        <div className="gender-select">
+          <div>
+            <label>Male</label>
+            <input
+              type="radio"
+              value="male"
+              checked={gender.value === "male"}
+              onChange={gender.handleChange}
+            />
+          </div>
+          <div>
+            <label>Female</label>
+            <input
+              type="radio"
+              value="female"
+              checked={gender.value === "female"}
+              onChange={gender.handleChange}
+            />
+          </div>
+        </div>
+        <label>
+          <b>Mobile Number</b>
+        </label>
+        <input
+          name="mobile_number"
+          type="number"
+          placeholder=""
+          value={mobileNo.value}
+          onChange={mobileNo.handleChange}
+          required
+        />
+        <label>
+          <b>City</b>
+        </label>
+        <input
+          name="city"
+          type="text"
+          placeholder=""
+          value={city.value}
+          onChange={city.handleChange}
+          required
+        />
+        <label>
+          <b>College</b>
+        </label>
+        <input
+          name="college"
+          type="text"
+          placeholder=""
+          value={college.value}
+          onChange={college.handleChange}
+          required
+        />
+        <label>
           <b>Password</b>
         </label>
         <input
           name="password"
-          type="text"
+          type="password"
           placeholder=""
           value={password.value}
           onChange={password.handleChange}
@@ -103,7 +167,7 @@ const RegisterPage = () => {
         </label>
         <input
           name="confirm_password"
-          type="text"
+          type="password"
           placeholder=""
           value={confirmPassword.value}
           onChange={confirmPassword.handleChange}
@@ -113,8 +177,11 @@ const RegisterPage = () => {
           <button type="submit" className="form-button">
             <b>Sign Up</b>
           </button>
-          <button className="form-button">
-            <Link to="/login">Have an account? Login!</Link>
+          <button
+            className="form-button"
+            onClick={() => history.push("/login")}
+          >
+            <b>Have an account? Login!</b>
           </button>
         </div>
       </form>

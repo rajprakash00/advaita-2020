@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Switch, Link, withRouter } from "react-router-dom";
 import ReactGA from "react-ga";
 import { AuthContext } from "./components/Authentication/authContext";
-import PrivateRoute from "./components/Authentication/privateRoute";
 
 import Loader from "./components/Loader";
 import LandingMain from "./components/LandingMain";
@@ -29,6 +28,7 @@ import LoginPage from "./components/Authentication/Login";
 import RegisterPage from "./components/Authentication/Register";
 import TeamRegistration from "./components/Authentication/TeamRegistration";
 import Dashboard from "./components/Authentication/Dashboard";
+import VerifyEmail from "./components/Authentication/VerifyEmail";
 
 import logo from "./img/logo.png";
 import ImageGallery from "./components/ImageGallery";
@@ -40,13 +40,14 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 const App = ({ location }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(true);
+  const [authTokens, setAuthTokens] = React.useState();
+
   React.useState(() => {
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
   }, []);
 
-  const [authTokens, setAuthTokens] = React.useState();
   const setToken = data => {
     sessionStorage.setItem("jwtToken", data);
     setAuthTokens(data);
@@ -80,8 +81,9 @@ const App = ({ location }) => {
         {/* Authentication Routes */}
         <Route path="/login" component={LoginPage} />
         <Route path="/register" component={RegisterPage} />
-        <PrivateRoute path="/team-register" component={TeamRegistration} />
-        <PrivateRoute path="/dashboard" component={Dashboard} />
+        <Route path="/verify-email" component={VerifyEmail} />
+        <Route path="/team-register" component={TeamRegistration} />
+        <Route path="/dashboard" component={Dashboard} />
 
         <Route path="/" component={LandingMain} exact />
         <Route component={Error} />

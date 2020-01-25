@@ -340,7 +340,7 @@
       {
         "MiscGames": {
           "id": 7,
-          "description": "Flip the bottle \n Arrange the cards \n 7 Up 7 Down\n Robin Ring\nSpin your Luck\n Alohomora",
+          "description": "Flip the bottle \n Fish Cup \n 7 Up 7 Down\n Robin Ring\nSpin your Luck\n Knock Down",
           "rules": "rules.pdf",
           "img_path": "Misc",
           "slug": "food-7"
