@@ -114,7 +114,41 @@ const TeamRegistration = props => {
           <div className="first_info">
             <h3>Event Name</h3>
             <br />
-            <select value={eventSlug.value} onChange={eventSlug.handleChange}>
+            {isSolo ? (
+              <select value={eventSlug.value} onChange={eventSlug.handleChange}>
+                <optgroup label="Cultural and Theatre Events">
+                  <option value="cult-4">Acoustica Solo</option>
+                  <option value="cult-3">Footloose Solo</option>
+                  <option value="cult-1">Cypher Solo</option>
+                  <option value="cult-2">Mera Naam Joker</option>
+                </optgroup>
+                <optgroup label="Tech Events">
+                  <option value="tech-10">BluePrint</option>
+                  <option value="tech-6">WebDev</option>
+                </optgroup>
+              </select>
+            ) : (
+              <select value={eventSlug.value} onChange={eventSlug.handleChange}>
+                <optgroup label="Cultural and Theatre Events">
+                  <option value="cult-7">Rockathon</option>
+                  <option value="cult-5">LaMode</option>
+                  <option value="cult-4">Acoustica Group</option>
+                  <option value="cult-3">Footloose Group</option>
+                </optgroup>
+                <optgroup label="Tech Events">
+                  <option value="tech-4">TechNova</option>
+                  <option value="tech-7">Paper Presentation</option>
+                  <option value="tech-2">SwigNCode</option>
+                  <option value="tech-3">Principium</option>
+                  <option value="tech-11">DirtRush</option>
+                  <option value="tech-9">LineFollower</option>
+                  <option value="tech-8">Encoded</option>
+                  <option value="tech-5">CTF</option>
+                  <option value="tech-12">Arduinoob</option>
+                </optgroup>
+              </select>
+            )}
+            {/* <select value={eventSlug.value} onChange={eventSlug.handleChange}>
               <optgroup label="Cultural and Theatre Events">
                 <option value="cult-7">Rockathon</option>
                 <option value="cult-4">Acoustica</option>
@@ -163,7 +197,7 @@ const TeamRegistration = props => {
                 <option value="food-2">Golgappe King</option>
                 <option value="food-5">Stringed Delicacy</option>
               </optgroup>
-            </select>
+            </select>*/}
           </div>
         </div>
         {isSolo ? null : (

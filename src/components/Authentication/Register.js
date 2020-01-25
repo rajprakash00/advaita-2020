@@ -44,6 +44,7 @@ const RegisterPage = () => {
       gender: gender.value,
       college: college.value
     }).then(() => {
+      alert("Please check your spam folder for registration verification link");
       history.push("/login");
     });
   };
@@ -155,12 +156,15 @@ const RegisterPage = () => {
           <b>Password</b>
         </label>
         <input
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
           name="password"
           type="password"
           placeholder=""
           value={password.value}
           onChange={password.handleChange}
           required
+          title=" Your password must be at least 8 characters as well as contain at
+            least one uppercase, one lowercase,one special character and one number."
         />
         <label>
           <b>Confirm Password</b>
