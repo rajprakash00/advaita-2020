@@ -98,7 +98,13 @@ const Dashboard = () => {
                         {event.payed ? (
                           <button disabled>Paid</button>
                         ) : (
-                          <button disabled>Pay Now</button>
+                          <button
+                            onClick={() => {
+                              alert("Coming Soon");
+                            }}
+                          >
+                            Pay Now
+                          </button>
                         )}
                       </td>
                     </tr>

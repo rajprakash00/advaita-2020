@@ -20,13 +20,15 @@ const NavMenu = props => {
       disableAutoFocus
     >
       {authTokens ? (
-        <NavLink
-          className="nav-link"
-          to="/dashboard"
-          onClick={props.toggleMenu}
-        >
-          Dashboard
-        </NavLink>
+        <>
+          <NavLink
+            className="nav-link"
+            to="/dashboard"
+            onClick={props.toggleMenu}
+          >
+            Dashboard
+          </NavLink>
+        </>
       ) : null}
       <NavLink className="nav-link" to="/" onClick={props.toggleMenu}>
         Home

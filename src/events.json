@@ -40,7 +40,7 @@
         "Cypher": {
           "id": 1,
           "description": "With respect comes your name. Your name is how you will be identified and acknowledged. A warrior comes, fights and conquers the stage. Age and gender don't matter.\n\"When many dancers get together to battle each other in a circle where no one can break in, is called a cypher.\" IIIT Bhubaneswar presents with booming hip-hop beats and a pumping party atmosphere, a one-of-a-kind dance event- CYPHER.\nSoak yourself up in the infectious energy and attitude of mind-blowing dance moves and pumping hip-hop tunes. This is a call to all the lockers and breakers and b-boyers and hip-hoppers out there. Push your boundaries and show off your dance moves to make the crowd go wild.\nBeat. Break. Battle",
-          "rules": "Cypher.docx",
+          "rules": "cypher.docx",
           "img_path": "Cypher",
           "slug": "cult-1"
         }
@@ -49,7 +49,7 @@
         "TillICollapse": {
           "id": 9,
           "description": "Rapping is a form of music that has something called a beat to it, something that sounds very attractive and appealing.\n Coming down to the beginning of a new decade,Hip-hop is making a lot of noise & It should get some more spotlight. To all the underground rappers in the city, Bhubaneswar had it coming.\nWith the growing number of rappers in the city, we gladly present to you \u201cTill I Collapse\u201d, the rap battle competition of Advaita 2K20, a perfect platform to showcase your talent.",
-          "rules": "Rap-battle.docx",
+          "rules": "rap-battle.docx",
           "img_path": "RapBattle",
           "slug": "cult-9"
         }
@@ -315,7 +315,7 @@
         "SholeParathe": {
           "id": 4,
           "description": "This will be a fastest paratha eating competition with some exciting twists\nlike chilies, spices, etc. In case of a tie a tie breaker round will be decided on the spot.",
-          "rules": "Zaiqa.doc",
+          "rules": "zaiqa.doc",
           "img_path": "Shole"
         }
       },
@@ -323,7 +323,7 @@
         "MaggieChef": {
           "id": 3,
           "description": "This is a maggie making competition.With so many surprises to unfold\nand secret ingredients with magic box on the way , this competition is the perfect mix of taste and brains.The event will be judged by a famous food blogger of Bhubaneswar",
-          "rules": "Zaiqa.doc",
+          "rules": "zaiqa.doc",
           "img_path": "Maggie",
           "slug": "food-3"
         }
@@ -332,7 +332,7 @@
         "TrackBait": {
           "id": 6,
           "description": "Come witness the differentEST past time that you will ever hope to come across. A game that you might never have played. Track Bait will help vent away the dullness of your life. Use your palms and your foot, but BEWARE! One mismatch and you are disqualified.",
-          "rules": "Zaiqa.doc",
+          "rules": "zaiqa.doc",
           "img_path": "Trait",
           "slug": "food-6"
         }
@@ -341,7 +341,7 @@
         "MiscGames": {
           "id": 7,
           "description": "Flip the bottle \n Fish Cup \n 7 Up 7 Down\n Robin Ring\nSpin your Luck\n Knock Down",
-          "rules": "Zaiqa.doc",
+          "rules": "zaiqa.doc",
           "img_path": "Misc",
           "slug": "food-7"
         }
@@ -350,7 +350,7 @@
         "GolgappeKing": {
           "id": 2,
           "description": "To all the gupchup lovers out there this event is going to be the most appealing explosion of spices. An event to test all individuals on the scale of time and to tickle their palate with the best of piquants. There is no stipulated time frame, the one who clocks the least will be the Gupchup Champion",
-          "rules": "Zaiqa.doc",
+          "rules": "zaiqa.doc",
           "img_path": "Gol",
           "slug": "food-2"
         }
@@ -359,7 +359,7 @@
         "TasteBuddy": {
           "id": 35,
           "description": "Are you a foodie who has a refined interest in food and who eats food not out of hunger but due to their love, interest or hobby for food. If yes, then taste buddy is for you. As FOOD is the ingredient that binds us together but do you know about the ingredients of the food you eat. Taste buddy will test your knowledge about kitchen and food so Keep calm and Test and Taste. Pull up your chair, take a taste. Explore with your taste buds as well as the brain.",
-          "rules": "Zaiqa.doc",
+          "rules": "zaiqa.doc",
           "img_path": "",
           "slug": ""
         }
@@ -368,7 +368,7 @@
         "Stringeddelicacy": {
           "id": 5,
           "description": "Teamwork is the ability to work together towards a common vision. It is a team event where teams will compete in a race to eat Doughnuts hanging from a string. In this event one can experience the joy of eating with a twist of exciting challenges and dares.",
-          "rules": "Zaiqa.doc",
+          "rules": "zaiqa.doc",
           "img_path": "String",
           "slug": "food-5"
         }

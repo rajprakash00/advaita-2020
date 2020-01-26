@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { useAuth } from "../components/Authentication/authContext";
-import { logoutFunc, checkLoginFunc } from "../utils/api";
+import { checkLoginFunc } from "../utils/api";
 import Particles from "react-particles-js";
 import logo from "../img/logo.png";
 import hook from "../img/hook.png";
@@ -27,19 +27,7 @@ const LandingMain = () => {
 
   return (
     <>
-      {authTokens ? (
-        <button
-          className="login-register-button"
-          onClick={() => {
-            logoutFunc().then(() => {
-              setAuthTokens("");
-              history.push("/");
-            });
-          }}
-        >
-          Logout
-        </button>
-      ) : (
+      {authTokens ? null : (
         <button
           className="login-register-button"
           onClick={() => history.push("/login")}

@@ -1,7 +1,7 @@
 .login-register-button {
   position: absolute;
   top: 30px;
-  left: 10px;
+  right: 100px;
   z-index: 1000;
   outline: none;
   border: none;
@@ -11,7 +11,9 @@
   padding: 10px 20px;
   border-radius: 20px;
   cursor: pointer;
-  // position: relative;
+  @include md {
+    left: 10px;
+  }
 }
 #wrapper {
   width: 100%;

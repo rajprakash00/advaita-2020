@@ -1,4 +1,5 @@
 import React from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import { useHistory } from "react-router-dom";
 import { registerFunc } from "../../utils/api";
 
@@ -19,6 +20,8 @@ function useField(defaultValue) {
 const RegisterPage = () => {
   const history = useHistory();
 
+  const [captchaVerified, setCaptchaVerified] = React.useState(false);
+
   const username = useField();
   const password = useField();
   const confirmPassword = useField();
@@ -32,21 +35,25 @@ const RegisterPage = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    registerFunc({
-      username: username.value,
-      password: password.value,
-      password_confirm: confirmPassword.value,
-      first_name: firstName.value,
-      last_name: lastName.value,
-      email: email.value,
-      mobile_no: mobileNo.value,
-      city: city.value,
-      gender: gender.value,
-      college: college.value
-    }).then(() => {
-      alert("Please check your spam folder for registration verification link");
-      history.push("/login");
-    });
+    captchaVerified
+      ? registerFunc({
+          username: username.value,
+          password: password.value,
+          password_confirm: confirmPassword.value,
+          first_name: firstName.value,
+          last_name: lastName.value,
+          email: email.value,
+          mobile_no: mobileNo.value,
+          city: city.value,
+          gender: gender.value,
+          college: college.value
+        }).then(() => {
+          alert(
+            "Registeration Successful, please check your spam for registration verification link."
+          );
+          history.push("/login");
+        })
+      : alert("Invalid Captcha!");
   };
   return (
     <section className="login-page">
@@ -163,8 +170,8 @@ const RegisterPage = () => {
           value={password.value}
           onChange={password.handleChange}
           required
-          title=" Your password must be at least 8 characters as well as contain at
-            least one uppercase, one lowercase,one special character and one number."
+          title="Your password must be at least 8 characters long, contain at
+            least one uppercase, one lowercase, one special character and one number"
         />
         <label>
           <b>Confirm Password</b>
@@ -177,6 +184,14 @@ const RegisterPage = () => {
           onChange={confirmPassword.handleChange}
           required
         />
+        <div style={{ margin: "0 auto", marginBottom: "20px" }}>
+          <ReCAPTCHA
+            sitekey="6Lc609IUAAAAAJJJPEjc9-8ITfBf0KAxQ7WxT8gV"
+            onChange={() => {
+              setCaptchaVerified(true);
+            }}
+          />
+        </div>
         <div className="button-group">
           <button type="submit" className="form-button">
             <b>Sign Up</b>

@@ -66,20 +66,15 @@ const EventDetails = props => {
               </>
             ) : (
               <>
-                {category === "tech" ? (
-                  <button onClick={() => window.open(`/assets/${rules}`)}>
-                    Rules
-                  </button>
-                ) : (
-                  <button
-                    onClick={() => {
-                      alert("Coming Soon");
-                    }}
-                  >
-                    Rules
-                  </button>
-                )}
-
+                <button
+                  onClick={() => {
+                    rules !== "rules.pdf"
+                      ? window.open(`/assets/${rules}`)
+                      : alert("coming soon");
+                  }}
+                >
+                  Rules
+                </button>
                 <button
                   onClick={() => {
                     props.history.push("/team-register");
