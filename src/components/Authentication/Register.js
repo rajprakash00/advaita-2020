@@ -47,12 +47,29 @@ const RegisterPage = () => {
           city: city.value,
           gender: gender.value,
           college: college.value
-        }).then(() => {
-          alert(
-            "Registeration Successful, please check your spam for registration verification link."
-          );
-          history.push("/login");
         })
+          .then(res => {
+            if (res.status === 201) {
+              alert(
+                "Registeration Successful, please check your spam for registration verification link."
+              );
+              history.push("/login");
+            } else if (res.status === 400) {
+              alert(
+                Object.keys(res.data)
+                  .map(
+                    x =>
+                      `${x}: ${JSON.stringify(Object.values(res.data[x])[0])}`
+                  )
+                  .join("\n")
+              );
+            }
+          })
+          .catch(err => {
+            alert(
+              "Some error occured while registering, please try again later."
+            );
+          })
       : alert("Invalid Captcha!");
   };
   return (
@@ -130,6 +147,7 @@ const RegisterPage = () => {
           <b>Mobile Number</b>
         </label>
         <input
+          pattern="(?=.*\d).{,10}"
           name="mobile_number"
           type="number"
           placeholder=""
@@ -177,6 +195,7 @@ const RegisterPage = () => {
           <b>Confirm Password</b>
         </label>
         <input
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
           name="confirm_password"
           type="password"
           placeholder=""

@@ -4,7 +4,7 @@ import * as API from "./config";
 axios.defaults.baseURL = API.URL;
 
 export const checkLoginFunc = () => {
-  if (sessionStorage.getItem("jwtToken") !== null) {
+  if (sessionStorage.getItem("jwtToken")) {
     return axios
       .post(
         API.IS_LOGGED_IN,
@@ -43,7 +43,12 @@ export const loginFunc = ({ username, password }) => {
     .then(res => {
       return res;
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      if (err.response.status === 401) {
+        alert(err.response.data.detail);
+      }
+      return err;
+    });
 };
 
 export const logoutFunc = () => {
@@ -58,12 +63,7 @@ export const logoutFunc = () => {
         }
       }
     )
-    .then(res => {
-      if (res.status === 200) {
-        sessionStorage.removeItem("jwtToken");
-      }
-      return res;
-    })
+    .then(res => res)
     .catch(err => console.log(err));
 };
 
@@ -76,7 +76,7 @@ export const registerFunc = user => {
       }
     })
     .then(res => res.data)
-    .catch(err => console.log(err));
+    .catch(err => err.response);
 };
 
 export const emailVerifyFunc = params => {
@@ -95,7 +95,7 @@ export const emailVerifyFunc = params => {
 };
 
 export const getProfileFunc = () => {
-  if (sessionStorage.getItem("jwtToken") !== null) {
+  if (sessionStorage.getItem("jwtToken")) {
     return axios
       .get(API.PROFILE, {
         withCredentials: true,
@@ -104,14 +104,12 @@ export const getProfileFunc = () => {
         }
       })
       .then(res => res)
-      .catch(err => console.log(err));
-  } else {
-    return Promise.reject({ status: 401 });
+      .catch(err => err);
   }
 };
 
 export const fetchRegistrationFunc = () => {
-  if (sessionStorage.getItem("jwtToken") !== null) {
+  if (sessionStorage.getItem("jwtToken")) {
     return axios
       .get(API.FETCH_REGISTRATION, {
         withCredentials: true,
@@ -127,7 +125,7 @@ export const fetchRegistrationFunc = () => {
 };
 
 export const teamRegisterFunc = (data, slug) => {
-  if (sessionStorage.getItem("jwtToken") !== null) {
+  if (sessionStorage.getItem("jwtToken")) {
     return axios
       .post(`${API.TEAM_REGISTER}${slug}`, data, {
         withCredentials: true,
@@ -136,6 +134,6 @@ export const teamRegisterFunc = (data, slug) => {
         }
       })
       .then(res => res)
-      .catch(err => console.log(err));
+      .catch(err => err);
   }
 };

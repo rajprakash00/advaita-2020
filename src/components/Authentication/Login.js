@@ -22,7 +22,11 @@ const LoginPage = () => {
           history.push("/dashboard");
         }
       })
-      .catch(() => alert("Some error has occured, please try again later."));
+      .catch(err => {
+        if (err.response.status === 401) {
+          alert(err.response.data.detail);
+        }
+      });
   };
   return (
     <section className="login-page">

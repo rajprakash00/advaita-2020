@@ -53,8 +53,19 @@ const App = ({ location }) => {
     setAuthTokens(data);
   };
 
+  const removeToken = () => {
+    sessionStorage.removeItem("jwtToken");
+    setAuthTokens("");
+  };
+
   return (
-    <AuthContext.Provider value={{ authTokens, setAuthTokens: setToken }}>
+    <AuthContext.Provider
+      value={{
+        authTokens,
+        setAuthTokens: setToken,
+        removeAuthTokens: removeToken
+      }}
+    >
       {isLoading ? <Loader /> : ""}
       {location.pathname !== "/" && (
         <Link to="/">

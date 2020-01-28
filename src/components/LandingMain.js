@@ -9,7 +9,7 @@ import fire from "../img/fire.gif";
 
 const LandingMain = () => {
   const history = useHistory();
-  const { authTokens, setAuthTokens } = useAuth();
+  const { authTokens, setAuthTokens, removeAuthTokens } = useAuth();
 
   React.useEffect(() => {
     checkLoginFunc()
@@ -20,7 +20,7 @@ const LandingMain = () => {
       })
       .catch(err => {
         if (err.status === 401) {
-          setAuthTokens("");
+          removeAuthTokens();
         }
       });
   }, []);

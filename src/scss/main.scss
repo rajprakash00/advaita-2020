@@ -94,11 +94,12 @@ section {
 }
 
 .main-logo {
-  position: absolute;
+  position: fixed;
   top: 5px;
   left: 5px;
   width: 150px;
   filter: drop-shadow(0 0 10px #000);
+  z-index: 9999;
 }
 
 .hidden {
