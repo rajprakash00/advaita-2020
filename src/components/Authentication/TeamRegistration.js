@@ -60,7 +60,8 @@ const TeamRegistration = props => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    teamRegisterFunc(
+   /* if(team_name.value.length()===0 ? alert("Fill team's name") :
+   (*/ teamRegisterFunc(
       {
         team_name: isSolo ? null : teamName.value,
         solo: isSolo,
@@ -81,7 +82,7 @@ const TeamRegistration = props => {
           ? history.push("/dashboard")
           : history.push("/login");
       })
-      .catch(err => alert("Some error has occured" + err));
+      .catch(err => alert("Some error has occured" + err));//)
   };
 
   return (

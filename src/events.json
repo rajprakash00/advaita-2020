@@ -112,7 +112,7 @@
       {
         "WebDev": {
           "id": 6,
-          "description": "Advaita brings you the platform to showcase your designing skills. It is an online event in which the participant is required to design a web site/web app according to given instruction and the participant with best design is the winner.",
+          "description": "Advaita brings you the platform to showcase your designing skills. It is an online event in which the participant is required to design a web site/web app or mobile app according to given instruction and the participant with best design is the winner.",
           "rules": "tech.docx",
           "img_path": "WebD",
           "slug": "tech-6"
@@ -252,6 +252,51 @@
           "rules": "rules.pdf",
           "img_path": "Imag",
           "slug": "art-3"
+        }
+      },
+      {
+        "Memo": {
+          "id": 9,
+          "description": "Do you consider yourself the Meme-lord of your Group? Then showcase you creativity, wit and immense knowledge of meme-lore in a competition against fellow masters of meme to decide who's the funniest of them all.",
+          "rules": "rules.pdf",
+          "img_path": "Memo",
+          "slug": "art-9"
+        }
+      },
+      {
+        "Crayon": {
+          "id": 8,
+          "description": "Given a Set S of Crayons, Can you find the rest of the crayons to complete the set and complete a hidden task? Get your investigative skills ready for this fun filled scavenger hunt for colours",
+          "rules": "rules.pdf",
+          "img_path": "Crayon",
+          "slug": "art-8"
+        }
+      },
+      {
+        "Creative": {
+          "id": 7,
+          "description": "Prove your resourcefulness by making an artpeice out of ... pieces of bread! Paint on them and show your creative talents by making the best out of the paint supplies provided. Improvise, Adapt, Overcome.",
+          "rules": "rules.pdf",
+          "img_path": "Creative",
+          "slug": "art-7"
+        }
+      },
+      {
+        "pictionary": {
+          "id": 10,
+          "description": "A charades inspired, intensely competitive guessing team game where you draw and your teammates guess! Make your way through the rounds to be the best there ever was!",
+          "rules": "rules.pdf",
+          "img_path": "Pictio",
+          "slug": "art-10"
+        }
+      },
+      {
+        "bhag_picasso_bhag": {
+          "id": 6,
+          "description": "A colourful Relay Race to unleash the hidden picasso in you. So keep your paintbrushes and sneakers ready for a fun- filled race to showcase your colouring skills",
+          "rules": "rules.pdf",
+          "img_path": "Bhag",
+          "slug": "art-6"
         }
       }
     ],
