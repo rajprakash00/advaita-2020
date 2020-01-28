@@ -10,14 +10,14 @@ import {
 } from "../../utils/api";
 
 const Dashboard = () => {
-  const { setAuthTokens } = useAuth();
+  const { setAuthTokens, removeAuthTokens } = useAuth();
   const history = useHistory();
   const [isLoading, setIsLoading] = React.useState(true);
   const [data, setData] = React.useState({});
   const [userRegistration, setUserRegistration] = React.useState([]);
 
   React.useEffect(() => {
-    if (sessionStorage.getItem("jwtToken") !== null) {
+    if (sessionStorage.getItem("jwtToken")) {
       checkLoginFunc()
         .then(res => {
           if (res.status === 200) {
@@ -44,8 +44,11 @@ const Dashboard = () => {
   }, []);
 
   const handleLogout = () => {
-    logoutFunc().then(() => {
-      history.push("/");
+    logoutFunc().then(res => {
+      if (res.status === 200) {
+        removeAuthTokens();
+        history.push("/");
+      }
     });
   };
 
