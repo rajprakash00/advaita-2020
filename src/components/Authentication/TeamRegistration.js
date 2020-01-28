@@ -65,31 +65,6 @@ const TeamRegistration = props => {
 
   const handleSubmit = event => {
     event.preventDefault();
-<<<<<<< HEAD
-   /* if(team_name.value.length()===0 ? alert("Fill team's name") :
-   (*/ teamRegisterFunc(
-      {
-        team_name: isSolo ? null : teamName.value,
-        solo: isSolo,
-        first_name1: firstNameOne.value,
-        last_name1: lastNameOne.value,
-        email1: emailOne.value,
-        first_name2: firstNameTwo.value,
-        last_name2: lastNameTwo.value,
-        email2: emailTwo.value,
-        first_name3: firstNameThree.value,
-        last_name3: lastNameThree.value,
-        email3: emailThree.value
-      },
-      eventSlug.value
-    )
-      .then(res => {
-        res.status === 201
-          ? history.push("/dashboard")
-          : history.push("/login");
-      })
-      .catch(err => alert("Some error has occured" + err));//)
-=======
     // Check if team name is empty
     if (!isSolo && teamName.value.length === 0) {
       alert("Please Enter a Team Name");
@@ -117,7 +92,7 @@ const TeamRegistration = props => {
         })
         .catch(err => console.log(err));
     }
->>>>>>> b1028a395697e4ffb33596342337ab84c378fe08
+
   };
 
   return (
