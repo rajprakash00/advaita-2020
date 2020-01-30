@@ -361,7 +361,8 @@
           "id": 4,
           "description": "This will be a fastest paratha eating competition with some exciting twists\nlike chilies, spices, etc. In case of a tie a tie breaker round will be decided on the spot.",
           "rules": "zaiqa.doc",
-          "img_path": "Shole"
+          "img_path": "Shole",
+          "slug": "food-4"
         }
       },
       {
