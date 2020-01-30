@@ -132,11 +132,17 @@ const TeamRegistration = props => {
                   <option value="cult-3">Footloose Solo</option>
                   <option value="cult-1">Cypher Solo</option>
                   <option value="cult-2">Mera Naam Joker</option>
+                  <option value="cult-6">Haq Se RJ</option>
                 </optgroup>
                 <optgroup label="Tech Events">
                   <option value="tech-10">BluePrint</option>
                   <option value="tech-6">WebDev</option>
                 </optgroup>
+                <optgroup label="Food Events">
+                  <option value="food-3">Maggie Chef</option>
+                  <option value="food-4">Shole Parathe</option>
+                </optgroup>
+                
               </select>
             ) : (
               <select value={eventSlug.value} onChange={eventSlug.handleChange}>
@@ -145,6 +151,7 @@ const TeamRegistration = props => {
                   <option value="cult-5">LaMode</option>
                   <option value="cult-4">Acoustica Group</option>
                   <option value="cult-3">Footloose Group</option>
+                  <option value="cult-8">Pradarshan(Nukkad)</option>
                 </optgroup>
                 <optgroup label="Tech Events">
                   <option value="tech-4">TechNova</option>
@@ -156,6 +163,11 @@ const TeamRegistration = props => {
                   <option value="tech-8">Encoded</option>
                   <option value="tech-5">CTF</option>
                   <option value="tech-12">Arduinoob</option>
+                </optgroup>
+                 <optgroup label="Food Events">
+                  <option value="food-5">Stringed Delicacy</option>
+                  <option value="food-2">Golgappe King</option>
+                  <option value="food-6">TrackBait</option>
                 </optgroup>
               </select>
             )}
