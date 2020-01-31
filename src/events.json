@@ -31,7 +31,7 @@
         "LaMode": {
           "id": 5,
           "description": "Fashion is very important. It is life-enhancing and, like everything that gives pleasure, it is worth doing well.\nFashion is not something that exists in dresses only.Fashion is in the sky,in the street,fashion has to do with ideas,the way we live,what is happening.\n LAMODE ,the grandeur fashion event of ADVAITA, IIIT Bhubaneswar where teams from the state and outside come to witness the fashion extravaganza. Whether it's ethnic or formal, casual or some pulchritudinous creation out of your own mind, participate in this event of IIIT Bhubaneswar and prove yourself a fashionista by winning the event and bringing laurels for your college.",
-          "rules": "rules.pdf",
+          "rules": "lamode.pdf",
           "img_path": "Lamode",
           "slug": "cult-5"
         }
@@ -196,7 +196,7 @@
         "CollArt": {
           "id": 1,
           "description": "MAKE THE BEST OUT OF WASTE ",
-          "rules": "rules.pdf",
+          "rules": "art.pdf",
           "img_path": "Coll"
         }
       },
@@ -204,7 +204,7 @@
         "Coffee_Painting": {
           "id": 23,
           "description": "Would you like to explore your creative side? Here is your opportunity to come and express yourself with no boundaries!! Hop on to explore coffee painting and unleash your ideas into",
-          "rules": "rules.pdf",
+          "rules": "art.pdf",
           "img_path": "",
           "slug": ""
         }
@@ -213,7 +213,7 @@
         "Embroidery_Workshop": {
           "id": 24,
           "description": "Are you bored of painting on paper or canvas or any such medium? If yes then the time has come to shift to the trending medium - fabric. In Advaita'19 Paracosm, in association with Pidilite, presents a workshop on fabric painting. We welcome everyone to attend this fresh and anomalous workshop of drawing and painting on the fabric. The medium will be new and exciting to work upon. The attendees shall retain their brand new magnum opus. The attendees will be mentored and instructed by the Pidilite accredited Experts. ",
-          "rules": "rules.pdf",
+          "rules": "art.pdf",
           "img_path": "",
           "slug": ""
         }
@@ -222,7 +222,7 @@
         "PhotoGallery": {
           "id": 5,
           "description": "Presenting to you Gallery , which is the annual installment of the display of the 24 flagship photos to have come from the creators within our society, not limited to to genre or equipment , just peerless vision reflected in each single photo.",
-          "rules": "rules.pdf",
+          "rules": "art.pdf",
           "img_path": "PhotoGeek",
           "slug": "art-5"
         }
@@ -231,7 +231,7 @@
         "PhotoExhibition": {
           "id": 2,
           "description": "Exhibition, our annual exhibit of photos on select genre(s) ,  unique to each year , come visit for the pleasant surprise and immerse yourself in the photos and take a moment out of your life to connect to the story we mean to convey in them.",
-          "rules": "rules.pdf",
+          "rules": "art.pdf",
           "img_path": "Exhiu",
           "slug": "art-2"
         }
@@ -240,7 +240,7 @@
         "Picasso": {
           "id": 4,
           "description": "Picasso is the annual painting competition conducted by Photogeeks. Photogeeks believe in creating magic with not just cameras but brushes as well. Nothing can replace the sheer beauty of a painting. So grab your brushes, switch your creative modes on and let the colours speak of your behalf. ",
-          "rules": "rules.pdf",
+          "rules": "art.pdf",
           "img_path": "Pic",
           "slug": "art-4"
         }
@@ -249,7 +249,7 @@
         "Imagen": {
           "id": 3,
           "description": "Bring out the photographer in you. A great stage to showcase your talent. Dont miss out the opportunity. ",
-          "rules": "rules.pdf",
+          "rules": "art.pdf",
           "img_path": "Imag",
           "slug": "art-3"
         }
@@ -258,7 +258,7 @@
         "Memo": {
           "id": 9,
           "description": "Do you consider yourself the Meme-lord of your Group? Then showcase you creativity, wit and immense knowledge of meme-lore in a competition against fellow masters of meme to decide who's the funniest of them all.",
-          "rules": "rules.pdf",
+          "rules": "art.pdf",
           "img_path": "Memo",
           "slug": "art-9"
         }
@@ -267,7 +267,7 @@
         "Crayon": {
           "id": 8,
           "description": "Given a Set S of Crayons, Can you find the rest of the crayons to complete the set and complete a hidden task? Get your investigative skills ready for this fun filled scavenger hunt for colours",
-          "rules": "rules.pdf",
+          "rules": "art.pdf",
           "img_path": "Crayon",
           "slug": "art-8"
         }
@@ -276,7 +276,7 @@
         "Creative": {
           "id": 7,
           "description": "Prove your resourcefulness by making an artpeice out of ... pieces of bread! Paint on them and show your creative talents by making the best out of the paint supplies provided. Improvise, Adapt, Overcome.",
-          "rules": "rules.pdf",
+          "rules": "art.pdf",
           "img_path": "Creative",
           "slug": "art-7"
         }
@@ -285,7 +285,7 @@
         "pictionary": {
           "id": 10,
           "description": "A charades inspired, intensely competitive guessing team game where you draw and your teammates guess! Make your way through the rounds to be the best there ever was!",
-          "rules": "rules.pdf",
+          "rules": "art.pdf",
           "img_path": "Pictio",
           "slug": "art-10"
         }
@@ -294,7 +294,7 @@
         "bhag_picasso_bhag": {
           "id": 6,
           "description": "A colourful Relay Race to unleash the hidden picasso in you. So keep your paintbrushes and sneakers ready for a fun- filled race to showcase your colouring skills",
-          "rules": "rules.pdf",
+          "rules": "art.pdf",
           "img_path": "Bhag",
           "slug": "art-6"
         }
