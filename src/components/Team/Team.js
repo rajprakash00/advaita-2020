@@ -6,11 +6,11 @@ export default class Team extends Component {
     return (
       <section className="team-page">
         <h1>The Team</h1>
-        <h1 className="team-heading">Cultural</h1>
+        <h1 className="team-heading">Convenor</h1>
         <div className="team-container">
           <TeamCard
             name="Naman Abrol"
-            des="Cult Head"
+            des="Convenor"
             img="27.png"
             number="7006176006"
             fb="https://www.facebook.com/nabrol3"
@@ -19,14 +19,16 @@ export default class Team extends Component {
           />
           <TeamCard
             name="Sanket Panda"
-            des="Cult Head"
+            des="Convenor"
             img="28.png"
             number="8333882613"
             fb="https://www.facebook.com/sanket.panda.1257"
             tweet="https://twitter.com/SanketPanda10?s=0"
             insta="https://www.instagram.com/sankepa7/"
           />
-
+        </div>
+        <h1 className="team-heading">Cultural</h1>
+        <div className="team-container">
           <TeamCard
             name="Sumeet Sagar Lenka"
             des="Cult Head"

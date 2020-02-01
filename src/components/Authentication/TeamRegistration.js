@@ -92,7 +92,6 @@ const TeamRegistration = props => {
         })
         .catch(err => console.log(err));
     }
-
   };
 
   return (
@@ -142,7 +141,6 @@ const TeamRegistration = props => {
                   <option value="food-3">Maggie Chef</option>
                   <option value="food-4">Shole Parathe</option>
                 </optgroup>
-                
               </select>
             ) : (
               <select value={eventSlug.value} onChange={eventSlug.handleChange}>
@@ -164,7 +162,7 @@ const TeamRegistration = props => {
                   <option value="tech-5">CTF</option>
                   <option value="tech-12">Arduinoob</option>
                 </optgroup>
-                 <optgroup label="Food Events">
+                <optgroup label="Food Events">
                   <option value="food-5">Stringed Delicacy</option>
                   <option value="food-2">Golgappe King</option>
                   <option value="food-6">TrackBait</option>
@@ -303,6 +301,10 @@ const TeamRegistration = props => {
         <button className="register_button" onClick={handleSubmit}>
           SUBMIT
         </button>
+        <h4>
+          Note: For any queries contact +917064223460, +919045855633,
+          +919149341125
+        </h4>
       </div>
       <button className="go-back-button" onClick={() => props.history.goBack()}>
         Go Back
