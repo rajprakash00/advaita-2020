@@ -132,14 +132,15 @@ const TeamRegistration = props => {
                   <option value="cult-1">Cypher Solo</option>
                   <option value="cult-2">Mera Naam Joker</option>
                   <option value="cult-6">Haq Se RJ</option>
+                  <option value="cult-9">Mic Drop</option>
                 </optgroup>
                 <optgroup label="Tech Events">
                   <option value="tech-10">BluePrint</option>
-                  <option value="tech-6">WebDev</option>
+                  <option value="tech-6">WebDev Solo</option>
                 </optgroup>
-                <optgroup label="Food Events">
-                  <option value="food-3">Maggie Chef</option>
-                  <option value="food-4">Shole Parathe</option>
+                <optgroup label="Art and Photography Events">
+                  <option value="art-9">Finding Memo</option>
+                  <option value="art-7">Making things creative</option>
                 </optgroup>
               </select>
             ) : (
@@ -158,14 +159,15 @@ const TeamRegistration = props => {
                   <option value="tech-3">Principium</option>
                   <option value="tech-11">DirtRush</option>
                   <option value="tech-9">LineFollower</option>
+                  <option value="tech-6">WebDev Team</option>
                   <option value="tech-8">Encoded</option>
                   <option value="tech-5">CTF</option>
                   <option value="tech-12">Arduinoob</option>
                 </optgroup>
-                <optgroup label="Food Events">
-                  <option value="food-5">Stringed Delicacy</option>
-                  <option value="food-2">Golgappe King</option>
-                  <option value="food-6">TrackBait</option>
+                <optgroup label="Art and Photography Events">
+                  <option value="art-10">Pictionary</option>
+                  <option value="art-6">Bhag picasso bhaag</option>
+                  <option value="art-8">Crayon Scavenger Hunt</option>
                 </optgroup>
               </select>
             )}

@@ -49,7 +49,7 @@
         "TillICollapse": {
           "id": 9,
           "description": "Rapping is a form of music that has something called a beat to it, something that sounds very attractive and appealing.\n Coming down to the beginning of a new decade,Hip-hop is making a lot of noise & It should get some more spotlight. To all the underground rappers in the city, Bhubaneswar had it coming.\nWith the growing number of rappers in the city, we gladly present to you \u201cTill I Collapse\u201d, the rap battle competition of Advaita 2K20, a perfect platform to showcase your talent.",
-          "rules": "rap-battle.docx",
+          "rules": "rap-battle.pdf",
           "img_path": "RapBattle",
           "slug": "cult-9"
         }
@@ -255,7 +255,7 @@
         }
       },
       {
-        "Memo": {
+        "Finding Memo": {
           "id": 9,
           "description": "Do you consider yourself the Meme-lord of your Group? Then showcase you creativity, wit and immense knowledge of meme-lore in a competition against fellow masters of meme to decide who's the funniest of them all.",
           "rules": "art.pdf",
@@ -264,7 +264,7 @@
         }
       },
       {
-        "Crayon": {
+        "Crayon Scavenger Hunt": {
           "id": 8,
           "description": "Given a Set S of Crayons, Can you find the rest of the crayons to complete the set and complete a hidden task? Get your investigative skills ready for this fun filled scavenger hunt for colours",
           "rules": "art.pdf",
@@ -273,7 +273,7 @@
         }
       },
       {
-        "Creative": {
+        "Making Things Creative": {
           "id": 7,
           "description": "Prove your resourcefulness by making an artpeice out of ... pieces of bread! Paint on them and show your creative talents by making the best out of the paint supplies provided. Improvise, Adapt, Overcome.",
           "rules": "art.pdf",
@@ -282,7 +282,7 @@
         }
       },
       {
-        "pictionary": {
+        "Pictionary": {
           "id": 10,
           "description": "A charades inspired, intensely competitive guessing team game where you draw and your teammates guess! Make your way through the rounds to be the best there ever was!",
           "rules": "art.pdf",
@@ -291,7 +291,7 @@
         }
       },
       {
-        "bhag_picasso_bhag": {
+        "Bhag picasso bhag": {
           "id": 6,
           "description": "A colourful Relay Race to unleash the hidden picasso in you. So keep your paintbrushes and sneakers ready for a fun- filled race to showcase your colouring skills",
           "rules": "art.pdf",

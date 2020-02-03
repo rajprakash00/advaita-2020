@@ -35,7 +35,7 @@ const thumbnail = [
   <h1 className="thumb_name">HaqSe Rj</h1>,
   <h1 className="thumb_name">Rockathon</h1>,
   <h1 className="thumb_name">Pradarshan</h1>,
-  <h1 className="thumb_name">Till I Collapse</h1>,
+  <h1 className="thumb_name">Mic Drop</h1>,
   <h1 className="thumb_name">Cypher</h1>,
   <h1 className="thumb_name">MeraNaamJoker</h1>,
   <h1 className="thumb_name">Footloose</h1>,
@@ -44,7 +44,7 @@ const thumbnail = [
   <h1 className="thumb_name">HaqSe Rj</h1>,
   <h1 className="thumb_name">Rockathon</h1>,
   <h1 className="thumb_name">Pradarshan</h1>,
-  <h1 className="thumb_name">Till I Collapse</h1>
+  <h1 className="thumb_name">Mic Drop</h1>
 ];
 
 const responsive = {
