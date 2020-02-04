@@ -266,7 +266,11 @@ const TeamRegistration = props => {
           SUBMIT
         </button>
         <h4>
-          Note: For any technical queries contact +917064223460, +919045855633,
+          Note: If for any event number of registration is less than required,
+          then that event will be cancelled.
+        </h4>
+        <h4>
+          For any technical queries contact +917064223460, +919045855633,
           +919149341125
         </h4>
       </div>
