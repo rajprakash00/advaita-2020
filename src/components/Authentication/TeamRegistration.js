@@ -88,6 +88,8 @@ const TeamRegistration = props => {
         .then(res => {
           if (res.status === 201) {
             history.push("/dashboard");
+          } else if (res.response.status === 400) {
+            alert("You are already registered!");
           }
         })
         .catch(err => console.log(err));
@@ -142,6 +144,12 @@ const TeamRegistration = props => {
                   <option value="art-9">Finding Memo</option>
                   <option value="art-7">Making things creative</option>
                 </optgroup>
+                <optgroup label="Food Events">
+                  <option value="food-4">Shole Parathe</option>
+                  <option value="food-6">Track Bait</option>
+                  <option value="food-7">Misc Games</option>
+                  <option value="food-2">Golgappe King</option>
+                </optgroup>
               </select>
             ) : (
               <select value={eventSlug.value} onChange={eventSlug.handleChange}>
@@ -169,58 +177,12 @@ const TeamRegistration = props => {
                   <option value="art-6">Bhag picasso bhaag</option>
                   <option value="art-8">Crayon Scavenger Hunt</option>
                 </optgroup>
+                <optgroup label="Food Events">
+                  <option value="food-3">Maggie Chef</option>
+                  <option value="food-5">Stringed Delicacy</option>
+                </optgroup>
               </select>
             )}
-            {/* <select value={eventSlug.value} onChange={eventSlug.handleChange}>
-              <optgroup label="Cultural and Theatre Events">
-                <option value="cult-7">Rockathon</option>
-                <option value="cult-4">Acoustica</option>
-                <option value="cult-3">Footloose</option>
-                <option value="cult-5">LaMode</option>
-                <option value="cult-1">Cypher</option>
-                <option value="cult-9">Till I Collapse</option>
-                <option value="cult-8">Pradarshan</option>
-                <option value="cult-6">Haq Se RJ</option>
-                <option value="cult-2">Mera Naam Joker</option>
-              </optgroup>
-              <optgroup label="Tech Events">
-                <option value="tech-4">TechNova</option>
-                <option value="tech-7">Paper Presentation</option>
-                <option value="tech-10">BluePrint</option>
-                <option value="tech-6">WebDev</option>
-                <option value="tech-2">SwigNCode</option>
-                <option value="tech-3">Principium</option>
-                <option value="tech-1">Battlefield</option>
-                <option value="tech-11">DirtRush</option>
-                <option value="tech-9">LineFollower</option>
-                <option value="tech-8">Encoded</option>
-                <option value="tech-5">CTF</option>
-                <option value="tech-12">Arduinoob</option>
-              </optgroup>
-              <optgroup label="Art and Photography Events">
-                <option value="art-1">CollArt</option>
-                <option value="art-5">Photo Gallery</option>
-                <option value="art-2">Photo Exhibition</option>
-                <option value="art-4">Picasso</option>
-                <option value="art-3">Imagen</option>
-              </optgroup>
-              <optgroup label="Sports and Gamex Events">
-                <option value="sports-1">CSGO</option>
-                <option value="sports-6">InterCollege Football</option>
-                <option value="sports-3">InterCollege Basketball</option>
-                <option value="sports-4">InterCollege Chess</option>
-                <option value="sports-5">SuperSix</option>
-                <option value="sports-2">FIFA</option>
-              </optgroup>
-              <optgroup label="Food Events">
-                <option value="food-4">Shole Parathe</option>
-                <option value="food-3">Maggie Chef</option>
-                <option value="food-6">Track Bait</option>
-                <option value="food-7">Misc Games</option>
-                <option value="food-2">Golgappe King</option>
-                <option value="food-5">Stringed Delicacy</option>
-              </optgroup>
-            </select>*/}
           </div>
         </div>
         {isSolo ? null : (
@@ -304,7 +266,7 @@ const TeamRegistration = props => {
           SUBMIT
         </button>
         <h4>
-          Note: For any queries contact +917064223460, +919045855633,
+          Note: For any technical queries contact +917064223460, +919045855633,
           +919149341125
         </h4>
       </div>

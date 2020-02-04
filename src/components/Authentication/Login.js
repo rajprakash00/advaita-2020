@@ -33,7 +33,7 @@ const LoginPage = () => {
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">
-          <b>Username</b>
+          <b>Username (not email)</b>
         </label>
         <input
           name="username"
