@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    height: 400px;
+    height: 700px;
     @include md {
       flex-direction: column;
     }
@@ -17,20 +17,24 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin: 0 10px;
+      margin: 0 100px;
       display: flex;
       text-align: center;
       @include md {
         margin: 20px 0;
       }
       img {
-        width: 100%;
-
+        width: 80%;
+        height: 80%;
+        @include md {
+          width: 100%;
+          height: 70%;
+        }
         transition: all 0.25s ease-in-out;
         &:hover {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
             0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          transform: scale(1.1);
+          transform: scale(1.05);
         }
       }
       .pronite-button {

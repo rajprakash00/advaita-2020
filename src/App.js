@@ -5,7 +5,7 @@ import { AuthContext } from "./components/Authentication/authContext";
 
 import Loader from "./components/Loader";
 import LandingMain from "./components/LandingMain";
-// import Pronite from "./components/Pronite";
+import Pronite from "./components/Pronite/Pronite";
 import Navbar from "./components/Navbar";
 import Event from "./components/Event";
 import About from "./components/About";
@@ -84,7 +84,7 @@ const App = ({ location }) => {
         <Route path="/sponsors" component={Lastsponsor} />
         <Route path="/sponsors-old" component={Sponsors} />
         <Route path="/gallery" component={ImageGallery} />
-        {/* <Route path="/pronite" component={Pronite} /> */}
+        <Route path="/pronite" component={Pronite} />
         <Route path="/event" component={Event} />
         <Route path="/team" component={Team} />
         <Route path="/about" component={About} />
