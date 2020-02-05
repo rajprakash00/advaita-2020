@@ -169,7 +169,7 @@ const TeamRegistration = props => {
                   <option value="tech-9">LineFollower</option>
                   <option value="tech-6">WebDev Team</option>
                   <option value="tech-8">Encoded</option>
-                 {/* <option value="tech-5">CTF</option>*/}
+                  <option value="tech-5">CTF</option>
                   <option value="tech-12">Arduinoob</option>
                 </optgroup>
                 <optgroup label="Art and Photography Events">
@@ -266,7 +266,7 @@ const TeamRegistration = props => {
           SUBMIT
         </button>
         <h4>
-          Note: If for any event, number of registrations are less than required,
+          Note: If for any event number of registration is less than required,
           then that event will be cancelled.
         </h4>
         <h4>
