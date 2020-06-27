@@ -23,6 +23,8 @@ npm run build
 ```
 
 ### Contributors
+[pranshu2610](https://github.com/pranshu2610) (Website Designer)
+
 [rajprakash00](https://github.com/rajprakash00)
 
 [boxdox](https://github.com/boxdox)
